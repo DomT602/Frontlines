@@ -1,0 +1,85 @@
+author = "Dom";
+overviewPicture = "";
+loadScreen = "";
+overviewText = "Game mode created by Dom.";
+onLoadMission = "Game mode created by Dom.";
+onLoadName = "Frontlines";
+
+class Header {
+	gameType = Coop;
+	minPlayers = 1;
+	maxPlayers = 46;
+};
+
+respawnButton = 1;
+respawnTemplates[] = {};
+respawn = 3;
+respawnDelay = 5;
+respawnDialog = 0;
+respawnOnStart = 0;
+
+corpseManagerMode = 1;
+corpseLimit = 30;
+corpseRemovalMinTime = 300;
+corpseRemovalMaxTime = 1200;
+
+wreckManagerMode = 1;
+wreckLimit = 5;
+wreckRemovalMinTime = 600;
+wreckRemovalMaxTime = 2400;
+minPlayerDistance = 1000;
+
+disableChannels[] = {{0,true,true},{1,false,true},{2,true,true},{3,false,true},{4,false,true},{5,false,true},{6,false,true}};
+
+disabledAI = 1;
+enableDebugConsole[] = {"76561198071007604"};
+skipLobby = 1;
+
+#include "GUI\masterHandler.hpp"
+class RscTitles {
+	#include "GUI\hud.hpp"
+};
+
+class CfgFunctions {
+	#include "Functions.hpp"
+};
+
+class CfgNotifications {
+	class defaultNotif {
+		title = "";
+		iconPicture = "";
+		iconText = "";
+		description = "";
+		color[] = {1,1,1,1};
+		duration = 10;
+		priority = 9;
+	};
+
+	class newNotif: defaultNotif {
+		title = "%1";
+		description = "%2";
+		color[] = {1,1,1,1};
+	};
+
+	class successNotif: newNotif {
+		color[] = {0,1,0,1};
+		iconPicture = "\a3\ui_f\data\GUI\Cfg\CommunicationMenu\defend_ca.paa";
+	};
+
+	class failedNotif: newNotif {
+		color[] = {1,0,0,1};
+		iconPicture = "\a3\ui_f\data\GUI\Cfg\CommunicationMenu\attack_ca.paa";
+	};
+
+	class generalNotif: newNotif {
+		color[] = {0,0.627,1,1};
+		iconPicture = "\a3\ui_f\data\GUI\Cfg\CommunicationMenu\instructor_ca.paa";
+	};
+};
+
+#include "Config\Blufor\Config_Groups.hpp"
+#include "Config\Config_Civilian.hpp"
+#include "Config\Config_Compositions.hpp"
+#include "Config\Config_Guerilla.hpp"
+#include "Config\Config_Master.hpp"
+#include "Config\Config_Opfor.hpp"

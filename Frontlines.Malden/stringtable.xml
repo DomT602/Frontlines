@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="DT Roles and Groups">
+	<Package name="GUI">
+		<Key ID="STR_DT_Role_Menu_Title">
+			<English>Role Selection</English>
+		</Key>
+		<Key ID="STR_DT_Role_Menu_Default_Loadout">
+			<English>DEFAULT LOADOUT</English>
+		</Key>
+		<Key ID="STR_DT_Rifleman_Description">
+			<English>The Rifleman is a flexible role, with access to a variety of kit to match the situation they find themselves in.</English>
+		</Key>
+		<Key ID="STR_DT_Medic_Description">
+			<English>The Medic is responsible for keeping his squad in the fight through treating and reviving his squad mates.</English>
+		</Key>
+		<Key ID="STR_DT_Engineer_Description">
+			<English>The Engineer is responsible for keeping vehicles operational through repairing and maintaining them.</English>
+		</Key>
+		<Key ID="STR_DT_TeLe_Description">
+			<English>The Team Leader takes command of a small team in the field.</English>
+		</Key>
+		<Key ID="STR_DT_SqLe_Description">
+			<English>The Squad Leader takes command of an infantry squad, utilising all members to achieve the objectives.</English>
+		</Key>
+		<Key ID="STR_DT_EOD_Description">
+			<English>The Explosive Specialist can track and defuse explosives, as well as setup explosives to aid his team.</English>
+		</Key>
+		<Key ID="STR_DT_Sniper_Description">
+			<English>The Sniper has access to long range weaponry and ghillie suits to assist friendlies from afar.</English>
+		</Key>
+		<Key ID="STR_DT_Spotter_Description">
+			<English>The Spotter aids the Sniper by choosing targets and acting as close protection.</English>
+		</Key>
+		<Key ID="STR_DT_Pilot_Description">
+			<English>The Pilot is responsible for transporting troops, vehicles and supplies around the AO. They can also fly CAS Missions to assist friendlies on the ground.</English>
+		</Key>
+		<Key ID="STR_DT_UAVOp_Description">
+			<English>The UAV Operator can command UAV's and UGV's to assist friendly forces.</English>
+		</Key>
+		<Key ID="STR_DT_Paratrooper_Description">
+			<English>The Paratrooper supports his allies by using his ability do deploy from above to get into positions that regular infantry cannot.</English>
+		</Key>
+		<Key ID="STR_DT_Diver_Description">
+			<English>The Diver is a specialist who comes equipped for underwater operations.</English>
+		</Key>
+		<Key ID="STR_DT_Crewman_Description">
+			<English>The Crewman takes control of vehicles to support friendly forces.</English>
+		</Key>
+		<Key ID="STR_DT_Officer_Description">
+			<English>The Officer is in overall command of all forces to achieve their objectives.</English>
+		</Key>
+	</Package>
+</Project>
