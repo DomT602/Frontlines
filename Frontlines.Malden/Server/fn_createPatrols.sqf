@@ -31,6 +31,6 @@ for "_i" from 1 to _heavyCount do {
 	_groups pushBack ([selectRandom _heavyVehicles,_position,_spawnRadius] call DT_fnc_createVehicle);
 };
 
-[_groups,_position,_spawnRadius + 50] call DT_fnc_initPatrol;
+[_groups,_position,_spawnRadius + (_spawnRadius * 0.1)] call DT_fnc_initPatrol;
 
 _groups;

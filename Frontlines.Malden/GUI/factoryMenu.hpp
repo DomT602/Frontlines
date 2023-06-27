@@ -23,10 +23,10 @@ class DT_factoryMenu : RscDisplayTeamSwitch
 		class FactoryMap: RscMapControl
 		{
 			idc = 1200;
-			x = 0.456894 * safezoneW + safezoneX;
-			y = 0.43114 * safezoneH + safezoneY;
-			w = 0.273281 * safezoneW;
-			h = 0.286 * safezoneH;
+			x = "16.3 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
+			y = "8.5 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+			w = "22.5 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
+			h = "14.2 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			onMouseButtonDown = "_this call DT_fnc_onFactoryMapPress";
 		};
 		class CancelBtn : CA_ButtonCancel
@@ -43,18 +43,18 @@ class DT_factoryMenu : RscDisplayTeamSwitch
 		class FactoryText: RscStructuredText
 		{
 			idc = 1100;
-			x = 0.45875 * safezoneW + safezoneX;
-			y = 0.28 * safezoneH + safezoneY;
-			w = 0.273281 * safezoneW;
-			h = 0.088 * safezoneH;
+			x = "16.3 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
+			y = "2.3 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+			w = "22.5 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
+			h = "4 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 		};
 		class TypeToolbox: RscToolbox
 		{
 			idc = 1600;
-			x = 0.45875 * safezoneW + safezoneX;
-			y = 0.379 * safezoneH + safezoneY;
-			w = 0.273281 * safezoneW;
-			h = 0.044 * safezoneH;
+			x = "16.3 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
+			y = "6.4 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+			w = "22.5 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
+			h = "2 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			rows = 1;
 			columns = 4;
 			strings[] = {"None","Supplies","Fuel","Ammo"};

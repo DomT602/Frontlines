@@ -50,7 +50,7 @@ if (_save isEqualTo []) then {
 	_marker setMarkerText _name;
 
 	DT_logistics = [0,0,[]];
-	[DT_logistics] remoteExecCall ["DT_fnc_updateLogistics",0,"DT_Logi_JIP"];
+	[DT_logistics] remoteExecCall ["DT_fnc_updateLogistics",-2,"DT_Logi_JIP"];
 	missionNamespace setVariable ["DT_threatLevel",0,true];
 	missionNamespace setVariable ["DT_intelCount",0,true];
 	[] call DT_fnc_updateCivRep;
@@ -60,8 +60,6 @@ if (_save isEqualTo []) then {
 	DT_opforDeaths = 0;
 	DT_guerillaDeaths = 0;
 	DT_civilianDeaths = 0;
-
-	[] call DT_fnc_saveGame;
 } else {
 	_save params ["_date","_sectors","_fobs","_logistics","_threat","_intel","_stats"];
 
@@ -170,12 +168,12 @@ if (_save isEqualTo []) then {
 				_x set [0,DT_allFOBs select _fromIndex];
 			} else {
 				private _fromIndex  = DT_allSectors findIf {_x getVariable "DT_sectorVariable" == _from};
-				_x set [1,DT_allSectors select _fromIndex];
+				_x set [0,DT_allSectors select _fromIndex];
 			};
 
 			if ("FOB_" in _to) then {
 				private _toIndex  = DT_allFOBs findIf {_x getVariable "DT_fobVariable" == _to};
-				_x set [0,DT_allFOBs select _toIndex];
+				_x set [1,DT_allFOBs select _toIndex];
 			} else {
 				private _toIndex  = DT_allSectors findIf {_x getVariable "DT_sectorVariable" == _to};
 				_x set [1,DT_allSectors select _toIndex];
@@ -191,7 +189,7 @@ if (_save isEqualTo []) then {
 	};
 
 	DT_logistics = _logistics;
-	[DT_logistics] remoteExecCall ["DT_fnc_updateLogistics",0,"DT_Logi_JIP"];
+	[DT_logistics] remoteExecCall ["DT_fnc_updateLogistics",-2,"DT_Logi_JIP"];
 
 	missionNamespace setVariable ["DT_threatLevel",_threat,true];
 	missionNamespace setVariable ["DT_intelCount",_intel,true];
@@ -203,6 +201,8 @@ if (_save isEqualTo []) then {
 	DT_guerillaDeaths = _stats select 3;
 	DT_civilianDeaths = _stats select 4;
 };
+
+[] call DT_fnc_saveGame;
 
 [
 	{

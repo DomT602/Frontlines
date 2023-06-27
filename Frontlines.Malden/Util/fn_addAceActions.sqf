@@ -223,7 +223,7 @@ private _loadCrate = [
 	"\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\getin_ca.paa",
 	{[_target] call DT_fnc_loadCrate},
 	{
-		private _transportClasses = getArray(missionConfigFile >> "Core_Settings" >> "transportVehicles");
+		private _transportClasses = getArray(missionConfigFile >> "Settings" >> "transportVehicles");
 		_transportClasses = _transportClasses apply {_x select 0};
 		isNull (attachedTo _target) && {nearestObjects [_target,_transportClasses,15] isNotEqualTo []}
 	}

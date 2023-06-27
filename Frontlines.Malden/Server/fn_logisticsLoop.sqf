@@ -37,4 +37,4 @@ reverse _toDelete;
 	_currentRoutes deleteAt _x;
 } forEach _toDelete;
 
-[DT_logistics,"endRoute"] remoteExecCall ["DT_fnc_updateLogistics",0,"DT_Logi_JIP"];
+[DT_logistics,"endRoute"] remoteExecCall ["DT_fnc_updateLogistics",-2,"DT_Logi_JIP"];

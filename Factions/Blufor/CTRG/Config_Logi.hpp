@@ -34,7 +34,7 @@ class Logi_Setup {
 			{
 				{"Classname",{supplies,fuel,ammo},"any conditions to buy"}
 				If first element is array, you can overwrite default name as shown below
-				{{"B_Slingload_01_Cargo_F", "FOB Container"}, {300,500,0}, "(count DT_allFOBs) < (getNumber(missionConfigFile >> 'Core_Settings' >> 'maxFobs'))"}
+				{{"B_Slingload_01_Cargo_F", "FOB Container"}, {300,500,0}, "(count DT_allFOBs) < (getNumber(missionConfigFile >> 'Settings' >> 'maxFobs'))"}
 			}
 		}
 	*/
@@ -170,8 +170,8 @@ class Logi_Setup {
 		{
 			"Logistics",
 			{
-				{{"B_Slingload_01_Cargo_F", "FOB Container"}, {300,500,0}, "(count DT_allFOBs) < (getNumber(missionConfigFile >> 'Core_Settings' >> 'maxFobs'))"},
-				{{"B_Truck_01_box_F", "FOB Truck"}, {350,500,0}, "(count DT_allFOBs) < (getNumber(missionConfigFile >> 'Core_Settings' >> 'maxFobs'))"},
+				{{"B_Slingload_01_Cargo_F", "FOB Container"}, {300,500,0}, "(count DT_allFOBs) < (getNumber(missionConfigFile >> 'Settings' >> 'maxFobs'))"},
+				{{"B_Truck_01_box_F", "FOB Truck"}, {350,500,0}, "(count DT_allFOBs) < (getNumber(missionConfigFile >> 'Settings' >> 'maxFobs'))"},
 
 				{{"Land_RepairDepot_01_tan_F", "Recycle Building"}, {250,0,0}, ""},
 				{{"B_Radar_System_01_F", "Radar"}, {1000,0,0}, ""},

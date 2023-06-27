@@ -15,7 +15,7 @@ private _sectorListbox = _display displayCtrl 1500;
 		_colour = [0,0.3,0.6,1];
 	} else {
 		if (_x in DT_activeSectors) then {
-			_colour = [0.851,0.4,0,1];
+			_colour = [0.85,0.4,0,1];
 		};
 	};
 	_sectorListbox lbSetColor [_index,_colour];

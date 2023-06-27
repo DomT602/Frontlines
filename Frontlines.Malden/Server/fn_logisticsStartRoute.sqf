@@ -22,8 +22,8 @@ private _newRoute = [_from,_to,_truckCount,_startTransitTime,_endTransitTime,_ca
 _currentRoutes pushBack _newRoute;
 DT_logistics set [0,(_availableTrucks - _truckCount)];
 DT_logistics set [1,(_trucksInUse + _truckCount)];
-[DT_logistics,"startRoute",_newRoute,_fromIndex] remoteExecCall ["DT_fnc_updateLogistics",0,"DT_Logi_JIP"];
+[DT_logistics,"startRoute",_newRoute,_fromIndex] remoteExecCall ["DT_fnc_updateLogistics",-2,"DT_Logi_JIP"];
 
-if (DT_logisticsHandle isEqualTo -1) then {
+if ((missionNamespace getVariable ["DT_logisticsHandle",-1]) isEqualTo -1) then {
 	DT_logisticsHandle = [DT_fnc_logisticsLoop,10] call CBA_fnc_addPerFrameHandler;
 };

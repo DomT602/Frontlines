@@ -30,7 +30,7 @@ switch _action do {
 		if (_sector getVariable "DT_sectorType" in ["military","tower"]) exitWith {["You need to select a civilian sector."] call DT_fnc_notify};
 		private _number = parseNumber _text;
 
-		[_sector,_number] remoteExecCall ["DT_fnc_adjustCivRep",2];
+		[_sector,_number] remoteExecCall ["DT_fnc_updateCivRep",2];
 		[format["Civilian reputation in %1 updated.",_sector getVariable "DT_sectorName"]] call DT_fnc_notify;
 	};
 
@@ -80,6 +80,7 @@ switch _action do {
 		if (_sector getVariable ["DT_sectorOwned",false]) exitWith {["Sector is already captured."] call DT_fnc_notify};
 		if (_sector in DT_activeSectors) exitWith {["Sector must be inactive."] call DT_fnc_notify};
 
+		_sectorListbox lbSetColor [_index,[0.85,0.4,0,1]];
 		[_sector] remoteExecCall ["DT_fnc_activateSector",2];
 	};
 
@@ -113,7 +114,7 @@ switch _action do {
 		_sector setVariable ["DT_sectorOwned",true,true];
 		(_sector getVariable "DT_sectorVariable") setMarkerColor "colorOPFOR";
 		_sector setVariable ["DT_sectorStrength",([] call DT_fnc_getAverageStrength),true];
-		_sectorListbox lbSetColor [_index,[0,0.3,0.6,1]];
+		_sectorListbox lbSetColor [_index,[0.5,0,0,1]];
 
 		private _sectorType = _sector getVariable "DT_sectorType";
 		if (_sectorType isEqualTo "factory") then {

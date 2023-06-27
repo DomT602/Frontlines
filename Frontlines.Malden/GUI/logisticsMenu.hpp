@@ -16,20 +16,20 @@ class DT_logisticsMenu : RscDisplayTeamSwitch
 			idc = 1500;
 			onLbSelChanged = "_this call DT_fnc_onLogisticsMenuLbChange;";
 
-			x = 0.273125 * safezoneW + safezoneX;
-			y = 0.28 * safezoneH + safezoneY;
-			w = 0.180469 * safezoneW;
-			h = 0.22 * safezoneH;
+			x = "1.2 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
+			y = "2.3 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+			w = "15 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
+			h = "10.6 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 		};
 		class LogisticsMap: RscMapControl
 		{
 			idc = 1200;
 			onMouseButtonDown = "_this call DT_fnc_onFactoryMapPress";
 
-			x = 0.45875 * safezoneW + safezoneX;
-			y = 0.28 * safezoneH + safezoneY;
-			w = 0.273281 * safezoneW;
-			h = 0.154 * safezoneH;
+			x = "16.3 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
+			y = "2.3 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+			w = "22.5 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
+			h = "8 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 		};
 		class CancelBtn : CA_ButtonCancel
 		{
@@ -44,60 +44,54 @@ class DT_logisticsMenu : RscDisplayTeamSwitch
 		class LogisticsText: RscStructuredText
 		{
 			idc = 1100;
-
-			x = 0.273124 * safezoneW + safezoneX;
-			y = 0.511 * safezoneH + safezoneY;
-			w = 0.180469 * safezoneW;
-			h = 0.209 * safezoneH;
+			x = "1.2 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
+			y = "13 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+			w = "15 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
+			h = "7.8 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 		};
 		class LogisticsSecondaryText: RscStructuredText
 		{
 			idc = 1101;
-
-			x = 0.45875 * safezoneW + safezoneX;
-			y = 0.511 * safezoneH + safezoneY;
-			w = 0.273281 * safezoneW;
-			h = 0.209 * safezoneH;
+			x = "16.3 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
+			y = "13 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+			w = "22.5 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
+			h = "7.8 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 		};
-		class BuyTruckButton: CA_ButtonContinue
+		class BuyTruckButton: CA_ButtonViewUnit
 		{
 			idc = 2400;
-			onButtonClick = "[] call DT_fnc_buyNewTruck;";
+			onButtonClick = "[player] remoteExecCall ['DT_fnc_buyNewTruck',2];";
 			text = "Buy Truck"; //--- ToDo: Localize;
-			x = 0.577344 * safezoneW + safezoneX;
-			y = 0.731 * safezoneH + safezoneY;
-			w = 0.0773437 * safezoneW;
-			h = 0.022 * safezoneH;
-			tooltip = "A truck costs 100 resources to build"; //--- ToDo: Localize;
+			tooltip = "A truck costs 100 resources to build at your nearest FOB"; //--- ToDo: Localize;
 		};
 		class RscCombo_2100: RscCombo
 		{
 			idc = 2100; 
 			onLBSelChanged = "_this call DT_fnc_onLogisticsMenuComboChange";
-			x = 0.45875 * safezoneW + safezoneX;
-			y = 0.445 * safezoneH + safezoneY;
-			w = 0.128906 * safezoneW;
-			h = 0.022 * safezoneH;
+			x = "16.3 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
+			y = "10.6 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+			w = "11 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
+			h = "1 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			tooltip = "Pickup location"; //--- ToDo: Localize;
 		};
 		class RscCombo_2101: RscCombo
 		{
 			idc = 2101;
 			onLBSelChanged = "_this call DT_fnc_onLogisticsMenuComboChange";
-			x = 0.603125 * safezoneW + safezoneX;
-			y = 0.445 * safezoneH + safezoneY;
-			w = 0.128906 * safezoneW;
-			h = 0.022 * safezoneH;
+			x = "27.8 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
+			y = "10.6 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+			w = "11 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
+			h = "1 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			tooltip = "Drop-off location"; //--- ToDo: Localize;
 		};
 		class RscEdit_1400: RscEdit
 		{
 			idc = 1400;
 			text = "0";
-			x = 0.45875 * safezoneW + safezoneX;
-			y = 0.478 * safezoneH + safezoneY;
-			w = 0.0876563 * safezoneW;
-			h = 0.022 * safezoneH;
+			x = "16.3 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
+			y = "11.9 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+			w = "7.2 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
+			h = "1 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			colorText[] = {0,0.75,0,1};
 			tooltip = "Supplies"; //--- ToDo: Localize;
 			onKeyUp = "[] call DT_fnc_onLogisticsMenuComboChange";
@@ -106,10 +100,10 @@ class DT_logisticsMenu : RscDisplayTeamSwitch
 		{
 			idc = 1401;
 			text = "0";
-			x = 0.551562 * safezoneW + safezoneX;
-			y = 0.478 * safezoneH + safezoneY;
-			w = 0.0876563 * safezoneW;
-			h = 0.022 * safezoneH;
+			x = "23.8 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
+			y = "11.9 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+			w = "7.2 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
+			h = "1 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			colorText[] = {0.75,0.75,0,1};
 			tooltip = "Fuel"; //--- ToDo: Localize;
 			onKeyUp = "[] call DT_fnc_onLogisticsMenuComboChange";
@@ -118,10 +112,10 @@ class DT_logisticsMenu : RscDisplayTeamSwitch
 		{
 			idc = 1402;
 			text = "0";
-			x = 0.644375 * safezoneW + safezoneX;
-			y = 0.478 * safezoneH + safezoneY;
-			w = 0.0876563 * safezoneW;
-			h = 0.022 * safezoneH;
+			x = "31.3 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
+			y = "11.9 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+			w = "7.2 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
+			h = "1 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			colorText[] = {0.75,0,0,1};
 			tooltip = "Ammo"; //--- ToDo: Localize;
 			onKeyUp = "[] call DT_fnc_onLogisticsMenuComboChange";

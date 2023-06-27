@@ -6,7 +6,7 @@
 params [
 	["_logistics",[],[[]]],
 	["_action","",[""]],
-	["_data",[],[[]]],
+	["_data",[],[[],objNull]],
 	["_selIndex",0,[0]]
 ];
 
@@ -16,6 +16,7 @@ private _display = findDisplay 9645;
 if !(isNull _display) then {
 	private _routeList = _display displayCtrl 1500;
 	private _routeCurSel = lbCurSel _routeList;
+	private _fromComboBox = _display displayCtrl 2100;
 
 	if (_action isEqualTo "newTruck") then {
 		if (_routeCurSel isEqualTo -1) then {
@@ -23,7 +24,14 @@ if !(isNull _display) then {
 		} else {
 			_routeList lbSetCurSel _routeCurSel;
 		};
-		//reduce fob resource count in combo?
+
+		private _index = 0;
+		for "_i" from 0 to (lbSize _fromComboBox)-1 do {
+			if ((objectFromNetId(_fromComboBox lbData _i)) isEqualTo _data) exitWith {_index = _i};
+		};
+		private _resources = [_data] call DT_fnc_getCurrentResources;
+		_fromComboBox lbSetTextRight [_index,str _resources];
+		(_display displayCtrl 2101) lbSetTextRight [_index,str _resources];
 	} else {
 		if (_action isEqualTo "startRoute") then {
 			_data params ["_from","_to","","","","_carrying"];
@@ -32,11 +40,9 @@ if !(isNull _display) then {
 			_routeList lbSetTextRight [_index,str _carrying];
 			_routeList lbSetCurSel _index;
 
-			private _fromCombobox = _display displayCtrl 2100;
-			private _toCombobox = _display displayCtrl 2101;
-			_fromCombobox lbSetTextRight [_selIndex,str _resources];
-			_toCombobox lbSetTextRight [_selIndex,str _resources];
-			[] call DT_fnc_onlogisticsMenuComboChange;
+			private _resources = [_from getVariable "DT_factoryResources",[_from] call DT_fnc_getCurrentResources] select (isNil {_from getVariable "DT_factoryResources"});
+			_fromComboBox lbSetTextRight [_selIndex,str _resources];
+			[] call DT_fnc_onLogisticsMenuComboChange;
 		} else {
 			if (_action isEqualTo "endRoute") then {
 				lbClear _routeList;
