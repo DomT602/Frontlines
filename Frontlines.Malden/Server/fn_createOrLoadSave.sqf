@@ -202,6 +202,7 @@ if (_save isEqualTo []) then {
 	DT_civilianDeaths = _stats select 4;
 };
 
+deleteMarker "manualFobMarker";
 [] call DT_fnc_saveGame;
 
 [

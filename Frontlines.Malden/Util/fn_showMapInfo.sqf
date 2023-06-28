@@ -67,7 +67,7 @@ if (_type isEqualTo "marker") then {
 	private _fobIndex = DT_allFOBs findIf {_x getVariable ["DT_fobVariable",""] isEqualTo _value};
 	if (_fobIndex isNotEqualTo -1) exitWith {
 		private _fob = DT_allFOBs select _fobIndex;
-		([getMarkerPos _value] call DT_fnc_getCurrentResources) params ["_supplies","_fuel","_ammo"];
+		([_fob] call DT_fnc_getCurrentResources) params ["_supplies","_fuel","_ammo"];
 		private _text = format ["<t color='004D99'font='PuristaBold' align='center' size='1.4'>%1</t><br/>",_fob getVariable "DT_fobName"];
 
 		_text = _text + format ["<br/><t font='PuristaBold' align='left'>Supplies:</t><t color='#008000' font='PuristaLight' align='right'>%1</t>",_supplies];

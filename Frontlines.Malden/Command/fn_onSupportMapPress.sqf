@@ -14,10 +14,10 @@ if (_button isEqualTo 0) then {
 	private _position = _control ctrlMapScreenToWorld [_x,_y];
 	private _markerPos = markerPos "supportTarget";
 	if (_markerPos isEqualTo [0,0,0]) then {
-		_mortarMarker = createMarkerLocal ["supportTarget",_position];
-		_mortarMarker setMarkerTypeLocal "mil_objective";
-		_mortarMarker setMarkerColorLocal "ColorRed";
-		_mortarMarker setMarkerTextLocal "Target";
+		private _marker = createMarkerLocal ["supportTarget",_position];
+		_marker setMarkerTypeLocal "mil_objective";
+		_marker setMarkerColorLocal "ColorRed";
+		_marker setMarkerTextLocal "Target";
 	} else {
 		"supportTarget" setMarkerPosLocal _position;
 	};

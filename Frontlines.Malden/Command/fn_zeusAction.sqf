@@ -58,6 +58,7 @@ switch _action do {
 	};
 
 	case "wipeSave": {
+		closeDialog 0;
 		private _action = [
 			"Are you sure you want to wipe the server progress (this should only need to be done before switching maps)",
 			"Wiping Save",
