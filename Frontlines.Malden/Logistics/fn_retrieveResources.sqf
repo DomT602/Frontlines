@@ -7,17 +7,16 @@ private _display = findDisplay 9648;
 private _desiredSupplies = ctrlText (_display displayCtrl 1400);
 private _desiredFuel = ctrlText (_display displayCtrl 1401);
 private _desiredAmmo = ctrlText (_display displayCtrl 1402);
-if (!([_desiredSupplies] call DT_fnc_checkNumber) || {!([_desiredFuel] call DT_fnc_checkNumber) || {!([_desiredAmmo] call DT_fnc_checkNumber)}}) exitWith {};
-private _desiredArray = [];
-_desiredArray pushBack (parseNumber _desiredSupplies);
-_desiredArray pushBack (parseNumber _desiredFuel);
-_desiredArray pushBack (parseNumber _desiredAmmo);
+if (!([_desiredSupplies,-0.1] call DT_fnc_checkNumber) || {!([_desiredFuel,-0.1] call DT_fnc_checkNumber) || {!([_desiredAmmo,-0.1] call DT_fnc_checkNumber)}}) exitWith {};
 
-private _isAtFOB = [player] call DT_fnc_isNearFOB;
 private _safePosition = (getPosATL player) findEmptyPosition [0,75,"Land_HelipadEmpty_F"];
 if (_safePosition isEqualTo []) exitWith {["No suitable position to spawn crates, move somewhere else."] call DT_fnc_notify};
 
-private _storedResources = [];
+private _desiredCrateCounts = [floor (parseNumber _desiredSupplies),floor (parseNumber _desiredFuel),floor (parseNumber _desiredAmmo)];
+private _desiredResourceCounts = _desiredCrateCounts apply {_x * 100};
+private _isAtFOB = [player] call DT_fnc_isNearFOB;
+
+private "_storedResources";
 private "_nearestFactory";
 if (_isAtFOB) then {
 	_storedResources = [player] call DT_fnc_getCurrentResources;
@@ -25,14 +24,13 @@ if (_isAtFOB) then {
 	_nearestFactory = [player,["factory"]] call DT_fnc_getNearestSector;
 	_storedResources = _nearestFactory getVariable "DT_factoryResources";
 };
-_storedResources = _storedResources apply {_x / 100};
 
 private _enoughResources = true;
 {
 	if (_x > (_storedResources select _forEachIndex)) exitWith {
 		_enoughResources = false;
 	};
-} forEach _desiredArray;
+} forEach _desiredResourceCounts;
 if !(_enoughResources) exitWith {["Not enough resources are stored here."] call DT_fnc_notify};
 closeDialog 0;
 
@@ -47,11 +45,10 @@ private _offset = 2.5;
 	};
 
 	_offset = 2.5;
-} forEach _desiredArray;
+} forEach _desiredCrateCounts;
 
-_desiredArray = _desiredArray apply {_x * 100};
 if (_isAtFOB) then {
-	[player,_desiredArray,false] call DT_fnc_adjustResources;
+	[player,_desiredResourceCounts,false] call DT_fnc_adjustResources;
 } else {
-	_nearestFactory setVariable ["DT_factoryResources",_storedResources vectorDiff _desiredArray,true];
+	_nearestFactory setVariable ["DT_factoryResources",_storedResources vectorDiff _desiredResourceCounts,true];
 };

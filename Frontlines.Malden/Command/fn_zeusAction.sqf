@@ -19,7 +19,7 @@ private _fob = objectFromNetId (_fobListbox lbData (lbCurSel _fobListbox));
 switch _action do {
 	case "adjustIntel": {
 		if !([_text] call DT_fnc_checkNumber) exitWith {};
-		private _number = parseNumber _text;
+		private _number = floor (parseNumber _text);
 
 		[_number] remoteExecCall ["DT_fnc_updateIntel",2];
 		["Intel updated."] call DT_fnc_notify;
@@ -28,7 +28,7 @@ switch _action do {
 	case "adjustCivRep": {
 		if !([_text] call DT_fnc_checkNumber) exitWith {};
 		if (_sector getVariable "DT_sectorType" in ["military","tower"]) exitWith {["You need to select a civilian sector."] call DT_fnc_notify};
-		private _number = parseNumber _text;
+		private _number = floor (parseNumber _text);
 
 		[_sector,_number] remoteExecCall ["DT_fnc_updateCivRep",2];
 		[format["Civilian reputation in %1 updated.",_sector getVariable "DT_sectorName"]] call DT_fnc_notify;
@@ -36,7 +36,7 @@ switch _action do {
 
 	case "adjustThreat": {
 		if !([_text] call DT_fnc_checkNumber) exitWith {};
-		private _number = parseNumber _text;
+		private _number = floor (parseNumber _text);
 
 		[_number] remoteExecCall ["DT_fnc_updateThreat",2];
 		["Threat level updated."] call DT_fnc_notify;
@@ -44,7 +44,7 @@ switch _action do {
 
 	case "adjustResources": {
 		if !([_text] call DT_fnc_checkNumber) exitWith {};
-		private _number = parseNumber _text;
+		private _number = floor (parseNumber _text);
 		
 		private _resources = [0,0,0];
 		_resources set [(_this select 1),_number];

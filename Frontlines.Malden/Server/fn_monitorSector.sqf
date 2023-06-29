@@ -73,6 +73,9 @@ if (([_sectorObj,_radius] call DT_fnc_getCaptureRatio) > getNumber(missionConfig
 			_sectorObj setVariable ["DT_sectorStrength",_sectorStrength,true];
 
 			[_sectorObj,_squads,_objectsToDelete] call DT_fnc_clearArea;
+
+			DT_activeSectors deleteAt (DT_activeSectors find _sectorObj);
+			publicVariable "DT_activeSectors";
 		} else {
 			_args set [4,_timeoutCount];
 		};

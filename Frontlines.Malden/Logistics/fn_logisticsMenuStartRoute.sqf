@@ -14,10 +14,10 @@ private _to = objectFromNetId (_toCombobox lbData (lbCurSel _toCombobox));
 private _suppliesToMove = ctrlText (_display displayCtrl 1400);
 private _fuelToMove = ctrlText (_display displayCtrl 1401);
 private _ammoToMove = ctrlText (_display displayCtrl 1402);
-if (!([_suppliesToMove] call DT_fnc_checkNumber) || {!([_fuelToMove] call DT_fnc_checkNumber) || {!([_ammoToMove] call DT_fnc_checkNumber)}}) exitWith {_button ctrlEnable false};
-_suppliesToMove = parseNumber _suppliesToMove;
-_fuelToMove = parseNumber _fuelToMove;
-_ammoToMove = parseNumber _ammoToMove;
+if (!([_suppliesToMove,-0.1] call DT_fnc_checkNumber) || {!([_fuelToMove,-0.1] call DT_fnc_checkNumber) || {!([_ammoToMove,-0.1] call DT_fnc_checkNumber)}}) exitWith {_button ctrlEnable false};
+_suppliesToMove = floor (parseNumber _suppliesToMove);
+_fuelToMove = floor (parseNumber _fuelToMove);
+_ammoToMove = floor (parseNumber _ammoToMove);
 private _totalToMove = _suppliesToMove + _fuelToMove + _ammoToMove;
 if (_totalToMove isEqualTo 0) exitWith {["Nothing to move."] call DT_fnc_notify};
 

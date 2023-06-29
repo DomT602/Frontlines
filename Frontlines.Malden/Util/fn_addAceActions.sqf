@@ -415,7 +415,7 @@ private _intelMenu = [
 ] call ace_interact_menu_fnc_createAction;
 [player,1,["ACE_SelfActions","baseCategory"],_intelMenu] call ace_interact_menu_fnc_addActionToObject;
 
-private _intelMenu = [
+private _cancelMission = [
 	"cancelMission",
 	"Cancel Mission",
 	"\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\danger_ca.paa",
@@ -428,4 +428,4 @@ private _intelMenu = [
 		{missionNamespace getVariable ["DT_secondaryActive",""] isNotEqualTo ""}}
 	}
 ] call ace_interact_menu_fnc_createAction;
-[player,1,["ACE_SelfActions","baseCategory","intelMenu"],_intelMenu] call ace_interact_menu_fnc_addActionToObject;
+[player,1,["ACE_SelfActions","baseCategory","intelMenu"],_cancelMission] call ace_interact_menu_fnc_addActionToObject;

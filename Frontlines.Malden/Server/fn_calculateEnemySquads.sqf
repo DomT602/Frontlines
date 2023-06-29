@@ -9,7 +9,7 @@ params [
 ];
 
 private _squadCounts = (round(DT_threatLevel / 25) max 1) * _initialModifier;
-private _playerModifier = (0.1 / (count playableUnits)) max 0.5;
+private _playerModifier = ((0.1 * (count playableUnits)) max 0.5) min 2.5;
 private _difficultyModifier = getNumber (missionConfigFile >> "Settings" >> "difficultyModifier");
 
 private _infantryCount = ceil (_squadCounts * _difficultyModifier * _playerModifier);
