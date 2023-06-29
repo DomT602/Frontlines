@@ -87,7 +87,7 @@ DT_buildRotation = 0;
 			private _control = _hud displayCtrl 1000;
 			if (ctrlShown _control) then {
 				_control ctrlShow false;
-				(_hud displayCtrl 1000) ctrlShow false;
+				(_hud displayCtrl 1900) ctrlShow false;
 				(_hud displayCtrl 1901) ctrlShow false;
 			};
 		};
