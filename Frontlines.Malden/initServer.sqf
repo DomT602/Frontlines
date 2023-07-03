@@ -118,6 +118,6 @@ for "_i" from 1 to (count _supportActions) do {
 };
 missionNamespace setVariable ["DT_supportCooldowns",_cooldowns,true];
 
-[DT_fnc_saveGame,[],getNumber(missionConfigFile >> "Settings" >> "autoSaveTimer")] call CBA_fnc_waitAndExecute;
+[DT_fnc_saveGame,getNumber(missionConfigFile >> "Settings" >> "autoSaveTimer")] call CBA_fnc_addPerFrameHandler;
 
 missionNamespace setVariable ["DT_serverReady",true,true];

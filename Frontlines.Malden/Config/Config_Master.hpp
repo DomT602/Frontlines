@@ -10,7 +10,7 @@ class Settings {
 	defaultFOBNames[] = {"FOB Alpha","FOB Bravo","FOB Charlie","FOB Delta","FOB Echo","FOB Foxtrot","FOB Golf","FOB Hotel","FOB India","FOB Juliet"};
 	fobBuildRadius = 100; //max distance from the main FOB building that the objects can be built (and therefore saved)
 	startingResources[] = {250,250,250}; //starting resources in format {supplies,fuel,ammo}
-	fobGlobalResourcePool = 0; //0 - each FOB has indiviual resources, 1 is a shared/global pool. Do not change this mid-playthrough otherwise there will be unintended behaviour
+	fobGlobalResourcePool = 0; //0 - each FOB has individual resources, 1 is a shared/global pool. Do not change this mid-playthrough otherwise there will be unintended behaviour
 	maxRecycleGain = 100; //max amount of each resource that can be obtained from a vehicle recycle, reduced depending on how much damage/fuel used/ammo used
 
 	sectorActivationRange = 500; //max 2D distance for sector to be activated
@@ -50,9 +50,9 @@ class Settings {
 
 	vehicleSeatRestrictions = 1; //restrict certain vehicles to certain roles; pilots for air, engineers/crewman for armour
 
-	maxAmbientCivLand = 1; //max ambient civs driving around, 0 disables this feature
+	maxAmbientCivLand = 5; //max ambient civs driving around, 0 disables this feature
 	maxAmbientCivAir = 1; //max ambient civs flying around (only if map supports airports), 0 disables this feature
-	maxAmbientOpfor = 1; //max ambient enemy vehicles driving around, actual number is reduced as enemy lose strength, 0 disables this feature
+	maxAmbientOpfor = 5; //max ambient enemy vehicles driving around, actual number is reduced as enemy lose strength, 0 disables this feature
 
 	sideMissionTimer = 2700; //minimum time in seconds between new side missions (enemy actions, civilian requests)
 

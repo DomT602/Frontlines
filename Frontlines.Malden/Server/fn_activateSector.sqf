@@ -61,7 +61,7 @@ private _extras = [0,0,0,0];
 if (_isFortified) then {_extras set [0,1]; _extras set [1,1]};
 if (_isMilitary) then {_extras set [3,1]};
 
-private _squads = [_sectorObj,_spawnRadius,([1,_extras] call DT_fnc_calculateEnemySquads)] call DT_fnc_createPatrols;
+private _squads = [_sectorObj,_spawnRadius,([_sectorStrength,_extras] call DT_fnc_calculateEnemySquads)] call DT_fnc_createPatrols;
 _squads pushBack ([_sectorObj,100] call DT_fnc_createMortar);
 for "_i" from 1 to ceil (DT_threatLevel / 33) do {
 	_squads pushBack ([_sectorObj] call DT_fnc_createStatic);
