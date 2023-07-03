@@ -3,6 +3,7 @@
 	Author: Dom
 	Description: Handles factory production
 */
+if (getNumber(missionConfigFile >> "Settings" >> "factoryOfflineProduction") isEqualTo 0 && {playableUnits isEqualTo []}) exitWith {};
 params ["_factories"];
 
 private _factoryProductionAmount = getNumber(missionConfigFile >> "Settings" >> "factoryProductionAmount");

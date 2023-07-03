@@ -33,6 +33,7 @@ class Settings {
 	factoryProductionInterval = 3600; //time in seconds for a factory to produce resources
 	factoryProductionAmount = 100; //amount of resources produced per cycle
 	factoryProductionCap = 1000; //max amount of combined resources that a factory can produce up to
+	factoryOfflineProduction = 1; //whether factories produce with no players online, 0 for paused production, 1 for continued production
 	logisticsTruckCapacity = 200; //single truck capacity in the logistics menu
 
 	intelObjects[] = {"Land_laptop_03_closed_sand_F","Land_laptop_03_closed_black_F","Land_laptop_03_closed_olive_F","Land_File_research_F","Land_Document_01_F","Land_Tablet_02_black_F","Land_MobilePhone_smart_F"}; //classnames of intel items 
