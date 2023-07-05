@@ -29,6 +29,7 @@ class Settings {
 
 	opforDeathsThreatIncreaseCount = 20; //every x amount of opfor deaths cause the threat to increase by 1%
 	opforVehicleLockState = 0; //default lock state for enemy vehicles, 0 is unlocked, 1 is locked for players
+	opforMortarFrequency = 30; //minimum time between mortar shots
 
 	factoryProductionInterval = 3600; //time in seconds for a factory to produce resources
 	factoryProductionAmount = 100; //amount of resources produced per cycle

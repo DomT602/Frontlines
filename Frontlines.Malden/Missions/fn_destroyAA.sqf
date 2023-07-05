@@ -10,7 +10,7 @@ private _spawnPos = [selectRandom _frontlineSectors,0,750,25,0,0.25,0] call BIS_
 [format["The enemy has setup an AA site at %1.",mapGridPosition _spawnPos],"generalNotif","Destroy AA"] remoteExecCall ["DT_fnc_notify",0];
 
 private _templateObjects = selectRandom (getArray(missionConfigFile >> "Compositions" >> "opforAASites"));
-private _AATypes = getArray (missionConfigFile >> "Opfor_Setup" >> "opforAAVehicles");
+private _AATypes = getArray(missionConfigFile >> "Opfor_Setup" >> "opforAAVehicles");
 private _objects = [];
 private _objectives = [];
 private _squads = [];

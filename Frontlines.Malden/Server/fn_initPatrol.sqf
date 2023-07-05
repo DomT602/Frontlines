@@ -19,7 +19,7 @@ params [
 				[_x,_position,_radius,[],false,true,-2,false] remoteExecCall ["lambs_wp_fnc_taskGarrison",_leader];
 			};
 		} else {
-			[_x,_position,_radius] remoteExecCall ["lambs_wp_fnc_taskPatrol",_leader];
+			[_x,_position,_radius,4,[],false,true] remoteExecCall ["lambs_wp_fnc_taskPatrol",_leader];
 		};
 	} else {
 		if !(isNull objectParent _leader) then {_radius = _radius + 150};
