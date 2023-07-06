@@ -13,7 +13,7 @@ if (_type isEqualTo "marker") then {
 		private _sectorType = _sector getVariable "DT_sectorType";
 		private _sectorOwned = _sector getVariable ["DT_sectorOwned",false];
 
-		private _ownedColour = if (_sectorOwned) then {"#004D99"} else {"#800000"}; //blufor v opfor
+		private _ownedColour = if (_sectorOwned) then {"#004D99"} else {"#800000"};
 		private _text = format ["<t color='%1'font='PuristaBold' align='center' size='1.4'>%2</t><br/>",_ownedColour,_sector getVariable "DT_sectorName"];
 
 		if !(_sectorOwned) then {
@@ -49,8 +49,8 @@ if (_type isEqualTo "marker") then {
 				(switch (_sector getVariable ["DT_factoryType",-1]) do {
 					case -1: {["None","#FFFFFF"]};
 					case 0: {["Supplies","#008000"]};
-					case 0: {["Fuel","#D9D900"]};
-					case 0: {["Ammunition","#E60000"]};
+					case 1: {["Fuel","#D9D900"]};
+					case 2: {["Ammunition","#E60000"]};
 				}) params ["_descriptor","_colour"];
 
 				_text = _text + format ["<br/><t font='PuristaBold' align='left'>Producing:</t><t color='%1' font='PuristaLight' align='right'>%2</t>",_colour,_descriptor];

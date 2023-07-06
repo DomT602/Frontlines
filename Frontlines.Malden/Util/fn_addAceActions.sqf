@@ -246,6 +246,12 @@ private _crateClasses = getArray(missionConfigFile >> "Logi_Setup" >> "bluforCra
 	[_x,0,["ACE_MainActions"],_storeCrate] call ace_interact_menu_fnc_addActionToClass;
 } forEach _crateClasses;
 
+private _vehicleClasses = getArray(missionConfigFile >> "Settings" >> "transportVehicles");
+{
+	_x params ["_class"];
+	[_class,0,["ACE_MainActions"],_unloadCrate,true] call ace_interact_menu_fnc_addActionToClass;
+} forEach _vehicleClasses;
+
 private _createNewFOB = [
 	"createNewFOB",
 	"Establish new FOB",
