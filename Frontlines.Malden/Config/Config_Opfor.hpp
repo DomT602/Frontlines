@@ -66,6 +66,7 @@ class Opfor_Setup {
 	opforSupplyTruck = "O_Truck_03_repair_F";
 	opforFuelTruck = "O_Truck_03_fuel_F";
 	opforAmmoTruck = "O_Truck_03_ammo_F";
+	opforArtilleryVehicle = "O_MBT_02_arty_F";
 
 	//if the vehicle does not belong to the faction naturally, enclose in {} and add ,true
 	opforLightVehicles[] = {

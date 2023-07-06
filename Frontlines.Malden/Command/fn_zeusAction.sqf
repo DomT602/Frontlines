@@ -128,6 +128,10 @@ switch _action do {
 		[] remoteExecCall ["DT_fnc_destroyAA",2];
 	};
 
+	case "destroyArtillery": {
+		[] remoteExecCall ["DT_fnc_destroyArtillery",2];
+	};
+
 	case "destroyJammer": {
 		[] remoteExecCall ["DT_fnc_destroyJammer",2];
 	};

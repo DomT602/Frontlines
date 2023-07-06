@@ -67,6 +67,26 @@ class Compositions {
 		}
 	};
 
+	opforArtillerySites[] = {
+		{
+			{"PortableHelipadLight_01_yellow_F",{-0.63,2.49,0.00},78.36},
+			{"PortableHelipadLight_01_yellow_F",{-2.95,-3.43,0.00},256.95},
+			{"Land_BarGate_F",{4.03,2.52,0.00},53.05},
+			{"Land_HBarrier_Big_F",{4.79,-5.27,0.00},312.89},
+			{"Land_HBarrier_Big_F",{-3.18,6.80,0.00},0.00},
+			{"Land_Razorwire_F",{1.04,8.89,0.00},359.87},
+			{"Land_HBarrier_Big_F",{-2.91,-8.49,0.00},1.94},
+			{"Land_HBarrier_Big_F",{-8.59,3.44,0.00},90.28},
+			{"Land_Razorwire_F",{6.86,-6.68,0.00},128.95},
+			{"Land_HBarrier_Big_F",{-8.45,-5.33,0.00},90.28},
+			{"Land_Razorwire_F",{-0.24,-10.82,0.00},180.65},
+			{"Land_Razorwire_F",{-10.89,3.17,0.00},271.54},
+			{"Land_Razorwire_F",{-7.21,8.81,0.00},357.58},
+			{"Land_Razorwire_F",{-11.02,-5.34,0.00},271.54},
+			{"Land_Razorwire_F",{-8.47,-10.84,0.00},180.65}
+		}
+	};
+
 	opforFOBs[] = {
 		{
 			{

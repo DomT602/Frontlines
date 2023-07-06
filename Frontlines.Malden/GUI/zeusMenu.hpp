@@ -119,8 +119,8 @@ class DT_zeusMenu : RscDisplayTeamSwitch
 		class RscButtonMenu_2408: RscButtonMenu
 		{
 			idc = 2408;
-			text = "Destroy Jammer"; //--- ToDo: Localize;
-			onButtonClick="[""destroyJammer""] call DT_fnc_zeusAction";
+			text = "Destroy Artillery"; //--- ToDo: Localize;
+			onButtonClick="[""destroyArtillery""] call DT_fnc_zeusAction";
 			x = "29.4 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
 			y = "3.6 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
 			w = "9.1 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
@@ -129,8 +129,8 @@ class DT_zeusMenu : RscDisplayTeamSwitch
 		class RscButtonMenu_2409: RscButtonMenu
 		{
 			idc = 2409;
-			text = "FOB Assault"; //--- ToDo: Localize;
-			onButtonClick="[""fobAssault""] call DT_fnc_zeusAction";
+			text = "Destroy Jammer"; //--- ToDo: Localize;
+			onButtonClick="[""destroyJammer""] call DT_fnc_zeusAction";
 			x = "29.4 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
 			y = "4.9 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
 			w = "9.1 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
@@ -139,8 +139,8 @@ class DT_zeusMenu : RscDisplayTeamSwitch
 		class RscButtonMenu_2410: RscButtonMenu
 		{
 			idc = 2410;
-			text = "Convoy Ambush"; //--- ToDo: Localize;
-			onButtonClick="[""convoyAmbush""] call DT_fnc_zeusAction";
+			text = "FOB Assault"; //--- ToDo: Localize;
+			onButtonClick="[""fobAssault""] call DT_fnc_zeusAction";
 			x = "29.4 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
 			y = "6.2 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
 			w = "9.1 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
@@ -149,8 +149,8 @@ class DT_zeusMenu : RscDisplayTeamSwitch
 		class RscButtonMenu_2411: RscButtonMenu
 		{
 			idc = 2411;
-			text = "Repair Request"; //--- ToDo: Localize;
-			onButtonClick="[""repairRequest""] call DT_fnc_zeusAction";
+			text = "Convoy Ambush"; //--- ToDo: Localize;
+			onButtonClick="[""convoyAmbush""] call DT_fnc_zeusAction";
 			x = "29.4 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
 			y = "7.5 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
 			w = "9.1 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
@@ -159,10 +159,20 @@ class DT_zeusMenu : RscDisplayTeamSwitch
 		class RscButtonMenu_2412: RscButtonMenu
 		{
 			idc = 2412;
+			text = "Repair Request"; //--- ToDo: Localize;
+			onButtonClick="[""repairRequest""] call DT_fnc_zeusAction";
+			x = "29.4 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
+			y = "8.8 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+			w = "9.1 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
+			h = "1 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+		};
+		class RscButtonMenu_2424: RscButtonMenu
+		{
+			idc = 2412;
 			text = "Counter-Attack"; //--- ToDo: Localize;
 			onButtonClick="[""sectorCounterAttack""] call DT_fnc_zeusAction";
 			x = "29.4 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
-			y = "8.8 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+			y = "10.1 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
 			w = "9.1 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
 			h = "1 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 		};

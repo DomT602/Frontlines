@@ -3,7 +3,6 @@
 	Author: Dom
 	Description: Secondary objective to clear UXO's from a blufor sector
 */
-[-3] call DT_fnc_updateIntel;
 missionNamespace setVariable ["DT_secondaryActive","clearUXOs",true];
 
 private _sectors = [["city","town","factory"],true] call DT_fnc_getSectorsByType;

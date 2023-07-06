@@ -83,6 +83,7 @@ class DT_Core {
 		class captureUAV {};
 		class clearUXOs {};
 		class destroyAA {};
+		class destroyArtillery {};
 		class destroyJammer {};
 		class fobAssault {};
 		class fobHunt {};

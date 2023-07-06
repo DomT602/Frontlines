@@ -9,7 +9,6 @@ if (_position isEqualTo []) exitWith {
 };
 _position params ["_xPos","_yPos"];
 
-[-15] call DT_fnc_updateIntel;
 missionNamespace setVariable ["DT_secondaryActive","supplyDepot",true];
 
 private _objects = [];
