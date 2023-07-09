@@ -42,7 +42,7 @@ private _saveRespawnLoadout = [
 	"Save respawn loadout",
 	"\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\download_ca.paa",
 	{
-		DT_respawnLoadout = [player] call CBA_fnc_getLoadout;
+		DT_savedLoadout = [player] call CBA_fnc_getLoadout;
 		["Loadout saved."] call DT_fnc_notify;
 	},
 	{true}
@@ -54,9 +54,9 @@ private _loadRespawnLoadout = [
 	"Load respawn loadout",
 	"\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\rearm_ca.paa",
 	{
-		[player,DT_respawnLoadout,true] call CBA_fnc_setLoadout;
+		[player,DT_savedLoadout,true] call CBA_fnc_setLoadout;
 	},
-	{!isNil "DT_respawnLoadout"}
+	{!isNil "DT_savedLoadout"}
 ] call ace_interact_menu_fnc_createAction;
 [player,1,["ACE_SelfActions","baseCategory","arsenalCategory"],_loadRespawnLoadout] call ace_interact_menu_fnc_addActionToObject;
 
