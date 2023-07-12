@@ -27,11 +27,10 @@ if (_isCivilian) then {
 	private _crateTypes = getArray(missionConfigFile >> "Logi_Setup" >> "bluforCrates");
 
 	for "_i" from 1 to round (random _maxCrates) do {
-		private _className = selectRandom _crateTypes;
 		private _spawnPos = [_sectorObj,10,_spawnRadius,5,0,0.3,0] call BIS_fnc_findSafePos;
 		if (_spawnPos isEqualTo []) exitWith {};
 
-		private _crate = createVehicle [_className,_spawnPos];
+		private _crate = createVehicle [selectRandom _crateTypes,_spawnPos];
 		_cratesAndIntel pushBack _crate;
 	};
 
@@ -42,16 +41,16 @@ private _buildings = [_sectorObj,_spawnRadius] call DT_fnc_getBuildings;
 if (_buildings isNotEqualTo []) then {
 	private _intelCount = getNumber(missionConfigFile >> "Settings" >> "maxSectorIntel");
 	private _intelTypes = getArray(missionConfigFile >> "Settings" >> "intelObjects");
-	_intelCount = (round (random _intelCount)) min (count _spawnOptions);
-	
+
 	private _spawnOptions = [];
 	{
 		_spawnOptions append (_x buildingPos -1);
 	} forEach _sectorBuildings;
 	[_spawnOptions,true] call CBA_fnc_shuffle;
 
+	_intelCount = (round (random _intelCount)) min (count _spawnOptions);
 	for "_i" from 0 to (_intelCount - 1) do {
-		private _intel = createVehicle [selectRandom _className,_spawnOptions select _i];
+		private _intel = createVehicle [selectRandom _intelTypes,_spawnOptions select _i];
 		_intel setDir (random 360);
 		_cratesAndIntel pushBack _intel;
 	};
@@ -62,11 +61,7 @@ if (_isFortified) then {_extras set [0,1]; _extras set [1,1]};
 if (_isMilitary) then {_extras set [3,1]};
 
 private _squads = [_sectorObj,_spawnRadius,([_sectorStrength,_extras] call DT_fnc_calculateEnemySquads)] call DT_fnc_createPatrols;
-_squads pushBack ([_sectorObj,100] call DT_fnc_createMortar);
-for "_i" from 1 to ceil (DT_threatLevel / 33) do {
-	_squads pushBack ([_sectorObj] call DT_fnc_createStatic);
-};
-[_sectorObj,_spawnRadius,round (DT_threatLevel / 10)] call DT_fnc_createMines;
+[_sectorObj,_spawnRadius,true] call DT_fnc_createDefences;
 
 private _unitCount = 0;
 {

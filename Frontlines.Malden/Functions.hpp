@@ -111,6 +111,7 @@ class DT_Core {
 		class civilianKilled {};
 		class civilianWalking {};
 		class clearArea {};
+		class createDefences {};
 		class createMarker {};
 		class createMines {};
 		class createMortar {};

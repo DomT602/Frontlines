@@ -44,11 +44,7 @@ if (DT_isLambsEnabled) then {
 				_spread = (_spread - 1) max 1;
 			} else {
 				_spread = (_spread * 2) min 10;
-				if ([] call DT_fnc_isNight) then {
-					_ammoType = 1;
-				} else {
-					_ammoType = 2;
-				};
+				_ammoType = if ([] call DT_fnc_isNight) then {1} else {2};
 			}; 
 			_args set [2,_currentPos];
 			_args set [3,_spread];

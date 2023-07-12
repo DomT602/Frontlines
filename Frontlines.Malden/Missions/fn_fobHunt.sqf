@@ -44,8 +44,7 @@ private _objectives = [];
 } forEach _compositionObjectives;
 
 private _squads = [_position,50,([1.25] call DT_fnc_calculateEnemySquads)] call DT_fnc_createPatrols;
-_squads pushBack ([_position,50] call DT_fnc_createStatic);
-[_position,500] call DT_fnc_createMines;
+[_position,50,true] call DT_fnc_createDefences;
 
 private _marker = ["fobHunt",_position,true,"ColorOPFOR","ELLIPSE",1000,"FOB Hunt","FDiagonal"] call DT_fnc_createMarker;
 ["The area the FOB is in has been marked.","generalNotif","FOB Hunting"] remoteExecCall ["DT_fnc_notify",0];
