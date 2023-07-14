@@ -19,6 +19,7 @@ if (_action in ["mortar","supplyDrop"] && {_pos isEqualTo [0,0,0]}) exitWith {["
 
 if (_action isEqualTo "mortar") then {
 	private _mortarType = _tree tvText _selectionPath;
+	_pos set [2,150];
 
 	private _count = 1;
 	if ("3" in _mortarType) then {
@@ -30,27 +31,27 @@ if (_action isEqualTo "mortar") then {
 	};
 	_cooldown = _cooldown * _count;
 
-	private _roundClass = "M_Mo_82mm_AT_LG";
+	private _roundClass = "Sh_82mm_AMOS";
+	private _speed = 75;
 	if ("Smoke" in _mortarType) then {
 		_roundClass = "SmokeShellArty";
 	} else {
 		if ("Illumination" in _mortarType) then {
 			_roundClass = selectRandom ["F_40mm_White","F_40mm_Yellow","F_40mm_Green","F_40mm_Red"];
-			_pos set [2,50];
+			_speed = 5;
 		};
 	};
 
 	for "_i" from 1 to _count do {
 		[
 			{
-				params ["_pos","_type"];
+				params ["_pos","_type","_speed"];
 				private _vehicle = createVehicle [_type,_pos,[],8];
-				if ("F_40mm" in _type) then {
-					_vehicle setVelocity [wind select 0,wind select 1,30];
-				};
+				_vehicle setVectorUp [0,0,-1];
+				_vehicle setVelocity [0,0,(_speed * -1)];
 			},
-			[_pos,_roundClass],
-			25 + (random 5) + (3 * _i)
+			[_pos,_roundClass,_speed],
+			5 + (random 5) + (3 * _i)
 		] remoteExecCall ["CBA_fnc_waitAndExecute",2];
 	};
 	["Rounds are being fired as ordered, approximately 30 seconds out."] call DT_fnc_notify;

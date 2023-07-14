@@ -14,7 +14,7 @@ if (random 100 > 50) then {
 	_groups pushBack ([_position,_spawnRadius] call DT_fnc_createMortar);
 };
 
-for "_i" from 1 to ceil (DT_threatLevel / 33) do {
+for "_i" from 1 to round (DT_threatLevel / 25) do {
 	_groups pushBack ([_position,_spawnRadius] call DT_fnc_createStatic);
 };
 

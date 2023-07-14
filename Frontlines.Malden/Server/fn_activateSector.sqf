@@ -61,7 +61,7 @@ if (_isFortified) then {_extras set [0,1]; _extras set [1,1]};
 if (_isMilitary) then {_extras set [3,1]};
 
 private _squads = [_sectorObj,_spawnRadius,([_sectorStrength,_extras] call DT_fnc_calculateEnemySquads)] call DT_fnc_createPatrols;
-[_sectorObj,_spawnRadius,true] call DT_fnc_createDefences;
+_squads append ([_sectorObj,_spawnRadius,true] call DT_fnc_createDefences);
 
 private _unitCount = 0;
 {
