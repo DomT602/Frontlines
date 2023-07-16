@@ -79,3 +79,4 @@ _save pushBack (missionNamespace getVariable ["DT_intelCount",0]);
 _save pushBack [DT_playtime,DT_bluforDeaths,DT_opforDeaths,DT_guerillaDeaths,DT_civilianDeaths];
 
 profileNamespace setVariable ["DT_serverSave",_save];
+saveProfileNamespace;

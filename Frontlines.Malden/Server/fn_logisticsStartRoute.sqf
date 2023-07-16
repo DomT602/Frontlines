@@ -6,8 +6,9 @@
 params ["_from","_to","_truckCount","_startTransitTime","_endTransitTime","_carrying","_fuelRequired","_fromIndex"];
 
 DT_logistics params ["_availableTrucks","_trucksInUse","_currentRoutes"];
-private _resources = [_from getVariable "DT_factoryResources",[_from] call DT_fnc_getCurrentResources] select (isNil {_from getVariable "DT_factoryResources"});
-if (_truckCount > _availableTrucks || {_fuelRequired > (_resources select 1)}) exitWith {["Something went wrong."] remoteExecCall ["DT_fnc_notify",remoteExecutedOwner]};
+private _nearFOBRes = [_from] call DT_fnc_getCurrentResources;
+private _fuelAvailable = _nearFOBRes select 1;
+if (_truckCount > _availableTrucks || {_fuelRequired > _fuelAvailable}) exitWith {["Something went wrong."] remoteExecCall ["DT_fnc_notify",remoteExecutedOwner]};
 
 if (isNil {_from getVariable "DT_factoryResources"}) then {
 	[_from,_carrying,false] call DT_fnc_adjustResources;

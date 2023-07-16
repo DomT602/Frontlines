@@ -47,7 +47,7 @@ class DT_logisticsMenu : RscDisplayTeamSwitch
 			x = "1.2 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
 			y = "13 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
 			w = "15 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
-			h = "7.8 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+			h = "9.7 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 		};
 		class LogisticsSecondaryText: RscStructuredText
 		{
@@ -55,7 +55,7 @@ class DT_logisticsMenu : RscDisplayTeamSwitch
 			x = "16.3 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
 			y = "13 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
 			w = "22.5 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
-			h = "7.8 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+			h = "9.7 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 		};
 		class BuyTruckButton: CA_ButtonViewUnit
 		{

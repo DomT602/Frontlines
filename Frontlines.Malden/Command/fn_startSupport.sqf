@@ -46,12 +46,12 @@ if (_action isEqualTo "mortar") then {
 		[
 			{
 				params ["_pos","_type","_speed"];
-				private _vehicle = createVehicle [_type,_pos,[],8];
+				private _vehicle = createVehicle [_type,_pos,[],10];
 				_vehicle setVectorUp [0,0,-1];
 				_vehicle setVelocity [0,0,(_speed * -1)];
 			},
 			[_pos,_roundClass,_speed],
-			5 + (random 5) + (3 * _i)
+			20 + (random 5) + (3 * _i)
 		] remoteExecCall ["CBA_fnc_waitAndExecute",2];
 	};
 	["Rounds are being fired as ordered, approximately 30 seconds out."] call DT_fnc_notify;

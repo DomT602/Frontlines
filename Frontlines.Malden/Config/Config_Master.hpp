@@ -41,7 +41,7 @@ class Settings {
 	maxIntelFromItem = 5; //max intel gained from picking up the intel objects above
 	maxIntelFromPOW = 7; //max intel gained from picking up the intel objects above
 
-	mobileRespawnEnemyBlockRadius = 50; //how big of a radius in m to check for nearby enemies to decide whether a mobile respawn can be used, 0 disables this feature
+	mobileRespawnEnemyBlockRadius = 50; //how big of a radius in metres to check for nearby enemies to decide whether a mobile respawn can be used, 0 disables this feature
 	mobileRespawnTimer = 60; //time in seconds before a mobile respawn can be used since its last used, 0 disables this feature
 
 	healedCivRepGain = 2; //percentage civ rep gain per heal action on a civilian
@@ -50,11 +50,11 @@ class Settings {
 	seizedCivVehicleRepLoss = -3; //percentage loss per civ vehicle seized or destroyed
 	damagedBuildingRepLoss = -4; //percentage loss per building damaged (doubled if building is destroyed (as a ruin))
 
-	vehicleSeatRestrictions = 1; //restrict certain vehicles to certain roles; pilots for air, engineers/crewman for armour
+	vehicleSeatRestrictions = 1; //restrict certain vehicles to certain roles; pilots for air, engineers/crewman for armour, recommended 1
 
-	maxAmbientCivLand = 5; //max ambient civs driving around, 0 disables this feature
-	maxAmbientCivAir = 1; //max ambient civs flying around (only if map supports airports), 0 disables this feature
-	maxAmbientOpfor = 5; //max ambient enemy vehicles driving around, actual number is reduced as enemy lose strength, 0 disables this feature
+	maxAmbientCivLand = 5; //max ambient civs driving around, 0 disables this feature, recommended 0-15
+	maxAmbientCivAir = 1; //max ambient civs flying around (only if map supports airports), 0 disables this feature, recommended 0-3
+	maxAmbientOpfor = 5; //max ambient enemy vehicles driving around, actual number is reduced as enemy lose strength, 0 disables this feature, recommended 0-10
 
 	sideMissionTimer = 2700; //minimum time in seconds between new side missions (enemy actions, civilian requests)
 

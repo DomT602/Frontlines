@@ -13,7 +13,7 @@ private _text = format ["
 ",DT_threatLevel,DT_globalReputation,DT_intelCount,floor (([] call DT_fnc_getMissionProgress) * 100),"%"];
 
 if (DT_activeSectors isNotEqualTo []) then {
-	_text = format ["%1<br/><t font='PuristaBold' align='center' size='1.4'>Active Sectors:</t><br/><br/>",_text];
+	_text = format ["%1<br/><t font='PuristaBold' align='center' size='1.4'>Active Sectors</t><br/><br/>",_text];
 	{
 		_text = format ["<t font='PuristaLight' align='left'>%1%2<br/>",_text,_x getVariable "DT_sectorName"];
 	} forEach DT_activeSectors;
