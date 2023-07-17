@@ -19,12 +19,9 @@ if (DT_isTFAREnabled) then {
 			private _coreSignal = _this call acre_sys_signal_fnc_getSignalCore;
 			_coreSignal params ["_Px","_maxSignal"];
 			_Px = _Px * 0.1;
-			if (player inArea myTrigger) then {
-				_Px = 0;
-			};
 
 			[_Px,_maxSignal]
-		}] call acre_api_fnc_setCustomSignalFunc;
+		}] remoteExecCall ["acre_api_fnc_setCustomSignalFunc",0];
 	};
 };
 
@@ -47,7 +44,7 @@ private _marker = ["destroyJammer",_spawnPos,true,"ColorOPFOR","ELLIPSE",250,"De
 			missionNamespace setVariable ["TFAR_globalRadioRangeCoef",1,true];
 		} else {
 			if (DT_isACREEnabled) then {
-				[{}] call acre_api_fnc_setCustomSignalFunc;
+				[{}] remoteExecCall ["acre_api_fnc_setCustomSignalFunc",0];
 			};
 		};
 		["The jammer has been destroyed.","successNotif","Destroy Jammer"] remoteExecCall ["DT_fnc_notify",0];

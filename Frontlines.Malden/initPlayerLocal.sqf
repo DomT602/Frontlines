@@ -17,33 +17,34 @@ if (DT_isTFAREnabled) then {
 	["radioSetup","OnRadiosReceived",DT_fnc_initSwRadios] call TFAR_fnc_addEventHandler;
 	["radioSwChange","OnSWchannelSet",{DT_lastSwChannel = _this select 2}] call TFAR_fnc_addEventHandler;
 	["radioLrChange","OnLRchannelSet",{DT_lastLrChannel = _this select 3}] call TFAR_fnc_addEventHandler;
-};
-if (DT_isACREEnabled) then {
-	DT_swRadioFrequencies params ["_frequencies","_groupArrays"];
-	{
-		private _freq = parseNumber _x;
-		private _index = (_forEachIndex + 1);
-		(_groupArrays select _forEachIndex) params ["_groupName"];
-
+} else {
+	if (DT_isACREEnabled) then {
+		DT_swRadioFrequencies params ["_frequencies","_groupArrays"];
 		{
-			[_x,"default",_index,"label",_groupName] call acre_api_fnc_setPresetChannelField;
-			[_x,"default",_index,"frequencyRX",_freq] call acre_api_fnc_setPresetChannelField;
-			[_x,"default",_index,"frequencyTX",_freq] call acre_api_fnc_setPresetChannelField;
-		} forEach ["ACRE_PRC343","ACRE_PRC148","ACRE_PRC152"];
-	} forEach _frequencies;
+			private _freq = parseNumber _x;
+			private _index = (_forEachIndex + 1);
+			(_groupArrays select _forEachIndex) params ["_groupName"];
 
-	DT_lrRadioFrequencies params ["_frequencies","_groupArrays"];
-	{
-		private _freq = parseNumber _x;
-		private _index = (_forEachIndex + 1);
-		(_groupArrays select _forEachIndex) params ["_groupName"];
+			{
+				[_x,"default",_index,"label",_groupName] call acre_api_fnc_setPresetChannelField;
+				[_x,"default",_index,"frequencyRX",_freq] call acre_api_fnc_setPresetChannelField;
+				[_x,"default",_index,"frequencyTX",_freq] call acre_api_fnc_setPresetChannelField;
+			} forEach ["ACRE_PRC343","ACRE_PRC148","ACRE_PRC152"];
+		} forEach _frequencies;
 
+		DT_lrRadioFrequencies params ["_frequencies","_groupArrays"];
 		{
-			[_x,"default",_index,"label",_groupName] call acre_api_fnc_setPresetChannelField;
-			[_x,"default",_index,"frequencyRX",_freq] call acre_api_fnc_setPresetChannelField;
-			[_x,"default",_index,"frequencyTX",_freq] call acre_api_fnc_setPresetChannelField;
-		} forEach ["ACRE_PRC117F","ACRE_PRC77"];
-	} forEach _frequencies;
+			private _freq = parseNumber _x;
+			private _index = (_forEachIndex + 1);
+			(_groupArrays select _forEachIndex) params ["_groupName"];
+
+			{
+				[_x,"default",_index,"label",_groupName] call acre_api_fnc_setPresetChannelField;
+				[_x,"default",_index,"frequencyRX",_freq] call acre_api_fnc_setPresetChannelField;
+				[_x,"default",_index,"frequencyTX",_freq] call acre_api_fnc_setPresetChannelField;
+			} forEach ["ACRE_PRC117F","ACRE_PRC77"];
+		} forEach _frequencies;
+	};
 };
 
 ["ace_arsenal_displayClosed",{
