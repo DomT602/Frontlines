@@ -22,7 +22,7 @@ params [
 			[_x,_position,_radius,4,[],false,true] remoteExecCall ["lambs_wp_fnc_taskPatrol",_leader];
 		};
 	} else {
-		if !(isNull objectParent _leader) then {_radius = _radius + 150};
+		if !(isNull objectParent _leader) then {_radius = _radius + 100};
 		private _waypoints = [];
 		for "_i" from 0 to 5 do {
 			_waypoints pushBack ([_position,_radius] call CBA_fnc_randPos);

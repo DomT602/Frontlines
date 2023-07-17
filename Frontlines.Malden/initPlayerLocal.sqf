@@ -105,6 +105,7 @@ if (DT_showIntro) then {
 		<t align='center' size='6' shadow='0'><br/>Frontlines</t><br/>
 		Welcome to Frontlines, a sector control gamemode made for Arma 3.<br/>
 		This is a Beta version of the original Frontlines, with a full rewrite from the ground up and work still ongoing to improve the mode.<br/><br/>
+		<a color='#00DFFF'></a> Wiki & Tutorials: <a href='https://github.com/DomT602/Frontlines/wiki' color='#56BDD6'> https://github.com/DomT602/Frontlines/wiki</a><br/>
 		<a color='#00DFFF'></a> Github: <a href='https://github.com/DomT602/Frontlines' color='#56BDD6'> https://github.com/DomT602/Frontlines</a><br/>
 		<a color='#00DFFF'></a> Discord: <a href='https://discord.gg/FewM2Wfc9y' color='#56BDD6'> https://discord.gg/82tAKdsT79</a>
 	";

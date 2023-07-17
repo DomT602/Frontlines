@@ -11,7 +11,7 @@ publicVariable "DT_activeSectors";
 
 private _sectorVar = _sectorObj getVariable "DT_sectorVariable";
 private _sectorType = _sectorObj getVariable "DT_sectorType";
-private _sectorStrength = _sectorObj getVariable ["DT_sectorStrength",1];
+private _sectorStrength = (_sectorObj getVariable ["DT_sectorStrength",1]) max 0.25;
 private _sectorRep = _sectorObj getVariable ["DT_sectorReputation",100];
 
 private _isCivilian = _sectorType in ["town","city","factory"];

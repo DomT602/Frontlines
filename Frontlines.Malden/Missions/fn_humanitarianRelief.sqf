@@ -13,7 +13,13 @@ switch _stage do {
 		missionNamespace setVariable ["DT_secondaryActive","humanitarianRelief",true];
 		DT_reliefTrucks = [];
 
-		private _targetSector = selectRandom ([true] call DT_fnc_getFrontlineSectors);
+		private _sectors = [true] call DT_fnc_getFrontlineSectors;
+		private _civReps = [];
+		{
+			_civReps pushBack (_x getVariable ["DT_sectorReputation",0]);
+		} forEach _sectors;
+		private _index = (_civReps call CBA_fnc_findMin) select 1;
+		private _targetSector = _sectors select _index;
 		private _marker = ["humanitarianRelief",_targetSector,false,"ColorYellow","mil_objective",1.5,"Humanitarian Relief Requested"] call DT_fnc_createMarker;
 		["The relief sector is marked, head there now.","generalNotif","Humanitarian Relief"] remoteExecCall ["DT_fnc_notify",0];
 	};

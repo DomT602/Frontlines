@@ -31,7 +31,7 @@ if ((_selectionPath select 0) isEqualTo 1) exitWith {
 
 	private _nextUseTime = missionNamespace getVariable ["DT_nextMobileRespawnAvailable",0];
 	if (_nextUseTime > CBA_missionTime) exitWith {
-		[format ["You need to wait %1 seconds before using a mobile respawn again.",(_nextUseTime - CBA_missionTime)]] call DT_fnc_notify;
+		[format ["You need to wait %1 seconds before using a mobile respawn again.",ceil (_nextUseTime - CBA_missionTime)]] call DT_fnc_notify;
 	};
 
 	private _radius = getNumber(missionConfigFile >> "Settings" >> "mobileRespawnEnemyBlockRadius");
