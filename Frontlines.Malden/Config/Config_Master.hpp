@@ -50,7 +50,8 @@ class Settings {
 	seizedCivVehicleRepLoss = -3; //percentage loss per civ vehicle seized or destroyed
 	damagedBuildingRepLoss = -4; //percentage loss per building damaged (doubled if building is destroyed (as a ruin))
 
-	vehicleSeatRestrictions = 1; //restrict certain vehicles to certain roles; pilots for air, engineers/crewman for armour, recommended 1
+	vehicleSeatRestrictions = 1; //restrict certain vehicles to certain roles; pilots for air, engineers/crewman for armour, recommended 1 (enabled)
+	bluforMapMarkers = 2; //map marker choice, 0 shows mobile respawns on the map only, 1 shows blufor group leaders, 2 shows blufor group leaders and blufor UAVs
 
 	maxAmbientCivLand = 5; //max ambient civs driving around, 0 disables this feature, recommended 0-15
 	maxAmbientCivAir = 1; //max ambient civs flying around (only if map supports airports), 0 disables this feature, recommended 0-3

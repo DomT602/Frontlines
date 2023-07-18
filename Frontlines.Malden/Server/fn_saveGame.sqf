@@ -64,7 +64,7 @@ private _saveRange = 1.1 * (getNumber(missionConfigFile >> "Settings" >> "fobBui
 					_fobObjects pushBack [_className,_position,_direction,_up,_damage,_items];
 				};
 			};
-		} forEach (vehicles - _nearObjects);
+		} forEach vehicles;
 	};
 	_fobInfo pushBack [_fobName,_fobPos,_fobRes,_fobObjects];
 } forEach DT_allFOBs;

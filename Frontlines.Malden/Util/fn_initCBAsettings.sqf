@@ -110,10 +110,12 @@ DT_buildRotation = 0;
 	[30,50,40,1]
 ] call CBA_fnc_addSetting;
 
-[
-	"DT_autoRadioOption",
-	"LIST",
-	["Automatic Radio Channel Selection","Choose what radio channel selection should happen once you recieve your radio (TFAR only)."],
-	["Frontlines","Radio"],
-	[[0,1,2],["Disabled","Group default","Last selected channel"],1]
-] call CBA_fnc_addSetting;
+if (DT_isTFAREnabled) then {
+	[
+		"DT_autoRadioOption",
+		"LIST",
+		["Automatic Radio Channel Selection","Choose what radio channel selection should happen once you recieve your radio."],
+		["Frontlines","Radio"],
+		[[0,1,2],["Disabled","Group default","Last selected channel"],1]
+	] call CBA_fnc_addSetting;
+};
