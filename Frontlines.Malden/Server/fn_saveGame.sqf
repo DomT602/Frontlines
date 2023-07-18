@@ -22,6 +22,8 @@ private _sectorInfo = [];
 _save pushBack _sectorInfo;
 
 private _fobInfo = [];
+private _checkedObjects = [];
+private _lastIndex = (count DT_allFOBs) - 1;
 private _saveRange = 1.1 * (getNumber(missionConfigFile >> "Settings" >> "fobBuildRadius"));
 {
 	private _fobName = _x getVariable ["DT_fobName",""];
@@ -41,22 +43,26 @@ private _saveRange = 1.1 * (getNumber(missionConfigFile >> "Settings" >> "fobBui
 			if (_damage isNotEqualTo []) then {_damage = _damage select 2};
 			private _items = [getItemCargo _x,getWeaponCargo _x,getMagazineCargo _x,getBackpackCargo _x];
 
+			_checkedObjects pushBack _x;
 			_fobObjects pushBack [_className,_pos,_dir,_up,_damage,_items];
 		};
 	} forEach _nearObjects;
 
-	if (_forEachIndex isEqualTo 0) then {
+	if (_forEachIndex isEqualTo _lastIndex) then {
 		{
 			private _className = typeOf _x;
 			private _position = getPosWorld _x;
-			if (_x isKindOf "AllVehicles" && {alive _x && {speed _x < 3 && (_className in DT_bluforClassesToSave || {_x getVariable ["DT_playerUsed",false] || {[_position] call DT_fnc_isNearFOB}})}}) then {
-				private _direction = vectorDirVisual _x;
-				private _up = vectorUpVisual _x;
-				private _damage = getAllHitPointsDamage _x;
-				if (_damage isNotEqualTo []) then {_damage = _damage select 2};
-				private _items = [getItemCargo _x,getWeaponCargo _x,getMagazineCargo _x,getBackpackCargo _x];
+			if (_x isKindOf "AllVehicles" && {alive _x && {speed _x < 3 && {!(_x in _checkedObjects)}}}) then {
+				_checkedObjects pushBack _x;
+				if (_className in DT_bluforClassesToSave || {_x getVariable ["DT_playerUsed",false] || {[_position] call DT_fnc_isNearFOB}}) then {
+					private _direction = vectorDirVisual _x;
+					private _up = vectorUpVisual _x;
+					private _damage = getAllHitPointsDamage _x;
+					if (_damage isNotEqualTo []) then {_damage = _damage select 2};
+					private _items = [getItemCargo _x,getWeaponCargo _x,getMagazineCargo _x,getBackpackCargo _x];
 
-				_fobObjects pushBack [_className,_position,_direction,_up,_damage,_items];
+					_fobObjects pushBack [_className,_position,_direction,_up,_damage,_items];
+				};
 			};
 		} forEach (vehicles - _nearObjects);
 	};

@@ -20,9 +20,11 @@ if (_action) then {
 	deleteVehicle _object;
 
 	private _nearFOB = [_pos] call DT_fnc_getNearestFob;
+	private _fobVariable = _nearFOB getVariable "DT_fobVariable";
 	DT_allFOBs = DT_allFOBs - [_nearFOB];
 	publicVariable "DT_allFOBs";
 	deleteVehicle _nearFOB;
+	deleteMarker _fobVariable;
 
 	private _fobBoxClass = selectRandom (getArray(missionConfigFile >> "Logi_Setup" >> "fobBoxes"));
 	private _fobBox = createVehicle [_fobBoxClass,_pos,[],0,"NONE"];

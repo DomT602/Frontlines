@@ -259,7 +259,7 @@ private _createNewFOB = [
 	{[_target] spawn DT_fnc_createNewFOB},
 	{
 		(rankId player > 2 || DT_isZeus) &&
-		{!([player] call DT_fnc_isNearFOB)}
+		{!([player,(getNumber(missionConfigFile >> "Settings" >> "fobBuildRadius")) * 2] call DT_fnc_isNearFOB)}
 	}
 ] call ace_interact_menu_fnc_createAction;
 {
