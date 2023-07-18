@@ -74,6 +74,12 @@ if (_isMilitary || {DT_threatLevel > 50 && {DT_threatLevel > (random 100)}}) the
 	[DT_fnc_callReinforcements,[_sectorObj],_timer + random (_timer / 2)] call CBA_fnc_waitAndExecute;
 };
 
+if (DT_globalReputation < 0) then {
+	if (abs DT_globalReputation > random(100)) then {
+		[_sectorObj] call DT_fnc_spawnGuerillas;
+	};
+};
+
 [
 	DT_fnc_monitorSector,
 	1,

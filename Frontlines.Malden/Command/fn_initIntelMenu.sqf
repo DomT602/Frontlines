@@ -19,10 +19,9 @@ Bring the trucks back to the FOB to secure the resources.<br/><br/>
 	["Secure Downed UAV",10,"","[] remoteExecCall [""DT_fnc_captureUAV"",2]","We have recieved some intel that an enemy UAV has crashed inside the red zone on your map.<br/>
 Capturing this UAV would provide us with intel on the enemies movements and plans.<br/>
 The enemy are looking to secure it, and will be done within approximately 20 minutes, go there and secure it before they can!<br/><br/>
-<t color='#00FF00'>Reward: +30 Intel<br/></t>
-<t color='#ffa000'>Failure: None</t>"],
+<t color='#00FF00'>Reward: +30 Intel<br/></t>"],
 	["Setup Listening Post",0,"([['town','city','factory','military']] call DT_fnc_getSectorsByType) isNotEqualTo []","[""init""] remoteExecCall [""DT_fnc_listeningPost"",2]","We are able to setup a Listening Post nearby to our frontlines to gain more intel.<br/>
-Setting this Post up would provide us a continuous stream of intel for 30 minutes.<br/>
+Setting this post up would provide us a continuous stream of intel for 30 minutes.<br/>
 The post can be found in the Logistics section of the Build Menu.<br/>
 Once active, it is likely to be attacked by the enemy, ensure it is protected.<br/><br/>
 <t color='#00FF00'>Reward: +2 Intel per minute active<br/></t>
