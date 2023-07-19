@@ -10,6 +10,7 @@ class Settings {
 	defaultFOBNames[] = {"FOB Alpha","FOB Bravo","FOB Charlie","FOB Delta","FOB Echo","FOB Foxtrot","FOB Golf","FOB Hotel","FOB India","FOB Juliet"};
 	fobBuildRadius = 100; //max distance from the main FOB building that the objects can be built (and therefore saved)
 	startingResources[] = {250,250,250}; //starting resources in format {supplies,fuel,ammo}
+	newFobResources[] = {250,250,0}; //how many resources a new FOB starts with
 	fobGlobalResourcePool = 0; //0 - each FOB has individual resources, 1 is a shared/global pool. Do not change this mid-playthrough otherwise there will be unintended behaviour
 	maxRecycleGain = 100; //max amount of each resource that can be obtained from a vehicle recycle, reduced depending on how much damage/fuel used/ammo used
 

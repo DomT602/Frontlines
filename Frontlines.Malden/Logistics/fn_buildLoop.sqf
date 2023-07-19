@@ -47,7 +47,8 @@ if (DT_buildAction > 0 || {!alive player || {!isNull objectParent player}}) then
 					private _fobVariable = format ["FOB_%1",count DT_allFOBs];
 
 					_fobNamespace setVariable ["DT_fobVariable",_fobVariable,true];
-					_fobNamespace setVariable ["DT_fobResources",[0,0,0],true];
+					private _startingFobResources = getNumber(missionConfigFile >> "Settings" >> "newFobResources");
+					_fobNamespace setVariable ["DT_fobResources",_startingFobResources,true];
 					DT_allFOBs pushBack _fobNamespace;
 					publicVariable "DT_allFOBs";
 

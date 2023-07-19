@@ -314,6 +314,25 @@ private _destroyWheelTrack = [
 	[_x,0,["ACE_MainActions"],_destroyWheelTrack] call ace_interact_menu_fnc_addActionToClass;
 } forEach ["ACE_Wheel","ACE_Track"];
 
+private _destroyObjectNearFOB = [
+	"destroyObject",
+	"Destroy",
+	"\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\destroy_ca.paa",
+	{
+		_target setDamage 1;
+	},
+	{
+		[player] call DT_fnc_isNearFOB
+	}
+] call ace_interact_menu_fnc_createAction;
+["ReammoBox_F",0,["ACE_MainActions"],_destroyObjectNearFOB,true] call ace_interact_menu_fnc_addActionToClass;
+
+["B_Slingload_01_Repair_F",0,["ACE_MainActions"],_retrieveWheel] call ace_interact_menu_fnc_addActionToClass;
+["B_Slingload_01_Repair_F",0,["ACE_MainActions"],_retrieveTrack] call ace_interact_menu_fnc_addActionToClass;
+{
+	[_x,0,["ACE_MainActions"],_destroyWheelTrack] call ace_interact_menu_fnc_addActionToClass;
+} forEach ["ACE_Wheel","ACE_Track"];
+
 private _fullHealAll = [
 	"aceFullHealAll",
 	"Full heal nearby players (including self)",

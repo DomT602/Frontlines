@@ -6,7 +6,7 @@
 params [
 	["_target",objNull,[objNull,[]]],
 	["_position",[],[[],objNull]],
-	["_modifier",1.5,[0]]
+	["_modifier",1,[0]]
 ];
 
 if (_position isEqualTo []) then {
@@ -42,6 +42,6 @@ for "_i" from 1 to _heavyCount do {
 	_waypoint setWaypointBehaviour "AWARE";
 } forEach _groups;
 
-_groups pushBack ([_target,_lightCount] call DT_fnc_spawnAttackHelicopters);
+_groups pushBack ([_target,_mediumCount] call DT_fnc_spawnAttackHelicopters);
 
 _groups;

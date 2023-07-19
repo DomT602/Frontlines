@@ -42,4 +42,4 @@ if (_possibleMissions isEqualTo [] || {playableUnits isEqualTo []}) exitWith {[D
 (selectRandom _possibleMissions) params ["_type","","_code"];
 [] call _code;
 
-[DT_fnc_startSideMission,_type,_timer + (random (_timer / 2))] call CBA_fnc_waitAndExecute;
+[DT_fnc_startSideMission,_type,_timer + (random _timer)] call CBA_fnc_waitAndExecute;

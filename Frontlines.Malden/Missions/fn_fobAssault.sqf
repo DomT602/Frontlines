@@ -16,4 +16,4 @@ private _fobName = _targetFOB getVariable "DT_fobName";
 private _nearestSector = [_targetFOB,["tower","military","city"],true] call DT_fnc_getNearestSector;
 
 [format["Intel suggests the enemy are planning to attack %1 in 10 minutes.",_fobName],"generalNotif","FOB Assault"] remoteExecCall ["DT_fnc_notify",0];
-[DT_fnc_spawnAssault,[_targetFOB,_nearestSector,2],600] call CBA_fnc_waitAndExecute;
+[DT_fnc_spawnAssault,[_targetFOB,_nearestSector,1.5],600] call CBA_fnc_waitAndExecute;
