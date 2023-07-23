@@ -35,11 +35,11 @@ private _groups = [_targetSector,_sendingSector] call DT_fnc_spawnAssault;
 
 				[
 					{
-						params ["_targetPos"];
-						[_targetPos,1000] call DT_fnc_areaIsClear;
+						params ["_targetSector"];
+						[_targetSector,1000] call DT_fnc_areaIsClear;
 					},
 					DT_fnc_clearArea,
-					[_targetPos,_groups]
+					[_targetSector,_groups]
 				] call CBA_fnc_waitUntilAndExecute;
 			},
 			_this,
@@ -63,11 +63,11 @@ private _groups = [_targetSector,_sendingSector] call DT_fnc_spawnAssault;
 
 				[
 					{
-						params ["_targetPos"];
-						[_targetPos,1000] call DT_fnc_areaIsClear;
+						params ["_targetSector"];
+						[_targetSector,1000] call DT_fnc_areaIsClear;
 					},
 					DT_fnc_clearArea,
-					[_targetPos,_groups]
+					[_targetSector,_groups]
 				] call CBA_fnc_waitUntilAndExecute;
 			}
 		] call CBA_fnc_waitUntilAndExecute;

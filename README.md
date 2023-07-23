@@ -47,7 +47,7 @@ Begin an invasion to take over a region, securing all its objectives and buildin
 - Simple config design to aid users in setting up and customising the gamemode.
 
 ## Mission Setup
-The gamemode requires a small amount of setup and is best ran on a dedicated server. More details on the specific setup can be found in this <a href="https://github.com/DomT602/Frontlines/blob/main/Mission_Setup_Guide.md">guide</a>.
+The gamemode requires a small amount of setup and is best ran on a dedicated server. More details on the specific setup can be found in this <a href="https://github.com/DomT602/Frontlines/wiki/Mission-Setup">guide</a>.
 
 ## Factions
-Each faction provided in the SQM and Factions folder has differing mod requirements, so please check what they use and edit as necessary..
+Each faction provided in the SQM and Factions folder has differing mod requirements, so please check what they use and edit as necessary.
