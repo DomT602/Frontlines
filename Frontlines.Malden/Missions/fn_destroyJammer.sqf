@@ -30,6 +30,7 @@ _squads pushBack ([_spawnPos,50] call DT_fnc_createStatic);
 [_spawnPos,500] call DT_fnc_createMines;
 
 private _marker = ["destroyJammer",_spawnPos,true,"ColorOPFOR","ELLIPSE",250,"Destroy Jammer","Grid"] call DT_fnc_createMarker;
+missionNamespace setVariable ["DT_opforJammerActive",true,true];
 
 [
 	{
@@ -48,6 +49,7 @@ private _marker = ["destroyJammer",_spawnPos,true,"ColorOPFOR","ELLIPSE",250,"De
 			};
 		};
 		["The jammer has been destroyed.","successNotif","Destroy Jammer"] remoteExecCall ["DT_fnc_notify",0];
+		missionNamespace setVariable ["DT_opforJammerActive",nil,true];
 		
 		[
 			{

@@ -40,6 +40,7 @@ _squads append ([_spawnPos,50,([0.75] call DT_fnc_calculateEnemySquads)] call DT
 _squads pushBack ([_spawnPos,50] call DT_fnc_createStatic);
 
 private _marker = ["destroyAA",_spawnPos,true,"ColorOPFOR","ELLIPSE",250,"Destroy AA","Grid"] call DT_fnc_createMarker;
+missionNamespace setVariable ["DT_opforAAActive",true,true];
 
 [
 	{
@@ -51,6 +52,7 @@ private _marker = ["destroyAA",_spawnPos,true,"ColorOPFOR","ELLIPSE",250,"Destro
 		
 		deleteMarker _marker;
 		["The AA site has been destroyed.","successNotif","Destroy AA"] remoteExecCall ["DT_fnc_notify",0];
+		missionNamespace setVariable ["DT_opforAAActive",nil,true];
 
 		[
 			{

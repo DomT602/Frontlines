@@ -44,6 +44,7 @@ _squads append ([_spawnPos,50,([0.75] call DT_fnc_calculateEnemySquads)] call DT
 //may need scripted arty?
 
 private _marker = ["destroyArtillery",_spawnPos,true,"ColorOPFOR","ELLIPSE",250,"Destroy Artillery","Grid"] call DT_fnc_createMarker;
+missionNamespace setVariable ["DT_opforArtilleryActive",true,true];
 
 [
 	{
@@ -55,6 +56,7 @@ private _marker = ["destroyArtillery",_spawnPos,true,"ColorOPFOR","ELLIPSE",250,
 		
 		deleteMarker _marker;
 		["The artillery site has been destroyed.","successNotif","Destroy Artillery"] remoteExecCall ["DT_fnc_notify",0];
+		missionNamespace setVariable ["DT_opforArtilleryActive",nil,true];
 
 		[
 			{

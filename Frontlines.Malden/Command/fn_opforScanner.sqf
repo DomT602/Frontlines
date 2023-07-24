@@ -14,11 +14,9 @@ private _markers = [];
 
 [
 	{
-		params ["_markers"];
-		
 		{
 			deleteMarker _x;
-		} forEach _markers;
+		} forEach _this;
 	},
 	_markers,
 	300

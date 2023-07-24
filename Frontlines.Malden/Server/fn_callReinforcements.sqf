@@ -41,7 +41,7 @@ if (_isSector) then {
 	[
 		{
 			params ["_target"];
-			!(_sector in DT_activeSectors) &&
+			!(_target in DT_activeSectors) &&
 			{[_target] call DT_fnc_areaIsClear}
 		},
 		DT_fnc_clearArea,

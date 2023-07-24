@@ -28,7 +28,7 @@ if (_type isEqualTo "marker") then {
 		};
 
 		if (_sectorType isEqualTo "tower") then {
-			(if (_sector getVariable ["DT_towerDestroyed",false]) then {[["Destroyed","#E60000"]]} else {["Operating","#008000"]}) params ["_descriptor","_colour"]; //green
+			(if (_sector getVariable ["DT_towerDestroyed",false]) then {["Destroyed","#E60000"]} else {["Operating","#008000"]}) params ["_descriptor","_colour"]; //green
 
 			_text = _text + format ["<br/><t font='PuristaBold' align='left'>Status:</t><t color='%1' font='PuristaLight' align='right'>%2</t>",_colour,_descriptor];
 		};

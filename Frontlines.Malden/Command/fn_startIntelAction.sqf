@@ -17,7 +17,7 @@ if !([_conditions] call DT_fnc_conditionChecker) exitWith {["Conditions not met.
 closeDialog 0;
 
 if (_intelRequired isNotEqualTo 0) then {
-	[(_intelRequired * -1)] remoteExecCall ["DT_updateIntel",2];
+	[(_intelRequired * -1)] remoteExecCall ["DT_fnc_updateIntel",2];
 };
 
 call compile _code;

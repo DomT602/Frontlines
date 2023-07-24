@@ -9,9 +9,9 @@ params [
 
 private _timer = getNumber(missionConfigFile >> "Settings" >> "sideMissionTimer");
 private _sideMissions = [
-	["destroyAA","DT_threatLevel > 33",DT_fnc_destroyAA],
-	["destroyArtillery","DT_threatLevel > 33",DT_fnc_destroyArtillery],
-	["destroyJammer","DT_threatLevel > 33",DT_fnc_destroyJammer],
+	["destroyAA","DT_threatLevel > 33 && {(!missionNamespace getVariable ['DT_opforAAActive',false])}",DT_fnc_destroyAA],
+	["destroyArtillery","DT_threatLevel > 33 && {(!missionNamespace getVariable ['DT_opforArtilleryActive',false])}",DT_fnc_destroyArtillery],
+	["destroyJammer","DT_threatLevel > 33 && {(!missionNamespace getVariable ['DT_opforJammerActive',false])}",DT_fnc_destroyJammer],
 	["convoyAmbush","DT_threatLevel > 50 && {(DT_logistics select 2) isNotEqualTo []}",DT_fnc_ambushLogisticsConvoy],
 	["counterAttack","DT_threatLevel > 33 && {[] call DT_fnc_getMissionProgress > 0.1}",DT_fnc_sectorCounterAttack],
 	["fobAssault","DT_threatLevel > 80 && {count playableUnits > 3}",DT_fnc_fobAssault],
