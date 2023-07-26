@@ -326,7 +326,8 @@ private _destroyObjectNearFOB = [
 	}
 ] call ace_interact_menu_fnc_createAction;
 {
-	[_x,0,["ACE_MainActions"],_destroyObjectNearFOB] call ace_interact_menu_fnc_addActionToClass;
+	_x params ["","_class"];
+	[_class,0,["ACE_MainActions"],_destroyObjectNearFOB] call ace_interact_menu_fnc_addActionToClass;
 } forEach (getArray(missionConfigFile >> "Logi_Setup" >> "supplyCrateTypes"));
 
 private _fullHealAll = [
