@@ -8,11 +8,21 @@ params [
 ];
 
 private _className = typeOf _object;
-private _resourcesToReturn = [0,0,0];
+private _bluforBuildables = [];
+{
+	_x params ["","_options"];
+	{
+		if (_x select 0 isEqualType []) then {
+			_x set [0,(_x select 0) select 0];
+		};
+		_bluforBuildables pushBackUnique _x;
+	} forEach _options;
+} forEach (getArray(missionConfigFile >> "Logi_Setup" >> "bluforBuyables"));
+
+private _index = _bluforBuildables findIf {_x select 0 == _className};
+private _resourcesToReturn = if (_index isEqualTo -1) then {getArray(missionConfigFile >> "Settings" >> "maxRecycleGain")} else {(_bluforBuildables select _index) select 1};
 
 if (_object isKindOf "LandVehicle" || {_object isKindOf "Ship" || {_object isKindOf "Air"}}) then {
-	private _multiplier = getNumber(missionConfigFile >> "Settings" >> "maxRecycleGain");
-
 	private _damageArray = (getAllHitPointsDamage _object) select 2;
 	private _maxDamage = count _damageArray;
 	private _currentDamage = 0;
@@ -20,10 +30,10 @@ if (_object isKindOf "LandVehicle" || {_object isKindOf "Ship" || {_object isKin
 		_currentDamage = _currentDamage + _x;
 	} forEach _damageArray;
 	_currentDamage = abs (_currentDamage / _maxDamage);
-	_resourcesToReturn set [0,_multiplier * (1 - _currentDamage)];
+	_resourcesToReturn set [0,(_resourcesToReturn select 0) * (1 - _currentDamage)];
 
 	private _fuel = fuel _object;
-	_resourcesToReturn set [1,(_fuel * _multiplier)];
+	_resourcesToReturn set [1,(_fuel * (_resourcesToReturn select 1))];
 
 	private _ammo = 0;
 	private _magazineArray = magazinesAmmo [_object,false];
@@ -36,22 +46,9 @@ if (_object isKindOf "LandVehicle" || {_object isKindOf "Ship" || {_object isKin
 		} forEach _magazineArray;
 		_ammo = _ammo / _maxAmmo;
 	};
-	_resourcesToReturn set [2,_ammo * _multiplier];
+	_resourcesToReturn set [2,_ammo * (_resourcesToReturn select 2)];
 } else {
-	private _bluforBuildables = [];
-	{
-		_x params ["","_options"];
-		{
-			if (_x select 0 isEqualType []) then {
-				_x set [0,(_x select 0) select 0];
-			};
-			_bluforBuildables pushBackUnique _x;
-		} forEach _options;
-	} forEach (getArray(missionConfigFile >> "Logi_Setup" >> "bluforBuyables"));
-
-	private _index = _bluforBuildables findIf {_x select 0 == _className};
-	(_bluforBuildables select _index) params ["","_resources"];
-	_resourcesToReturn = _resources vectorMultiply 0.5;
+	_resourcesToReturn = _resourcesToReturn vectorMultiply 0.5;
 };
 
 _resourcesToReturn = _resourcesToReturn apply {floor _x};
