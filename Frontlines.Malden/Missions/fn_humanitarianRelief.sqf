@@ -70,25 +70,19 @@ switch _stage do {
 					} forEach _scouts;
 				};
 
-				private _toDelete = [];
 				{
 					if !(alive _x) then {
 						["A truck was destroyed.","failedNotif","Humanitarian Relief"] remoteExecCall ["DT_fnc_notify",0];
-						_toDelete pushBack _forEachIndex;
+						DT_reliefTrucks deleteAt _forEachIndex;
 					} else {
 						if (_x distance (markerPos "humanitarianRelief") < 100 && {crew _x isEqualTo []}) then {
 							deleteVehicle _x;
 							["A truck was delivered successfully.","successNotif","Humanitarian Relief"] remoteExecCall ["DT_fnc_notify",0];
 							[_sector,20] call DT_fnc_updateCivRep;
-							_toDelete pushBack _forEachIndex;
+							DT_reliefTrucks deleteAt _forEachIndex;
 						};
 					};
-				} forEach DT_reliefTrucks;
-
-				reverse _toDelete;
-				{
-					DT_reliefTrucks deleteAt _x;
-				} forEach _toDelete;
+				} forEachReversed DT_reliefTrucks;
 
 				{
 					private _group = _x;

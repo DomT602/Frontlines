@@ -32,24 +32,26 @@ if (_startMonitor) then {
 				[_this select 1] call CBA_fnc_removePerFrameHandler;
 			};
 
-			private _toDelete = [];
 			{
 				_x params ["_unit","_group","_vehicle","_lastPos"];
 				if !(alive _unit) then {
-					_toDelete pushBack _forEachIndex;
+					DT_ambientCivAir deleteAt _forEachIndex;
+					[1] call DT_fnc_spawnAmbientCivAir;
 					if (!isNull _vehicle && {!(_vehicle getVariable ["DT_playerUsed",false])}) then {
 						deleteVehicle _vehicle;
 					};
 				} else {
 					if !(alive _vehicle) then {
 						deleteVehicle _unit;
-						_toDelete pushBack _forEachIndex;
+						DT_ambientCivAir deleteAt _forEachIndex;
+						[1] call DT_fnc_spawnAmbientCivAir;
 					} else {
 						if (playableUnits isEqualTo []) exitWith {};
 						private _currentPos = getPosATL _unit;
 						if (_lastPos distance _currentPos < 1 && {[_unit,1500] call DT_fnc_areaIsClear}) then {
 							[_group] call DT_fnc_deleteGroup;
-							_toDelete pushBack _forEachIndex;
+							DT_ambientCivAir deleteAt _forEachIndex;
+							[1] call DT_fnc_spawnAmbientCivAir;
 						} else {
 							if (speed (vehicle _unit) < 5 && {count (waypoints _group) < 1}) then {
 								private _waypoint = _group addWaypoint [(selectRandom DT_airportLocations) select 0,0];
@@ -66,16 +68,7 @@ if (_startMonitor) then {
 						};
 					};
 				};
-			} forEach DT_ambientCivAir;
-
-			reverse _toDelete;
-			{
-				DT_ambientCivAir deleteAt _x;
-			} forEach _toDelete;
-
-			if (_toDelete isNotEqualTo []) then {
-				[count _toDelete] call DT_fnc_spawnAmbientCivAir;
-			};
+			} forEachReversed DT_ambientCivAir;
 		},
 		15
 	] call CBA_fnc_addPerFrameHandler;

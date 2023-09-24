@@ -94,7 +94,7 @@ class DT_logisticsMenu : RscDisplayTeamSwitch
 			h = "1 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			colorText[] = {0,0.75,0,1};
 			tooltip = "Supplies"; //--- ToDo: Localize;
-			onKeyUp = "[] call DT_fnc_onLogisticsMenuComboChange";
+			onEditChanged = "[] call DT_fnc_onLogisticsMenuComboChange";
 		};
 		class RscEdit_1401: RscEdit
 		{
@@ -106,7 +106,7 @@ class DT_logisticsMenu : RscDisplayTeamSwitch
 			h = "1 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			colorText[] = {0.75,0.75,0,1};
 			tooltip = "Fuel"; //--- ToDo: Localize;
-			onKeyUp = "[] call DT_fnc_onLogisticsMenuComboChange";
+			onEditChanged = "[] call DT_fnc_onLogisticsMenuComboChange";
 		};
 		class RscEdit_1402: RscEdit
 		{
@@ -118,7 +118,7 @@ class DT_logisticsMenu : RscDisplayTeamSwitch
 			h = "1 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			colorText[] = {0.75,0,0,1};
 			tooltip = "Ammo"; //--- ToDo: Localize;
-			onKeyUp = "[] call DT_fnc_onLogisticsMenuComboChange";
+			onEditChanged = "[] call DT_fnc_onLogisticsMenuComboChange";
 		};
 	};
 };

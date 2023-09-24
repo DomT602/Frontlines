@@ -18,10 +18,10 @@ class Logi_Setup {
 	};
 
 	mobileRespawns[] = { //vehicles that act as mobile respawns
-        "B_Truck_01_medical_F",
+		"B_Truck_01_medical_F",
 		"B_Heli_Transport_03_unarmed_F"
-    };
-    
+	};
+	
 	medicalBuildings[] = { //buildings to add heal actions onto
 		"Land_Medevac_house_V1_F"
 	};
@@ -81,8 +81,8 @@ class Logi_Setup {
 				{"B_CTRG_Heli_Transport_01_tropic_F", {200,200,100}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},   
 
 				{"B_T_VTOL_01_infantry_F", {600,300,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentPlanes',[]]) < DT_maxPlaneCount}"},
-		        {"B_T_VTOL_01_vehicle_F", {600,300,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentPlanes',[]]) < DT_maxPlaneCount}"},
-		        {"B_T_VTOL_01_armed_F", {600,300,700}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentPlanes',[]]) < DT_maxPlaneCount}"}, 
+				{"B_T_VTOL_01_vehicle_F", {600,300,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentPlanes',[]]) < DT_maxPlaneCount}"},
+				{"B_T_VTOL_01_armed_F", {600,300,700}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentPlanes',[]]) < DT_maxPlaneCount}"}, 
 				
 				{"B_Plane_Fighter_01_F", {900,800,800}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentPlanes',[]]) < DT_maxPlaneCount && {call DT_fnc_getMissionProgress > 0.4}}"},
 				{"B_Plane_CAS_01_dynamicLoadout_F", {800,800,900}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentPlanes',[]]) < DT_maxPlaneCount && {call DT_fnc_getMissionProgress > 0.35}}"}

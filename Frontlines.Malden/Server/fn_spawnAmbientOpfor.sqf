@@ -28,11 +28,11 @@ if (DT_ambientOpforHandle isEqualTo -1) then {
 				DT_ambientOpforHandle = -1;
 			};
 			
-			private _toDelete = [];
 			{
 				_x params ["_vehicle","_group","_lastPos"];
 				if (isNull _group) then {
-					_toDelete pushBack _forEachIndex;
+					DT_ambientOpfor deleteAt _forEachIndex;
+					[] call DT_fnc_spawnAmbientOpfor;
 					if (!isNull _vehicle && {!(_vehicle getVariable ["DT_playerUsed",false])}) then {
 						deleteVehicle _vehicle;
 					};
@@ -44,7 +44,8 @@ if (DT_ambientOpforHandle isEqualTo -1) then {
 						if !(isNull _vehicle) then {
 							deleteVehicle _vehicle;
 						};
-						_toDelete pushBack _forEachIndex;
+						DT_ambientOpfor deleteAt _forEachIndex;
+						[] call DT_fnc_spawnAmbientOpfor;
 					} else {
 						if (waypoints _group isEqualTo []) then {
 							private _sectorsToDrive = DT_allSectors select {!(_x getVariable ["DT_sectorOwned",false])};
@@ -71,16 +72,7 @@ if (DT_ambientOpforHandle isEqualTo -1) then {
 						};
 					};
 				};
-			} forEach DT_ambientOpfor;
-
-			reverse _toDelete;
-			{
-				DT_ambientOpfor deleteAt _x;
-			} forEach _toDelete;
-
-			if (_toDelete isNotEqualTo []) then {
-				[] call DT_fnc_spawnAmbientOpfor;
-			};
+			} forEachReversed DT_ambientOpfor;
 		},
 		15
 	] call CBA_fnc_addPerFrameHandler;

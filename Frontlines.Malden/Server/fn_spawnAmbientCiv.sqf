@@ -37,11 +37,11 @@ if (_startMonitor) then {
 				[_this select 1] call CBA_fnc_removePerFrameHandler;
 			};
 
-			private _toDelete = [];
 			{
 				_x params ["_unit","_group","_vehicle","_lastPos"];
 				if !(alive _unit) then {
-					_toDelete pushBack _forEachIndex;
+					DT_ambientCivs deleteAt _forEachIndex;
+					[1] call DT_fnc_spawnAmbientCiv;
 					if (!isNull _vehicle && {!(_vehicle getVariable ["DT_playerUsed",false])}) then {
 						deleteVehicle _vehicle;
 					};
@@ -85,16 +85,7 @@ if (_startMonitor) then {
 						};
 					};
 				};
-			} forEach DT_ambientCivs;
-
-			reverse _toDelete;
-			{
-				DT_ambientCivs deleteAt _x;
-			} forEach _toDelete;
-
-			if (_toDelete isNotEqualTo []) then {
-				[count _toDelete] call DT_fnc_spawnAmbientCiv;
-			};
+			} forEachReversed DT_ambientCivs;
 		},
 		15
 	] call CBA_fnc_addPerFrameHandler;
