@@ -26,7 +26,7 @@ if (_isCivilian) then {
 	private _maxCrates = getNumber(missionConfigFile >> "Settings" >> "maxSectorCrates");
 	private _crateTypes = getArray(missionConfigFile >> "Logi_Setup" >> "bluforCrates");
 
-	for "_i" from 1 to round (random _maxCrates) do {
+	for "_i" from 1 to ceil (random _maxCrates) do {
 		private _spawnPos = [_sectorObj,10,_spawnRadius,5,0,0.3,0] call BIS_fnc_findSafePos;
 		if (_spawnPos isEqualTo []) exitWith {};
 

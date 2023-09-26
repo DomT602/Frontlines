@@ -10,7 +10,7 @@ class DT_intelMenu : RscDisplayTeamSwitch
 		class Title : CA_TSTitle
 		{
 			text = "Intelligence Menu";
-			onLoad = "_this select 0 ctrlSetText format ['Intelligence Menu - Intel Count: %1',DT_intelCount]"
+			onLoad = "_this select 0 ctrlSetText format ['Intelligence Menu - Intel Count: %1',DT_intelCount]";
 		};
 		class IntelligenceList : RscTree
 		{

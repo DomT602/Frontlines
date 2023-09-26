@@ -149,6 +149,7 @@ private _moveObject = [
 ["AllVehicles",0,["ACE_MainActions"],_recycleObject,true] call ace_interact_menu_fnc_addActionToClass;
 {
 	if !(_x isKindOf "LandVehicle" || {_x isKindOf "Ship" || {_x isKindOf "Air"}}) then {
+		if (_x isEqualTo _fobClass) exitWith {};
 		[_x,0,["ACE_MainActions"],_recycleObject] call ace_interact_menu_fnc_addActionToClass;
 		[_x,0,["ACE_MainActions"],_moveObject] call ace_interact_menu_fnc_addActionToClass;
 	};
