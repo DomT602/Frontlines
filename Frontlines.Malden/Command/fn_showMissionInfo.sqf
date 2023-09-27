@@ -27,13 +27,17 @@ private _text = format ["
 <t font='PuristaBold' align='left'>Mission Progress:</t><t font='PuristaLight' align='right'>%6%7</t><br/><br/>
 ",_threatColour,DT_threatLevel,_repColour,DT_globalReputation,DT_intelCount,floor (([] call DT_fnc_getMissionProgress) * 100),"%"];
 
+if (missionNamespace getVariable ["DT_canGatherIntel",false]) then {
+	_text = format ["%1<t font='PuristaBold' align='left' color='#008000'>Radio Tower Intel Available</t><br/>",_text];
+};
+
 if (missionNamespace getVariable ["DT_opforAAActive",false]) then {
 	_text = format ["%1<t font='PuristaBold' align='left' color='#E60000'>Enemy Anti-Air Active</t><br/>",_text];
 };
 if (missionNamespace getVariable ["DT_opforArtilleryActive",false]) then {
 	_text = format ["%1<t font='PuristaBold' align='left' color='#E60000'>Enemy Artillery Active</t><br/>",_text];
 };
-if (missionNamespace getVariable ["DT_opforJammerctive",false]) then {
+if (missionNamespace getVariable ["DT_opforJammerActive",false]) then {
 	_text = format ["%1<t font='PuristaBold' align='left' color='#E60000'>Enemy Jammer Active</t><br/>",_text];
 };
 

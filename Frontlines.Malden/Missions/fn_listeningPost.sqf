@@ -16,6 +16,12 @@ switch _stage do {
 		private _marker = ["listeningPost",_targetSector,false,"ColorYellow","mil_objective",1.5,"Listening Post Setup Location"] call DT_fnc_createMarker;
 		["The location for the listening post is marked.","generalNotif","Listening Post"] remoteExecCall ["DT_fnc_notify",0];
 	};
+
+	case "cancel": {
+		deleteMarker "listeningPost";
+		["Mission cancelled.","failedNotif","Listening Post"] remoteExecCall ["DT_fnc_notify",0];
+	};
+
 	case "initPost": {
 		if (owner _data isNotEqualTo 2) then {
 			_data setOwner 2;
@@ -36,8 +42,6 @@ switch _stage do {
 
 				if (isNil "DT_secondaryActive") then {
 					deleteVehicle _post;
-					deleteMarker "listeningPost";
-					["Mission cancelled.","failedNotif","Listening Post"] remoteExecCall ["DT_fnc_notify",0];
 				};
 
 				if (alive _post) then {
@@ -48,13 +52,16 @@ switch _stage do {
 			[_data,markerPos "listeningPost"]
 		] call CBA_fnc_waitUntilAndExecute;
 	};
+
 	case "postKilled": {
 		missionNamespace setVariable ["DT_secondaryActive",nil,true];
 		deleteMarker "listeningPost";
 		["The listening post was destroyed.","failedNotif","Listening Post"] remoteExecCall ["DT_fnc_notify",0];
 	};
+
 	case "startPost": {
 		private _counter = 1;
+		missionNamespace setVariable ["DT_secondaryActive","listeningPostNoCancel",true];
 		[
 			{
 				params ["_args","_handle"];

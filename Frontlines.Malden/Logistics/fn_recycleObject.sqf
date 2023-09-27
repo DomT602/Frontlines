@@ -23,14 +23,18 @@ private _index = _bluforBuildables findIf {_x select 0 == _className};
 private _resourcesToReturn = if (_index isEqualTo -1) then {getArray(missionConfigFile >> "Settings" >> "maxRecycleGain")} else {(_bluforBuildables select _index) select 1};
 
 if (_object isKindOf "LandVehicle" || {_object isKindOf "Ship" || {_object isKindOf "Air"}}) then {
-	private _damageArray = (getAllHitPointsDamage _object) select 2;
-	private _maxDamage = count _damageArray;
-	private _currentDamage = 0;
-	{
-		_currentDamage = _currentDamage + _x;
-	} forEach _damageArray;
-	_currentDamage = abs (_currentDamage / _maxDamage);
-	_resourcesToReturn set [0,(_resourcesToReturn select 0) * (1 - _currentDamage)];
+	(getAllHitPointsDamage _object) params ["","",["_damageArray",[]]];
+	if (_damageArray isEqualTo []) then {
+		_resourcesToReturn set [0,round ((_resourcesToReturn select 0) * 0.1)];
+	} else {
+		private _maxDamage = count _damageArray;
+		private _currentDamage = 0;
+		{
+			_currentDamage = _currentDamage + _x;
+		} forEach _damageArray;
+		_currentDamage = abs (_currentDamage / _maxDamage);
+		_resourcesToReturn set [0,(_resourcesToReturn select 0) * (1 - _currentDamage)];
+	};
 
 	private _fuel = fuel _object;
 	_resourcesToReturn set [1,(_fuel * (_resourcesToReturn select 1))];

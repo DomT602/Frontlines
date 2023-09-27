@@ -49,12 +49,12 @@ if (([_sectorObj,_radius] call DT_fnc_getCaptureRatio) > getNumber(missionConfig
 		[
 			DT_fnc_areaIsClear,
 			{
-				params ["_obj","_rad","_obj"];
+				params ["_obj"];
 				[_obj] call DT_fnc_clearArea;
 				DT_activeSectors deleteAt (DT_activeSectors find _obj);
 				publicVariable "DT_activeSectors";
 			},
-			[_sectorObj,_radius * 1.5,_sectorObj]
+			[_sectorObj,_radius * 1.5]
 		] call CBA_fnc_waitUntilAndExecute;
 	};
 } else {

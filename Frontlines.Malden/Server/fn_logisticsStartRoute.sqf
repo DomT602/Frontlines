@@ -9,7 +9,7 @@ DT_logistics params ["_availableTrucks","_trucksInUse","_currentRoutes"];
 private _isFromFOB = isNil {_from getVariable "DT_factoryResources"};
 private _nearFOBRes = [_from] call DT_fnc_getCurrentResources;
 private _fuelAvailable = _nearFOBRes select 1;
-private _fuelTotalRequired = if (_isFromFOB) then {_fuelRequired = _fuelRequired + (_carrying select 1)} else {_fuelRequired};
+private _fuelTotalRequired = if (_isFromFOB) then {_fuelRequired + (_carrying select 1)} else {_fuelRequired};
 if (_truckCount > _availableTrucks) exitWith {["Not enough trucks."] remoteExecCall ["DT_fnc_notify",remoteExecutedOwner]};
 if (_fuelTotalRequired > _fuelAvailable) exitWith {["Not enough fuel."] remoteExecCall ["DT_fnc_notify",remoteExecutedOwner]};
 

@@ -28,6 +28,7 @@ private _marker = ["medicalAid",_chosenSector,false,"ColorYellow","mil_objective
 			deleteMarker _marker;
 			["Mission cancelled.","failedNotif","Medical Aid"] remoteExecCall ["DT_fnc_notify",0];
 		} else {
+			missionNamespace setVariable ["DT_secondaryActive","medicalAidNoCancel",true];
 			private _injuredCount = 2 + (ceil (count playableUnits / 4));
 			private _civilianTypes = getArray(missionConfigFile >> "Civilian_Setup" >> "civilianTypes");
 			private _bodyParts = ["Head","Body","LeftArm","RightArm","LeftLeg","RightLeg"];

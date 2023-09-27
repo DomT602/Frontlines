@@ -443,12 +443,19 @@ private _cancelMission = [
 	"Cancel Mission",
 	"\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\danger_ca.paa",
 	{
+		if (DT_secondaryActive isEqualTo "humanitarianRelief") then {
+			["cancel"] remoteExecCall ["DT_fnc_humanitarianRelief",2];
+		} else {
+			if (DT_secondaryActive isEqualTo "listeningPost") then {
+				["cancel"] remoteExecCall ["DT_fnc_listeningPost",2];
+			};
+		};
 		missionNamespace setVariable ["DT_secondaryActive",nil,true];
 	},
 	{
 		(rankId player > 1 || DT_isZeus) &&
 		{[player,50] call DT_fnc_isNearFOB &&
-		{missionNamespace getVariable ["DT_secondaryActive",""] isNotEqualTo ""}}
+		{missionNamespace getVariable ["DT_secondaryActive",""] in ["captureUAV","clearUXOs","fobHunt","listeningPost","humanitarianRelief","medicalAid","supplyDepot"]}}
 	}
 ] call ace_interact_menu_fnc_createAction;
 [player,1,["ACE_SelfActions","baseCategory","intelMenu"],_cancelMission] call ace_interact_menu_fnc_addActionToObject;

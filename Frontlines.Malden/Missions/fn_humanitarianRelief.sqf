@@ -24,6 +24,12 @@ switch _stage do {
 		["The relief sector is marked, head there now.","generalNotif","Humanitarian Relief"] remoteExecCall ["DT_fnc_notify",0];
 	};
 
+	case "cancel": {
+		DT_reliefTrucks = nil;
+		deleteMarker "humanitarianRelief";
+		["Mission cancelled.","failedNotif","Listening Post"] remoteExecCall ["DT_fnc_notify",0];
+	};
+
 	case "addTruck": {
 		DT_reliefTrucks pushBack _data;
 
@@ -43,6 +49,7 @@ switch _stage do {
 	};
 
 	case "startMonitor": {
+		missionNamespace setVariable ["DT_secondaryActive","humanitarianReliefNoCancel",true];
 		private _sector = [markerPos "humanitarianRelief",["town","factory","city","tower","military"],true] call DT_fnc_getNearestSector;
 
 		private _groups = [];
