@@ -384,7 +384,7 @@ private _capture = [
 		private _maxIntel = getNumber(missionConfigFile >> "Settings" >> "maxIntelFromPOW");
 		private _intelGained = ceil (random _maxIntel);
 		deleteVehicle _target;
-		[_intelGained] remoteExecCall ["DT_updateIntel",2];
+		[_intelGained] remoteExecCall ["DT_fnc_updateIntel",2];
 		["Interrogation completed.","generalNotif","Intel Gained"] remoteExecCall ["DT_fnc_notify",0];
 	},
 	{
@@ -404,7 +404,7 @@ private _secureIntel = [
 		private _maxIntel = getNumber(missionConfigFile >> "Settings" >> "maxIntelFromItem");
 		private _intelGained = ceil (random _maxIntel);
 		deleteVehicle _target;
-		[_intelGained] remoteExecCall ["DT_updateIntel",2];
+		[_intelGained] remoteExecCall ["DT_fnc_updateIntel",2];
 		["Intelligence secured.","generalNotif","Intel Gained"] remoteExecCall ["DT_fnc_notify",0];
 	},
 	{true}

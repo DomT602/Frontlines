@@ -12,11 +12,12 @@ private _doubleRadius = _sectorRadius * 2;
 private _frontlineSectors = [false] call DT_fnc_getFrontlineSectors;
 [_frontlineSectors,true] call CBA_fnc_shuffle;
 private _bluforSectors = [["town","city","factory","tower","military"],true] call DT_fnc_getSectorsByType;
+private _worldSize = worldSize;
 
 private _position = [];
 {
 	while {_position isEqualTo []} do {
-		private _testPos = _x getPos [random (worldSize / 3),random 360];
+		private _testPos = _x getPos [random (_worldSize / 4),random 360];
 		_testPos params ["_xPos","_yPos"];
 
 		if (
@@ -26,8 +27,8 @@ private _position = [];
 			{DT_allSectors findIf {_x distance2D _testPos < _radius} isEqualTo -1 && 
 			{DT_allFOBs findIf {_x distance2D _testPos < _doubleRadius} isEqualTo -1 &&
 			{_bluforSectors findIf {_x distance2D _testPos < _doubleRadius} isEqualTo -1 &&
-			{_xPos > 0 && {_xPos < worldSize &&
-			{_yPos > 0 && {_yPos < worldSize}}}}}}}}}
+			{_xPos > 0 && {_xPos < _worldSize &&
+			{_yPos > 0 && {_yPos < _worldSize}}}}}}}}}
 		) then {
 			_position = _testPos;
 		};
