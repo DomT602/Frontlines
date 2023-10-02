@@ -20,7 +20,7 @@ if (_type isEqualTo "marker") then {
 			private _sectorStrength = _sector getVariable ["DT_sectorStrength",1];
 			(call {
 				if (_sectorStrength > 0.8) exitWith {["Reinforced","#E60000"]}; //red
-				if (_sectorStrength > 0.5) exitWith {["Reinforced","#D96600"]}; //orange
+				if (_sectorStrength > 0.5) exitWith {["Defended","#D96600"]}; //orange
 				["Weakened","#D9D900"] //yellow
 			}) params ["_descriptor","_colour"];
 
@@ -37,7 +37,7 @@ if (_type isEqualTo "marker") then {
 			private _sectorRep = _sector getVariable ["DT_sectorReputation",1];
 			(call {
 				if (_sectorRep > 75) exitWith {["Loved","#008000"]};
-				if (_sectorRep > 25) exitWith {["Liked","#660080"]};
+				if (_sectorRep > 25) exitWith {["Liked","#D9D900"]};
 				if (_sectorRep > -25) exitWith {["Neutral","#FFFFFF"]};
 				if (_sectorRep > -75) exitWith {["Disliked","#D96600"]};
 				["Hated","#E60000"]

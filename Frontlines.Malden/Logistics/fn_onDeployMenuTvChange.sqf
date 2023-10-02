@@ -9,7 +9,7 @@ params [
 ];
 private _display = findDisplay 9640;
 private _button = _display displayCtrl 2400;
-private _map = _display displayCtrl 1200;
+private _mapControl = _display displayCtrl 1200;
 
 if (count _selectionPath isEqualTo 1) exitWith {
 	_button ctrlEnable false;

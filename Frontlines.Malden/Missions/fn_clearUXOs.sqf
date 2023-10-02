@@ -10,7 +10,7 @@ private _civReps = [];
 {
 	_civReps pushBack (_x getVariable ["DT_sectorReputation",0]);
 } forEach _sectors;
-private _index = (_civReps call CBA_fnc_findMax) select 1;
+private _index = (_civReps call CBA_fnc_findMin) select 1;
 private _chosenSector = _sectors select _index;
 
 private _pos = getPosATL _chosenSector;

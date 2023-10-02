@@ -6,7 +6,7 @@
 
 private _repColour = call {
 	if (DT_globalReputation > 75) exitWith {"#008000"};
-	if (DT_globalReputation > 25) exitWith {"#660080"};
+	if (DT_globalReputation > 25) exitWith {"#D9D900"};
 	if (DT_globalReputation > -25) exitWith {"#FFFFFF"};
 	if (DT_globalReputation > -75) exitWith {"#D96600"};
 	"#E60000"
