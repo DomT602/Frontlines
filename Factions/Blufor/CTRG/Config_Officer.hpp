@@ -1,5 +1,5 @@
 /*
-	Faction: Officer
+	Faction: CTRG
 	Author: Dom
 */
 class officer {

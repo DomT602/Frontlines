@@ -1,5 +1,5 @@
 /*
-	Faction: Commander
+	Faction: CTRG
 	Author: Dom
 */
 class commander {

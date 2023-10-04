@@ -1,5 +1,5 @@
 /*
-	Faction: Medic
+	Faction: CTRG
 	Author: Dom
 */
 class medic {

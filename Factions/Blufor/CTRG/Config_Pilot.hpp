@@ -1,5 +1,5 @@
 /*
-	Faction: Pilot
+	Faction: CTRG
 	Author: Dom
 */
 class pilot {

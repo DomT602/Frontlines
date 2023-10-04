@@ -1,5 +1,5 @@
 /*
-	Faction: UAV Operator
+	Faction: CTRG
 	Author: Dom
 */
 class uavop {

@@ -1,5 +1,5 @@
 /*
-	Faction: Crewman
+	Faction: CTRG
 	Author: Dom
 */
 class crewman {

@@ -1,5 +1,5 @@
 /*
-	Faction: Team Leader
+	Faction: CTRG
 	Author: Dom
 */
 class teamlead {
