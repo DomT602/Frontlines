@@ -1,5 +1,5 @@
 /*
-	Faction: fn_setupLocations.sqf
+	File: fn_setupLocations.sqf
 	Author: Dom
 	Requires: Setups up all types of locations
 */

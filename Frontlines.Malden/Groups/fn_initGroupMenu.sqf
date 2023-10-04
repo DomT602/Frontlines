@@ -1,5 +1,5 @@
 /*
-	Faction: fn_initGroupMenu.sqf
+	File: fn_initGroupMenu.sqf
 	Author: Dom
 	Description: Open and populates the group menu
 */

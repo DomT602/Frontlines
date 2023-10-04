@@ -1,5 +1,5 @@
 /*
-	Faction: fn_onRespawn.sqf
+	File: fn_onRespawn.sqf
 	Author: Dom
 	Description: Handles re-assigning group on player respawn
 */

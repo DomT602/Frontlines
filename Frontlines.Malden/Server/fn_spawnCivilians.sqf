@@ -46,14 +46,12 @@ for "_i" from 1 to _civilianCount do {
 			_civilian addEventHandler ["Killed",DT_fnc_civilianKilled];
 
 			if (7 > random 10) then {
-				private _bodyParts = ["Head","Body","LeftArm","RightArm","LeftLeg","RightLeg"];
-				private _damageTypes = ["bullet","grenade","explosive","vehiclecrash","stab","falling","ropeburn"];
+				private _bodyParts = ["head","body","leftarm","rightarm","leftleg","rightleg"];
+				private _damageTypes = ["grenade","explosive","bullet"];
 
-				private _woundCount = 2 + (round (random 1));
-				for "_i" from 1 to _woundCount do {
-					[_civilian,random 0.5,selectRandom _bodyParts,selectRandom _damageTypes] call ace_medical_fnc_addDamageToUnit;
+				for "_i" from 1 to 3 do {
+					[_civilian,random [0.3,0.4,0.5],selectRandom _bodyParts,selectRandom _damageTypes] call ace_medical_fnc_addDamageToUnit;
 				};
-
 				_civilian setVariable ["ace_medical_ai_lastFired",(CBA_missionTime + 600)];
 			};
 		};

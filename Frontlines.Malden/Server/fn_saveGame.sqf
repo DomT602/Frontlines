@@ -1,5 +1,5 @@
 /*
-	Faction: fn_saveGame.sqf
+	File: fn_saveGame.sqf
 	Author: Dom
 	Requires: Saves current game progress
 */
@@ -14,7 +14,10 @@ private _sectorInfo = [];
 	private _specificSectorInfo = [];
 	{
 		if !(_x in ["dt_sectorvariable","dt_sectorname","dt_sectortype","dt_sectorunitcount"]) then {
-			_specificSectorInfo pushBack [_x,_sector getVariable _x];
+			private _value = _sector getVariable _x;
+			if !(isNil "_value") then {
+				_specificSectorInfo pushBack [_x,_value];
+			};
 		};
 	} forEach (allVariables _x);
 	_sectorInfo pushBack _specificSectorInfo;

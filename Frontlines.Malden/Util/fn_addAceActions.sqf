@@ -93,7 +93,7 @@ private _crateCategory = [
 	"\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\box_ca.paa", 
 	DT_fnc_initSupplyCrateMenu, 
 	{ 
-		rankId player > 0 &&
+		(rankId player > 3 || DT_isZeus) &&
 		{[player,50] call DT_fnc_isNearFOB}
 	} 
 	] call ace_interact_menu_fnc_createAction; 
@@ -299,6 +299,18 @@ private _retrieveTrack = [
 	{true}
 ] call ace_interact_menu_fnc_createAction;
 
+private _retrieveJerryCan = [
+	"retrieveJerryCan",
+	"Retrieve jerry can",
+	"\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\refuel_ca.paa",
+	{
+		private _jerryCan = createVehicle ["Land_CanisterFuel_F",player,[],0,"CAN_COLLIDE"];
+		[_jerryCan,50] call ace_refuel_fnc_makeJerryCan;
+		[_jerryCan,true] remoteExecCall ["ace_dragging_fnc_setCarryable",0,_jerryCan];
+	},
+	{true}
+] call ace_interact_menu_fnc_createAction;
+
 private _destroyWheelTrack = [
 	"destroyWheelTrack",
 	"Destroy",
@@ -309,8 +321,20 @@ private _destroyWheelTrack = [
 	{true}
 ] call ace_interact_menu_fnc_createAction;
 
+private _deleteCan = [
+	"deleteCan",
+	"Destroy",
+	"\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\destroy_ca.paa",
+	{
+		deleteVehicle _target;
+	},
+	{true}
+] call ace_interact_menu_fnc_createAction;
+
 ["B_Slingload_01_Repair_F",0,["ACE_MainActions"],_retrieveWheel] call ace_interact_menu_fnc_addActionToClass;
 ["B_Slingload_01_Repair_F",0,["ACE_MainActions"],_retrieveTrack] call ace_interact_menu_fnc_addActionToClass;
+["B_Slingload_01_Fuel_F",0,["ACE_MainActions"],_retrieveJerryCan] call ace_interact_menu_fnc_addActionToClass;
+["Land_CanisterFuel_F",0,["ACE_MainActions"],_deleteCan] call ace_interact_menu_fnc_addActionToClass;
 {
 	[_x,0,["ACE_MainActions"],_destroyWheelTrack] call ace_interact_menu_fnc_addActionToClass;
 } forEach ["ACE_Wheel","ACE_Track"];

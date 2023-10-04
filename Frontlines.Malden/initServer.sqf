@@ -1,5 +1,5 @@
 /*
-	Faction: initServer.sqf
+	File: initServer.sqf
 	Author: Dom
 	Requires: Start the server up
 */

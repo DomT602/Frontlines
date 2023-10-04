@@ -31,8 +31,8 @@ private _marker = ["medicalAid",_chosenSector,false,"ColorYellow","mil_objective
 			missionNamespace setVariable ["DT_secondaryActive","medicalAidNoCancel",true];
 			private _injuredCount = 2 + (ceil (count playableUnits / 4));
 			private _civilianTypes = getArray(missionConfigFile >> "Civilian_Setup" >> "civilianTypes");
-			private _bodyParts = ["Head","Body","LeftArm","RightArm","LeftLeg","RightLeg"];
-			private _damageTypes = ["grenade","explosive","ropeburn"];
+			private _bodyParts = ["head","body","leftarm","rightarm","leftleg","rightleg"];
+			private _damageTypes = ["grenade","explosive","bullet"];
 
 			private _group = createGroup [civilian,true];
 			for "_i" from 1 to _injuredCount do {
@@ -43,9 +43,8 @@ private _marker = ["medicalAid",_chosenSector,false,"ColorYellow","mil_objective
 				removeAllItems _civilian;
 				_civilian addEventHandler ["Killed",DT_fnc_civilianKilled];
 
-				private _woundCount = 2 + (round (random 1));
-				for "_i" from 1 to _woundCount do {
-					[_civilian,0.25,(selectRandom _bodyParts),(selectRandom _damageTypes)] call ace_medical_fnc_addDamageToUnit;
+				for "_i" from 1 to 3 do {
+					[_civilian,random [0.3,0.4,0.5],selectRandom _bodyParts,selectRandom _damageTypes] call ace_medical_fnc_addDamageToUnit;
 				};
 				[_civilian,true,300,true] call ace_medical_fnc_setUnconscious;
 				_civilian setVariable ["ace_medical_ai_lastFired",(CBA_missionTime + 300)];

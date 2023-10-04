@@ -1,5 +1,5 @@
 /*
-	Faction: initPlayerLocal.sqf
+	File: initPlayerLocal.sqf
 	Author: Dom
 	Requires: Start us up
 */

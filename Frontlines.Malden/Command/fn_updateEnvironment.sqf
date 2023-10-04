@@ -1,5 +1,5 @@
 /*
-	Faction: fn_updateEnvironment.sqf
+	File: fn_updateEnvironment.sqf
 	Author: Dom
 	Requires: Checks for changes and updates the environment as requested
 */

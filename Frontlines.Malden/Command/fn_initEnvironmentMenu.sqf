@@ -1,5 +1,5 @@
 /*
-	Faction: fn_initEnvironmentMenu.sqf
+	File: fn_initEnvironmentMenu.sqf
 	Author: Dom
 	Requires: Opens and populates the environmental control menu
 */

@@ -1,5 +1,5 @@
 /*
-	Faction: fn_createOrLoadSave.sqf
+	File: fn_createOrLoadSave.sqf
 	Author: Dom
 	Requires: Creates or loads a save file
 */
