@@ -169,7 +169,6 @@ class DT_Core {
 		class endGame {};
 		class gatherIntel {};
 		class getAverageStrength {};
-		class getBuildings {};
 		class getCaptureRatio {};
 		class getFrontlineSectors {};
 		class getInMan {};
