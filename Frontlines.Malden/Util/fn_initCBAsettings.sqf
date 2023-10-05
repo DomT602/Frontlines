@@ -6,11 +6,12 @@
 [
 	"DT_preserveBuildData",
 	"CHECKBOX",
-	["Preserve build data","Saves height and direction when building."],
+	["Preserve build data","Saves height, direction and terrain alignment when building."],
 	["Frontlines","Building"]
 ] call CBA_fnc_addSetting;
 DT_buildElevation = 0;
 DT_buildRotation = 0;
+DT_alignToTerrain = true;
 
 [
 	"DT_buildRotationIncrement",

@@ -68,15 +68,15 @@ class Logi_Setup {
 		{
 			"Air Vehicles",
 			{
-				{"UK3CB_AAF_B_Unarmed_MH9", {250,250,0}, ""},
-				{"UK3CB_AAF_B_Benches_MH9", {250,250,0}, ""},
-				{"UK3CB_AAF_B_AH9", {250,250,250}, "DT_globalReputation > 25"},
-				{"UK3CB_AAF_B_UH60M", {250,250,150}, ""},
-				{"UK3CB_AAF_B_AH1Z", {500,250,500}, "DT_globalReputation > 25"},
-				{"UK3CB_AAF_B_Gripen_G", {1000,500,500}, "DT_globalReputation > 25"},
-				{"UK3CB_AAF_B_C130J_G_CARGO", {500,250,0}, ""},
-				{"UK3CB_AAF_B_C130J_G", {500,250,0}, ""},
-				{"I_UAV_02_dynamicLoadout_F", {250,100,250}, "DT_globalReputation > 25"}
+				{"UK3CB_AAF_B_Unarmed_MH9", {250,250,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
+				{"UK3CB_AAF_B_Benches_MH9", {250,250,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
+				{"UK3CB_AAF_B_AH9", {250,250,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {DT_globalReputation > 25 && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}}"},
+				{"UK3CB_AAF_B_UH60M", {250,250,150}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
+				{"UK3CB_AAF_B_AH1Z", {500,250,500}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {DT_globalReputation > 25 && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}}"},
+				{"UK3CB_AAF_B_Gripen_G", {1000,500,500}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {DT_globalReputation > 25 && {count (missionNamespace getVariable ['DT_currentPlanes',[]]) < DT_maxPlaneCount}}"},
+				{"UK3CB_AAF_B_C130J_G_CARGO", {500,250,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentPlanes',[]]) < DT_maxPlaneCount}"},
+				{"UK3CB_AAF_B_C130J_G", {500,250,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentPlanes',[]]) < DT_maxPlaneCount}"},
+				{"I_UAV_02_dynamicLoadout_F", {250,100,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {DT_globalReputation > 25 && {count (missionNamespace getVariable ['DT_currentPlanes',[]]) < DT_maxPlaneCount}}"}
 			}
 		},
 		{

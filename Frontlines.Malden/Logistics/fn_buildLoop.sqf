@@ -65,6 +65,7 @@ if (DT_buildAction > 0 || {!alive player || {!isNull objectParent player}}) then
 							DT_canBuild = false;
 							DT_buildAction = 0;
 							if !(DT_preserveBuildData) then {
+								DT_alignToTerrain = true;
 								DT_buildElevation = 0;
 								DT_buildRotation = 0;
 							};

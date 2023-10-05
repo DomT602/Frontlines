@@ -9,8 +9,8 @@ params [
 
 DT_canBuild = false;
 DT_buildAction = 0;
-DT_alignToTerrain = true;
 if !(DT_preserveBuildData) then {
+	DT_alignToTerrain = true;
 	DT_buildElevation = 0;
 	DT_buildRotation = 0;
 };

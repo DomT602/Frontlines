@@ -70,7 +70,7 @@ class Logi_Setup {
 				{"B_UAV_06_F", {75,100,0}, ""},
 				{"B_UAV_02_dynamicLoadout_F", {300,200,200}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {DT_globalReputation > 25 && {call DT_fnc_getMissionProgress > 0.35}}"},
 				{"B_UAV_05_F", {300,300,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {DT_globalReputation > 25 && {call DT_fnc_getMissionProgress > 0.35}}"},
-				{"B_T_UAV_03_dynamicLoadout_F", {500,300,350}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {DT_globalReputation > 25 && {call DT_fnc_getMissionProgress > 0.35  && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}}}"},
+				{"B_T_UAV_03_dynamicLoadout_F", {500,300,350}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {DT_globalReputation > 25 && {call DT_fnc_getMissionProgress > 0.35 && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}}}"},
 
 				{"B_Heli_Light_01_F", {200,150,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},                      
 				{"B_Heli_Light_01_dynamicLoadout_F", {250,150,150}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
