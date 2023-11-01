@@ -10,7 +10,7 @@ private _oldSelectionPath = [_unit] call DT_fnc_removeFromGroup;
 [DT_dynamicGroups,_oldSelectionPath] remoteExecCall ["DT_fnc_updateGroups",-2,"DT_DG_JIP"];
 
 if (playableUnits isEqualTo []) then {
-	DT_totalPlaytime = DT_totalPlaytime + (CBA_missionTime - DT_currentPlaytime);
+	DT_playtime = DT_playtime + (CBA_missionTime - DT_currentPlaytime);
 	[] call DT_fnc_saveGame;
 	DT_currentPlaytime = 0;
 };

@@ -43,7 +43,7 @@ if (([_sectorObj,_radius] call DT_fnc_getCaptureRatio) > getNumber(missionConfig
 
 	private _endedIndex = DT_allSectors findIf {!(_x getVariable ["DT_sectorOwned",false])};
 	if (_endedIndex isEqualTo -1) then {
-		[DT_totalPlaytime,DT_bluforDeaths,DT_opforDeaths,DT_guerillaDeaths,DT_civilianDeaths] remoteExec ["DT_fnc_endGame",0];
+		[DT_playtime,DT_bluforDeaths,DT_opforDeaths,DT_guerillaDeaths,DT_civilianDeaths] remoteExec ["DT_fnc_endGame",0];
 		[] call DT_fnc_wipeSave;
 	} else {
 		[
