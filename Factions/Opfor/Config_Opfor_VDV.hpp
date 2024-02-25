@@ -103,13 +103,9 @@ class Opfor_Setup {
 	};
 
 	opforAttackHelicopters[] = {
-		"RHS_Mi8MTV3_vdv",
-		"RHS_Mi8MTV3_heavy_vdv",
-		"RHS_Mi24V_vdv"
-
 		"RHS_Mi24P_vdv",
 		"RHS_mi24V_vdv",
-		"RHS_Mi8MTV3_vdv",
+		"RHS_Mi8MTV3_vdv"
 
 	};
 
