@@ -51,7 +51,7 @@ if (DT_isTFAREnabled) then {
 	if (DT_isTFAREnabled && {call TFAR_fnc_haveLRRadio}) then {call DT_fnc_initLrRadio};
 
 	if (DT_autoSaveLoadout) then {
-		DT_savedLoadout = [player] call CBA_fnc_getLoadout;	
+		DT_savedLoadout = [player] call CBA_fnc_getLoadout;
 		["Loadout saved."] call DT_fnc_notify;
 	};
 
@@ -82,7 +82,7 @@ if (DT_isTFAREnabled) then {
 DT_uiHandle = [DT_fnc_updateUI,DT_uiUpdateInterval,[true,""]] call CBA_fnc_addPerFrameHandler;
 
 DT_isZeus = (getPlayerUID player) in (getArray(missionConfigFile >> "Settings" >> "zeusUIDs"));
-if (DT_isZeus) then { 
+if (DT_isZeus) then {
 	[player] remoteExecCall ["DT_fnc_assignZeus",2];
 
 	private _zeusMenu = [

@@ -28,6 +28,6 @@ class pilot {
 	};
 
 	arsenalItems[] = {
-		
+
 	};
 };

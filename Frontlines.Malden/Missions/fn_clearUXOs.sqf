@@ -56,7 +56,7 @@ private _marker = ["clearUXOs",_pos,false,"ColorYellow","mil_objective",1.5,"UXO
 			[_sector,30] call DT_fnc_updateCivRep;
 			missionNamespace setVariable ["DT_secondaryActive",nil,true];
 		};
-		deleteMarker _marker;	
+		deleteMarker _marker;
 	},
 	[_uxoArray,_chosenSector,_marker]
 ] call CBA_fnc_waitUntilAndExecute;

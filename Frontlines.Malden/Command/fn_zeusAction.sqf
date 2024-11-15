@@ -45,7 +45,7 @@ switch _action do {
 	case "adjustResources": {
 		if !([_text] call DT_fnc_checkNumber) exitWith {};
 		private _number = floor (parseNumber _text);
-		
+
 		private _resources = [0,0,0];
 		_resources set [(_this select 1),_number];
 		[_fob,_resources,true] call DT_fnc_adjustResources;

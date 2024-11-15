@@ -21,7 +21,7 @@ class Logi_Setup {
         "UK3CB_AAF_B_M998_2DR",
 		"UK3CB_AAF_B_UH60M2",
     };
-    
+
 	medicalBuildings[] = { //buildings to add heal actions onto
 		"Land_Medevac_house_V1_F"
 	};
@@ -180,7 +180,7 @@ class Logi_Setup {
 				{"Land_HelipadCircle_F", {250,0,0}, ""},
 				{"Land_HelipadRescue_F", {250,0,0}, ""},
 				{"Land_TentHangar_V1_F", {500,0,0}, ""},
-				
+
 				{"UK3CB_AAF_B_MTVR_Repair", {250,50,0}, ""},
 				{"UK3CB_AAF_B_MTVR_Reammo", {200,50,50}, ""},
 				{"UK3CB_AAF_B_MTVR_Refuel", {200,100,0}, ""},
@@ -249,14 +249,14 @@ class Logi_Setup {
 			{"ACE_bloodIV_250",20},
 			{"ACE_surgicalKit",10}
 		}},
-		{"miscWeaponCrateCategory","Empty Crate (Small)","small",{5,0,0},{ 
-		
+		{"miscWeaponCrateCategory","Empty Crate (Small)","small",{5,0,0},{
+
 		}},
-		{"miscWeaponCrateCategory","Empty Crate (Medium)","medium",{5,0,0},{ 
-		
+		{"miscWeaponCrateCategory","Empty Crate (Medium)","medium",{5,0,0},{
+
 		}},
-		{"miscWeaponCrateCategory","Empty Crate (Large)","large",{5,0,0},{ 
-		
+		{"miscWeaponCrateCategory","Empty Crate (Large)","large",{5,0,0},{
+
 		}}
 	};
 };

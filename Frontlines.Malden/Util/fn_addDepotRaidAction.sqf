@@ -27,7 +27,7 @@ private _action = [
 		["Resources stored."] call DT_fnc_notify;
 	},
 	{
-		isNull objectParent player && 
+		isNull objectParent player &&
 		{[player,50] call DT_fnc_isNearFOB}
 	},
 	{},

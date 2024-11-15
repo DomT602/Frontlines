@@ -56,7 +56,7 @@ private _marker = ["medicalAid",_chosenSector,false,"ColorYellow","mil_objective
 					params ["_civilians"];
 					private _civCount = count _civilians;
 					({
-						!alive _x || 
+						!alive _x ||
 						{[_x] call ace_medical_status_fnc_isInStableCondition}
 					} count _civilians) isEqualTo _civCount;
 				},

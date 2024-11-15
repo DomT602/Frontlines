@@ -53,7 +53,7 @@ if (_startMonitor) then {
 						_sectorsToSpawn = _sectorsToSpawn - DT_activeSectors;
 						private _nearRoads = (selectRandom _sectorsToSpawn) nearRoads 750;
 						private _spawnPos = getPosATL (selectRandom _nearRoads);
-						
+
 						if (isNull objectParent _unit) then {
 							_unit moveInDriver _vehicle;
 						};
@@ -70,7 +70,7 @@ if (_startMonitor) then {
 									_position = selectRandom _nearRoads;
 								};
 							};
-							
+
 							private _waypoint = _group addWaypoint [_position,0];
 							_waypoint setWaypointType "MOVE";
 							_waypoint setWaypointBehaviour "SAFE";

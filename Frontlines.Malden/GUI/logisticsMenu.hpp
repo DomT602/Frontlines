@@ -66,7 +66,7 @@ class DT_logisticsMenu : RscDisplayTeamSwitch
 		};
 		class RscCombo_2100: RscCombo
 		{
-			idc = 2100; 
+			idc = 2100;
 			onLBSelChanged = "_this call DT_fnc_onLogisticsMenuComboChange";
 			x = "16.3 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
 			y = "10.6 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";

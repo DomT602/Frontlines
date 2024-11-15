@@ -38,7 +38,7 @@ class Settings {
 	factoryOfflineProduction = 0; //whether factories produce with no players online, 0 for paused production, 1 for continued production
 	logisticsTruckCapacity = 200; //single truck capacity in the logistics menu
 
-	intelObjects[] = {"Land_laptop_03_closed_sand_F","Land_laptop_03_closed_black_F","Land_laptop_03_closed_olive_F","Land_File_research_F","Land_Document_01_F","Land_Tablet_02_black_F","Land_MobilePhone_smart_F"}; //classnames of intel items 
+	intelObjects[] = {"Land_laptop_03_closed_sand_F","Land_laptop_03_closed_black_F","Land_laptop_03_closed_olive_F","Land_File_research_F","Land_Document_01_F","Land_Tablet_02_black_F","Land_MobilePhone_smart_F"}; //classnames of intel items
 	maxIntelFromItem = 5; //max intel gained from picking up the intel objects above
 	maxIntelFromPOW = 7; //max intel gained from picking up the intel objects above
 
@@ -129,7 +129,7 @@ class Settings {
 		{"rhsusf_CH53E_USMC",-9,{{0,7,-3.2},{0,5.5,-3.2},{0,4,-3.2},{0,2.5,-3.2},{0,1,-3.2}}},
 		{"RHS_CH_47F_base",-9,{{0,3.2,-1.9},{0,1.7,-1.9},{0.2,-1.9},{0,-1.3,-1.9},{0,-2.8,-1.9}}},
 		{"RHS_C130J_Base",-9.5,{{-0.8,8,-4},{0.8,8,-4},{-0.8,8,-2.8},{0.8,8,-2.8},{-0.8,6.5,-4},{0.8,6.5,-4},{-0.8,6.5,-2.8},{0.8,6.5,-2.8},{-0.8,5,-4},{0.8,5,-4},{-0.8,5,-2.8},{0.8,5,-2.8},{-0.8,3.5,-4},{0.8,3.5,-4},{-0.8,3.5,-2.8},{0.8,3.5,-2.8},{-0.8,2,-4},{0.8,2,-4},{-0.8,2,-2.8},{0.8,2,-2.8},{-0.8,0.5,-4},{0.8,0.5,-4},{-0.8,0.5,-2.8},{0.8,0.5,-2.8}}},
-		
+
 		{"UK3CB_MTVR_Open",-6.5,{{0,-0.2,0},{0,-1.9,0}}},
 		{"UK3CB_MTVR_Recovery",-6.5,{{0,-0.2,0},{0,-1.9,0},{0,-3.6,0}}},
 		{"UK3CB_BAF_Husky_Logistics_HMG_Sand",-5,{{0,-1.9,-0.2}}},

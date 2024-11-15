@@ -21,7 +21,7 @@ class Logi_Setup {
 		"B_Truck_01_medical_F",
 		"B_Heli_Transport_03_unarmed_F"
 	};
-	
+
 	medicalBuildings[] = { //buildings to add heal actions onto
 		"Land_Medevac_house_V1_F"
 	};
@@ -72,18 +72,18 @@ class Logi_Setup {
 				{"B_UAV_05_F", {300,300,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {DT_globalReputation > 25 && {call DT_fnc_getMissionProgress > 0.35}}"},
 				{"B_T_UAV_03_dynamicLoadout_F", {500,300,350}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {DT_globalReputation > 25 && {call DT_fnc_getMissionProgress > 0.35 && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}}}"},
 
-				{"B_Heli_Light_01_F", {200,150,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},                      
+				{"B_Heli_Light_01_F", {200,150,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
 				{"B_Heli_Light_01_dynamicLoadout_F", {250,150,150}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
-				
-				{"B_Heli_Transport_03_F", {300,200,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},							
+
+				{"B_Heli_Transport_03_F", {300,200,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
 				{"B_Heli_Transport_01_F", {200,200,100}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
 				{"B_CTRG_Heli_Transport_01_sand_F", {200,200,100}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
-				{"B_CTRG_Heli_Transport_01_tropic_F", {200,200,100}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},   
+				{"B_CTRG_Heli_Transport_01_tropic_F", {200,200,100}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
 
 				{"B_T_VTOL_01_infantry_F", {600,300,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentPlanes',[]]) < DT_maxPlaneCount}"},
 				{"B_T_VTOL_01_vehicle_F", {600,300,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentPlanes',[]]) < DT_maxPlaneCount}"},
-				{"B_T_VTOL_01_armed_F", {600,300,700}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentPlanes',[]]) < DT_maxPlaneCount}"}, 
-				
+				{"B_T_VTOL_01_armed_F", {600,300,700}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentPlanes',[]]) < DT_maxPlaneCount}"},
+
 				{"B_Plane_Fighter_01_F", {900,800,800}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentPlanes',[]]) < DT_maxPlaneCount && {call DT_fnc_getMissionProgress > 0.4}}"},
 				{"B_Plane_CAS_01_dynamicLoadout_F", {800,800,900}, "missionNamespace getVariable ['DT_canPurchaseAir',false] && {count (missionNamespace getVariable ['DT_currentPlanes',[]]) < DT_maxPlaneCount && {call DT_fnc_getMissionProgress > 0.35}}"}
 			}
@@ -179,7 +179,7 @@ class Logi_Setup {
 				{"Land_HelipadCircle_F", {250,0,0}, ""},
 				{"Land_HelipadRescue_F", {250,0,0}, ""},
 				{"Land_TentHangar_V1_F", {500,0,0}, ""},
-				
+
 				{"B_Truck_01_repair_F", {250,50,0}, ""},
 				{"B_Truck_01_ammo_F", {200,50,50}, ""},
 				{"B_Truck_01_fuel_F", {200,100,0}, ""},
@@ -209,7 +209,7 @@ class Logi_Setup {
 		{"medium", "Box_NATO_Wps_F"},
 		{"large", "Box_NATO_WpsSpecial_F"},
 	};
-	
+
 	//categories supported: medicalCrateCategory,lightWeaponCrateCategory,heavyWeaponCrateCategory,staticWeaponCrateCategory,miscWeaponCrateCategory
 	supplyCrates[] = { //format {"category","title","box size",{resources},{contents}}
 		{"medicalCrateCategory","Medical Crate","medical",{25,0,0},{
@@ -277,7 +277,7 @@ class Logi_Setup {
 			{"20Rnd_762x51_Mag",20},
 			{"100Rnd_65x39_caseless_mag",10},
 			{"150Rnd_556x45_Drum_Mag_F",8},
-						
+
 			{"HandGrenade",6},
 			{"MiniGrenade",6},
 			{"SmokeShell",4},
@@ -299,7 +299,7 @@ class Logi_Setup {
 
 		}},
 		{"miscWeaponCrateCategory","Empty Crate (Medium)","medium",{0,0,0},{
-			
+
 		}}
 	};
 };

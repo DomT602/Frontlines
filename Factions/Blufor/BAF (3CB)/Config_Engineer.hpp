@@ -28,6 +28,6 @@ class engineer {
 	};
 
 	arsenalItems[] = {
-		
+
 	};
 };

@@ -25,7 +25,7 @@ class DT_deployMenu
 			h = 0.022 * safezoneH;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.13])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.54])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.21])","(profilenamespace getvariable ['GUI_BCG_RGB_A',0.8])"};
 		};
-		class Tree: RscTree 
+		class Tree: RscTree
 		{
 			idc = 1500;
 			onTreeSelChanged = "_this call DT_fnc_onDeployMenuTvChange;";

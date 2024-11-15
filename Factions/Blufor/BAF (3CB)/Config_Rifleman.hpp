@@ -27,6 +27,6 @@ class rifleman {
 	};
 
 	arsenalItems[] = {
-		
+
 	};
 };

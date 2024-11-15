@@ -49,7 +49,7 @@ missionNamespace setVariable ["DT_opforAAActive",true,true];
 	},
 	{
 		params ["","_marker","_spawnPos","_squads","_objects"];
-		
+
 		deleteMarker _marker;
 		["The AA site has been destroyed.","successNotif","Destroy AA"] remoteExecCall ["DT_fnc_notify",0];
 		missionNamespace setVariable ["DT_opforAAActive",nil,true];

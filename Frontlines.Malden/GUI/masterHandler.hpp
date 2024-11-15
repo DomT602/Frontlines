@@ -25,7 +25,7 @@ class DT_RscTreeSearch: RscTree
 	idcSearch=645;
 };
 
-class DT_mapButton: RscButtonMenu 
+class DT_mapButton: RscButtonMenu
 {
 	idc = -1;
 	text = "Mission Status";

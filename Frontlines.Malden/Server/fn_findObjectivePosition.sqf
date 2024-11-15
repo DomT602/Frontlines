@@ -24,7 +24,7 @@ private _position = [];
 			!surfaceIsWater _testPos &&
 			{_testPos isFlatEmpty [-1,-1,0.2,_terrainRadius,0,false,objNull] isNotEqualTo [] &&
 			{nearestTerrainObjects [_testPos,["HIDE","BUILDING","TREE","ROCKS"],_terrainRadius,false] isEqualTo [] &&
-			{DT_allSectors findIf {_x distance2D _testPos < _radius} isEqualTo -1 && 
+			{DT_allSectors findIf {_x distance2D _testPos < _radius} isEqualTo -1 &&
 			{DT_allFOBs findIf {_x distance2D _testPos < _doubleRadius} isEqualTo -1 &&
 			{_bluforSectors findIf {_x distance2D _testPos < _doubleRadius} isEqualTo -1 &&
 			{_xPos > 0 && {_xPos < _worldSize &&

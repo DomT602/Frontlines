@@ -93,5 +93,5 @@ _textBox ctrlSetStructuredText parseText _text;
 if ([_localResources,_resources] call DT_fnc_compareResources && {[_conditions] call DT_fnc_conditionChecker}) then {
 	_button ctrlEnable true;
 } else {
-	_button ctrlEnable false;	
+	_button ctrlEnable false;
 };

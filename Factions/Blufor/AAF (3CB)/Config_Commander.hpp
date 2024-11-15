@@ -19,6 +19,6 @@ class commander {
 	};
 
 	arsenalItems[] = {
-		
+
 	};
 };

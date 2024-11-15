@@ -54,7 +54,7 @@ private _groups = [_targetSector,_sendingSector] call DT_fnc_spawnAssault;
 				publicVariable "DT_activeSectors";
 				(_targetSector getVariable "DT_sectorVariable") setMarkerColor "colorOPFOR";
 				_targetSector setVariable ["DT_sectorStrength",[] call DT_fnc_getAverageStrength,true];
-				
+
 				private _sectorType = _targetSector getVariable "DT_sectorType";
 				if (_sectorType isEqualTo "factory") then {
 					_targetSector setVariable ["DT_factoryType",nil,true];

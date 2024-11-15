@@ -48,7 +48,7 @@ if (player distance2D _sector < _radius) then {
 		(_hud displayCtrl 1901) ctrlShow false;
 		_args set [0,false];
 	};
-	
+
 	if (_marker isNotEqualTo "") then {
 		deleteMarkerLocal _marker;
 		_args set [1,""];

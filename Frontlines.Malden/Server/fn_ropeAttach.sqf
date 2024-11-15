@@ -1,7 +1,7 @@
 /*
 	File: fn_ropeAttach.sqf
 	Author: Dom
-	Description: EVH called on a rope attach 
+	Description: EVH called on a rope attach
 */
 params ["_object1", "_rope", "_object2"];
 

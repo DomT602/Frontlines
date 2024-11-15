@@ -27,6 +27,6 @@ class teamlead {
 	};
 
 	arsenalItems[] = {
-		
+
 	};
 };

@@ -12,7 +12,7 @@ if (_save isEqualTo []) then {
 	if (_fobPosition isEqualTo [0,0,0]) then {
 		private _radius = (getNumber(missionConfigFile >> "Settings" >> "sectorActivationRange") * 1.25);
 		private _startPos = [worldSize / 2,worldSize / 2];
-		
+
 		while {_fobPosition isEqualTo [0,0,0]} do {
 			private _testPos = _startPos getPos [random (worldSize / 2),random 360];
 			if (
@@ -25,7 +25,7 @@ if (_save isEqualTo []) then {
 			};
 		};
 	};
-	
+
 	private _fobBuildingClass = getText(missionConfigFile >> "Logi_Setup" >> "fobBuilding");
 	private _startRes = getArray(missionConfigFile >> "Settings" >> "startingResources");
 	(getArray(missionConfigFile >> "Settings" >> "defaultFOBNames")) params ["_name"];

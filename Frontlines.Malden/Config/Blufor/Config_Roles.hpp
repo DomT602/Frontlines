@@ -42,11 +42,11 @@ class Common_Arsenal {
 
 		"U_B_Wetsuit", "U_B_survival_uniform","V_RebreatherB", "G_B_Diving", "G_Diving",
 		"U_B_PilotCoveralls",
-		
+
 		"V_Rangemaster_belt",
 
 		"B_Carryall_cbr", "B_Kitbag_cbr", "B_AssaultPack_cbr", "B_LegStrapBag_coyote_F", "B_Parachute", "ACE_NonSteerableParachute",
-		
+
 		"launch_B_Titan_short_F",
 		"launch_B_Titan_F",
 		"launch_MRAWS_green_rail_F",

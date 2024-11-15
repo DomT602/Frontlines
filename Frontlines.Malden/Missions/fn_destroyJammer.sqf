@@ -50,7 +50,7 @@ missionNamespace setVariable ["DT_opforJammerActive",true,true];
 		};
 		["The jammer has been destroyed.","successNotif","Destroy Jammer"] remoteExecCall ["DT_fnc_notify",0];
 		missionNamespace setVariable ["DT_opforJammerActive",nil,true];
-		
+
 		[
 			{
 				params ["_pos"];

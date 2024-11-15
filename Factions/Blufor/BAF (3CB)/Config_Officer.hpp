@@ -27,6 +27,6 @@ class officer {
 	};
 
 	arsenalItems[] = {
-		
+
 	};
 };

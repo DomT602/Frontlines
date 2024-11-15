@@ -65,7 +65,7 @@ for "_i" from 1 to _civilianCount do {
 	},
 	{
 		params ["_obj","_civilians"];
-		
+
 		{
 			if (alive _x) then {
 				deleteVehicle _x;

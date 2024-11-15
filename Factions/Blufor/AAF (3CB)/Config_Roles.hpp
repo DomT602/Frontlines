@@ -21,44 +21,44 @@ class Common_Arsenal {
 		"rhs_weap_vhsd2_bg",
 		"rhs_weap_vhsd2_bg_ct15x",
 		"rhs_weap_vhsk2",
-		
+
 		"rhs_weap_m4a1_blockII", //spec ops rifle
 		"rhs_weap_m4a1_blockII_bk",
 		"rhs_weap_m4a1_blockII_M203_bk",
 		"rhs_weap_m4a1_blockII_KAC_bk",
 		"rhs_weap_m4a1_blockII_M203",
 		"rhs_weap_m4a1_blockII_KAC",
-		
+
 		"rhs_weap_m249_light_L", //LMG
 		"rhs_weap_m249_pip_L_para",
 		"rhs_weap_m249_light_S",
 		"rhs_weap_m249_pip_S_para",
-		
+
 		"rhs_weap_XM2010", //sniper rifle
 		"rhs_weap_XM2010_d",
 		"rhs_weap_XM2010_sa",
-		
+
 		"rhs_weap_M107", //anti-material rifle
-		
+
 		"rhsusf_weap_glock17g4", //pistol
 		"rhsusf_weap_m9",
 		"rhs_weap_M320",
-		
+
 		"ACE_Flashlight_Maglite_ML300L", //equipment
 		"rhs_weap_rsp30_white",
 		"rhs_weap_rsp30_green",
 		"rhs_weap_rsp30_red",
 		"rhs_weap_tr8",
 		"ACE_VMM3",
-		
+
 		"rhs_weap_fim92", //MANPADS
-		
+
 		"rhs_weap_m72a7", //RPG
 		"rhs_weap_smaw",
 		"rhs_weap_smaw_green",
-		
+
 		"UK3CB_BAF_Javelin_Slung_Tube", //Javelin
-		
+
 		"UK3CB_BAF_M6", //mortar
 
 		"rhs_mag_m4009", //grenades
@@ -82,10 +82,10 @@ class Common_Arsenal {
 		"rhs_mag_m716_yellow",
 		"rhs_mag_M781_Practice",
 		"ACE_40mm_Flare_ir",
-		
+
 		"rhsgref_30rnd_556x45_vhs2", //vhs
 		"rhsgref_30rnd_556x45_vhs2_t",
-		
+
 		"rhs_mag_30Rnd_556x45_M855_Stanag", //m4
 		"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 		"rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",
@@ -102,7 +102,7 @@ class Common_Arsenal {
 		"rhs_mag_30Rnd_556x45_M855A1_PMAG",
 		"rhs_mag_30Rnd_556x45_M855_PMAG_Tracer_Red",
 		"rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",
-		
+
 		"rhsusf_100Rnd_556x45_M855_soft_pouch_coyote", //m249
 		"rhsusf_100Rnd_556x45_M855_mixed_soft_pouch_coyote",
 		"rhsusf_100Rnd_556x45_soft_pouch_coyote",
@@ -116,34 +116,34 @@ class Common_Arsenal {
 		"rhsusf_200Rnd_556x45_M855_mixed_soft_pouch_coyote",
 		"rhsusf_200Rnd_556x45_soft_pouch_coyote",
 		"rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote",
-		
+
 		"rhsusf_5Rnd_300winmag_xm2010", //m2010
-		
+
 		"rhsusf_mag_10Rnd_STD_50BMG_M33", //m107
 		"rhsusf_mag_10Rnd_STD_50BMG_mk211",
-		
+
 		"rhsusf_mag_17Rnd_9x19_FMJ", //g17
 		"rhsusf_mag_17Rnd_9x19_JHP",
-		
+
 		"rhsusf_mag_15Rnd_9x19_FMJ", //m9
 		"rhsusf_mag_15Rnd_9x19_JHP",
-		
+
 		"rhs_mag_rsp30_white", //flare
 		"rhs_mag_rsp30_green",
 		"rhs_mag_rsp30_red",
-		
+
 		"rhs_fim92_mag", //fim92
-		
+
 		"rhs_mag_smaw_HEDP", //smaw
 		"rhs_mag_smaw_HEAA",
-		
+
 		"UK3CB_BAF_1Rnd_60mm_Mo_AB_Shells", //m6
 		"UK3CB_BAF_1Rnd_60mm_Mo_Shells",
 		"UK3CB_BAF_1Rnd_60mm_Mo_Smoke_Red",
 		"UK3CB_BAF_1Rnd_60mm_Mo_Flare_White",
 		"UK3CB_BAF_1Rnd_60mm_Mo_WPSmoke_White",
 		"UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White",
-		
+
 		"ACE_1Rnd_82mm_Mo_HE_LaserGuided", //static ammo
 		"ACE_1Rnd_82mm_Mo_HE",
 		"ACE_1Rnd_82mm_Mo_Illum",
@@ -187,7 +187,7 @@ class Common_Arsenal {
 		"rksl_optic_pmii_525",
 		"rhsusf_acc_nxs_3515x50f1_md_sun",
 		"rhsusf_acc_nxs_3515x50f1_md",
-		
+
 		"rhsusf_acc_grip1", //grip and bipods
 		"rhsusf_acc_harris_bipod",
 		"rhsusf_acc_kac_grip",
@@ -200,7 +200,7 @@ class Common_Arsenal {
 		"rhsusf_acc_saw_lw_bipod",
 		"rhsusf_acc_saw_bipod",
 		"rhsusf_acc_kac_grip_saw_bipod",
-		
+
 		"rhsusf_acc_anpeq15side", //attachment
 		"rhsusf_acc_anpeq15_top",
 		"rhsusf_acc_anpeq15_wmx",
@@ -215,7 +215,7 @@ class Common_Arsenal {
 		"rhsusf_acc_wmx",
 		"rhsusf_acc_wmx_bk",
 		"acc_flashlight_pistol",
-		
+
 		"rhsusf_acc_omega9k", //muzzle
 		"rhsusf_acc_nt4_black",
 		"rhsusf_acc_nt4_tan",
@@ -225,7 +225,7 @@ class Common_Arsenal {
 		"rhsusf_acc_m2010s",
 		"rhsusf_acc_m2010s_d",
 		"rhsusf_acc_m2010s_sa",
-		
+
 		"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_BRN", //uniforms
 		"UK3CB_AAF_B_U_CombatUniform_DIGI_BRN",
 		"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN",
@@ -252,7 +252,7 @@ class Common_Arsenal {
 		"UK3CB_AAF_B_U_JumperUniform_DIGI_GRN",
 		"UK3CB_AAF_B_U_JumperUniform_Digi_Mix_01",
 		"UK3CB_AAF_B_U_JumperUniform_Digi_Mix_02",
-		
+
 		"V_RebreatherIA", //vests
 		"UK3CB_AAF_B_V_Vest_DIGI_BLK",
 		"UK3CB_AAF_B_V_Vest_DIGI_BRN",
@@ -276,7 +276,7 @@ class Common_Arsenal {
 		"V_TacChestrig_oli_F",
 		"V_LegStrapBag_coyote_F",
 		"V_LegStrapBag_olive_F",
-		
+
 		"UK3CB_AAF_B_H_Beret_Airforce_Off", //headgear
 		"UK3CB_AAF_B_H_Beret_AIR",
 		"UK3CB_AAF_B_H_Beret_Army_Off",
@@ -299,7 +299,7 @@ class Common_Arsenal {
 		"UK3CB_AAF_B_H_PASGT_DIGI_GRN",
 		"UK3CB_AAF_B_H_PASGT_RHINO_DIGI_GRN",
 		"H_PilotHelmetFighter_I",
-		
+
 		"G_Aviator", //facewear
 		"rhs_balaclava",
 		"UK3CB_G_Balaclava_DES",
@@ -353,7 +353,7 @@ class Common_Arsenal {
 		"UK3CB_BAF_G_Tactical_Grey",
 		"UK3CB_BAF_G_Tactical_Orange",
 		"UK3CB_BAF_G_Tactical_Yellow",
-		
+
 		"UK3CB_BAF_Javelin_CLU", //binoculars
 		"ACE_VectorDay",
 		"ACE_Vector",
@@ -362,9 +362,9 @@ class Common_Arsenal {
 		"Laserdesignator",
 		"rhsusf_bino_leopold_mk4",
 		"rhs_tr8_periscope",
-		
+
 		"TFAR_anprc152", //radios
-		
+
 		"NVGogglesB_blk_F", //nvg
 		"NVGogglesB_grn_F",
 		"NVGogglesB_gry_F",
@@ -372,13 +372,13 @@ class Common_Arsenal {
 		"ACE_NVG_Gen4_Green",
 		"ACE_NVG_Wide_Black",
 		"ACE_NVG_Wide_Green",
-		
+
 		"ItemMap", //equipment
 		"ItemGPS",
 		"B_UavTerminal",
 		"ItemCompass",
 		"ItemWatch",
-		
+
 		"ACE_adenosine", //items
 		"ACE_artilleryTable",
 		"ACE_ATragMX",
@@ -428,7 +428,7 @@ class Common_Arsenal {
 		"ACE_WaterBottle_Empty",
 		"ACE_WaterBottle_Half",
 		"ACE_wirecutter",
-		
+
 		"rhs_grenade_m15_mag", //grenades
 		"rhs_mag_m18_green",
 		"rhs_mag_m18_purple",
@@ -451,7 +451,7 @@ class Common_Arsenal {
 		"ACE_Chemlight_HiYellow",
 		"ACE_Chemlight_IR",
 		"ACE_Chemlight_UltraHiOrange",
-		
+
 		"rhsusf_mine_m14_mag", //explosives
 		"rhs_mine_M19_mag",
 		"rhsusf_mine_m49a1_10m_mag",

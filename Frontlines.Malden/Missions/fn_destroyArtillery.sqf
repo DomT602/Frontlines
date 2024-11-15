@@ -53,7 +53,7 @@ missionNamespace setVariable ["DT_opforArtilleryActive",true,true];
 	},
 	{
 		params ["","_marker","_spawnPos","_squads","_objects"];
-		
+
 		deleteMarker _marker;
 		["The artillery site has been destroyed.","successNotif","Destroy Artillery"] remoteExecCall ["DT_fnc_notify",0];
 		missionNamespace setVariable ["DT_opforArtilleryActive",nil,true];

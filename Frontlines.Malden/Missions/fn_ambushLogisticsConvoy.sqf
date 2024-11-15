@@ -75,7 +75,7 @@ private _marker = ["logiAmbush",_roadToSpawn,true,"ColorOPFOR","ELLIPSE",100,"La
 			},
 			{
 				params ["_position","_squads","_marker","_crates"];
-				
+
 				[_position,_squads,_crates] call DT_fnc_clearArea;
 				deleteMarker _marker;
 				["The convoy was lost.","failedNotif","Convoy Lost"] remoteExecCall ["DT_fnc_notify",0];

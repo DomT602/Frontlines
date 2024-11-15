@@ -16,7 +16,7 @@ if (_isRespawn) then {
 } else {
 	DT_savedLoadout = _defaultLoadout;
 	[player,_defaultLoadout,true] call CBA_fnc_setLoadout;
-	
+
 	private _items = getArray(_roleConfig >> "arsenalItems");
 	_items append getArray(missionConfigFile >> "Common_Arsenal" >> "items");
 

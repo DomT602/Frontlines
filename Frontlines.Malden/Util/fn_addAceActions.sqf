@@ -67,7 +67,7 @@ private _copyLoadout = [
 	{
 		[player,[_target] call CBA_fnc_getLoadout,true] call CBA_fnc_setLoadout;
 	},
-	{	
+	{
 		isPlayer _target &&
 		{[player,50] call DT_fnc_isNearFOB}
 	}
@@ -87,16 +87,16 @@ private _deploy = [
 ] call ace_interact_menu_fnc_createAction;
 [player,1,["ACE_SelfActions","baseCategory"],_deploy] call ace_interact_menu_fnc_addActionToObject;
 
-private _crateCategory = [ 
-	"crateCategory", 
-	"Crates", 
-	"\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\box_ca.paa", 
-	DT_fnc_initSupplyCrateMenu, 
-	{ 
+private _crateCategory = [
+	"crateCategory",
+	"Crates",
+	"\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\box_ca.paa",
+	DT_fnc_initSupplyCrateMenu,
+	{
 		(rankId player > 3 || DT_isZeus) &&
 		{[player,50] call DT_fnc_isNearFOB}
-	} 
-	] call ace_interact_menu_fnc_createAction; 
+	}
+	] call ace_interact_menu_fnc_createAction;
 [player,1,["ACE_SelfActions","baseCategory"],_crateCategory] call ace_interact_menu_fnc_addActionToObject;
 
 private _logisticsCategory = [
@@ -116,7 +116,7 @@ private _buildMenu = [
 	"\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\defend_ca.paa",
 	DT_fnc_initBuildMenu,
 	{
-		isNull objectParent player && 
+		isNull objectParent player &&
 		{[player] call DT_fnc_isNearFOB}
 	}
 ] call ace_interact_menu_fnc_createAction;
@@ -141,7 +141,7 @@ private _moveObject = [
 	"\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\use_ca.paa",
 	{[_target] call DT_fnc_moveObject},
 	{
-		isNull objectParent player && 
+		isNull objectParent player &&
 		{[player] call DT_fnc_isNearFOB}
 	}
 ] call ace_interact_menu_fnc_createAction;
@@ -161,7 +161,7 @@ private _environmentMenu = [
 	"\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\use_ca.paa",
 	DT_fnc_initEnvironmentMenu,
 	{
-		(rankId player > 3 || DT_isZeus) && 
+		(rankId player > 3 || DT_isZeus) &&
 		{[player] call DT_fnc_isNearFOB}
 	}
 ] call ace_interact_menu_fnc_createAction;
@@ -173,8 +173,8 @@ private _factoryMenu = [
 	"\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\box_ca.paa",
 	DT_fnc_initFactoryMenu,
 	{
-		([["factory"],true] call DT_fnc_getSectorsByType isNotEqualTo []) && 
-		{(rankId player > 2 || DT_isZeus) && 
+		([["factory"],true] call DT_fnc_getSectorsByType isNotEqualTo []) &&
+		{(rankId player > 2 || DT_isZeus) &&
 		{([player] call DT_fnc_isNearFOB || [player,[["factory"],true] call DT_fnc_getSectorsByType] call DT_fnc_isNearSector)}}
 	}
 ] call ace_interact_menu_fnc_createAction;
@@ -186,7 +186,7 @@ private _logisticsMenu = [
 	"\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\truck_ca.paa",
 	DT_fnc_initLogisticsMenu,
 	{
-		(rankId player > 2 || DT_isZeus) && 
+		(rankId player > 2 || DT_isZeus) &&
 		{([player] call DT_fnc_isNearFOB || [player,[["factory"],true] call DT_fnc_getSectorsByType] call DT_fnc_isNearSector)}
 	}
 ] call ace_interact_menu_fnc_createAction;
@@ -196,9 +196,9 @@ private _retrieveCrates = [
 	"retrieveCrates",
 	"Withdraw resources",
 	"\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\getout_ca.paa",
-	DT_fnc_initRetrieveMenu, 
+	DT_fnc_initRetrieveMenu,
 	{
-		isNull objectParent player && 
+		isNull objectParent player &&
 		([player] call DT_fnc_isNearFOB || [player,[["factory"],true] call DT_fnc_getSectorsByType] call DT_fnc_isNearSector)
 	}
 ] call ace_interact_menu_fnc_createAction;
@@ -212,8 +212,8 @@ private _storeCrate = [
 		[_target] call DT_fnc_storeCrate;
 	},
 	{
-		isNull (attachedTo _target) && 
-		{[player] call DT_fnc_isNearFOB || 
+		isNull (attachedTo _target) &&
+		{[player] call DT_fnc_isNearFOB ||
 		{[player,[["factory"],true] call DT_fnc_getSectorsByType] call DT_fnc_isNearSector}}
 	}
 ] call ace_interact_menu_fnc_createAction;
@@ -413,7 +413,7 @@ private _capture = [
 	},
 	{
 		[player] call DT_fnc_isNearFOB &&
-		{captive _target && 
+		{captive _target &&
 		{!isPlayer _target &&
 		{[_target] call ace_medical_status_fnc_isInStableCondition}}}
 	}

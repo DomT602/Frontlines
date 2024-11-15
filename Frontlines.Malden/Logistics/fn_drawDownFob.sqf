@@ -6,7 +6,7 @@
 params [
 	["_object",objNull,[objNull]]
 ];
-if (count DT_allFOBs isEqualTo 1) exitWith {["You cannot draw down your only FOB."] call DT_fnc_notify}; 
+if (count DT_allFOBs isEqualTo 1) exitWith {["You cannot draw down your only FOB."] call DT_fnc_notify};
 
 private _action = [
 	"Are you sure you want to draw down this FOB, any resources will be lost, all objects will remain until the next restart and you will be given a new FOB box.",

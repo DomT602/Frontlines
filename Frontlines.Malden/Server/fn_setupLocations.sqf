@@ -25,18 +25,18 @@ private _sectors = [];
 } forEach allMapMarkers;
 missionNamespace setVariable ["DT_allSectors",_sectors,true];
 
-DT_airportLocations = []; 
-private _config = configFile >> "cfgWorlds" >> worldName; 
-private _primAirport = getArray(_config >> "ilsPosition"); 
-_primAirport set [2,0]; 
+DT_airportLocations = [];
+private _config = configFile >> "cfgWorlds" >> worldName;
+private _primAirport = getArray(_config >> "ilsPosition");
+_primAirport set [2,0];
 private _ilsDirection = getArray(_config >> "ilsDirection");
 private _primAirportDirection = (_ilsDirection # 0) atan2 (_ilsDirection # 2) - 180;
-DT_airportLocations pushBack [_primAirport,_primAirportDirection]; 
- 
-{ 
-	private _secAirport = getArray(_x >> "ilsPosition"); 
-	_secAirport set [2,0]; 
+DT_airportLocations pushBack [_primAirport,_primAirportDirection];
+
+{
+	private _secAirport = getArray(_x >> "ilsPosition");
+	_secAirport set [2,0];
 	private _ilsDirection = getArray(_x >> "ilsDirection");
 	private _secAirportDirection = (_ilsDirection # 0) atan2 (_ilsDirection # 2) - 180;
-	DT_airportLocations pushBack [_secAirport,_secAirportDirection]; 
+	DT_airportLocations pushBack [_secAirport,_secAirportDirection];
 } forEach ("true" configClasses (_config >> "SecondaryAirports")); 

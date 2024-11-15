@@ -27,7 +27,7 @@ if (DT_ambientOpforHandle isEqualTo -1) then {
 				[_this select 1] call CBA_fnc_removePerFrameHandler;
 				DT_ambientOpforHandle = -1;
 			};
-			
+
 			{
 				_x params ["_vehicle","_group","_lastPos"];
 				if (isNull _group) then {
@@ -57,7 +57,7 @@ if (DT_ambientOpforHandle isEqualTo -1) then {
 									_position = selectRandom _nearRoads;
 								};
 							};
-							
+
 							private _waypoint = _group addWaypoint [_position,10];
 							_waypoint setWaypointType "MOVE";
 							_waypoint setWaypointBehaviour "SAFE";

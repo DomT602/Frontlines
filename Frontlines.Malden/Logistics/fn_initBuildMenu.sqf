@@ -23,7 +23,7 @@ private _buyables = getArray(missionConfigFile >> "Logi_Setup" >> "bluforBuyable
 			_name = _class select 1;
 			_x set [0,_class select 0];
 		};
-		
+
 		private _index = _tree tvAdd [[_categoryIndex],_name];
 
 		if !(_icon in ["","pictureStaticObject","pictureThing"]) then {

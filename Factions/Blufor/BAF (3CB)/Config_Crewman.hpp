@@ -27,6 +27,6 @@ class crewman {
 	};
 
 	arsenalItems[] = {
-		
+
 	};
 };

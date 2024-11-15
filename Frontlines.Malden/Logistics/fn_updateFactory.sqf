@@ -19,7 +19,7 @@ if (_suppliesAvailable < 100) exitWith {["100 supplies need to be available at t
 
 _resources = _resources vectorDiff [100,0,0];
 _object setVariable ["DT_factoryType",_toolboxIndex,true];
-_object setVariable ["DT_factoryResources",_resources,true]; 
+_object setVariable ["DT_factoryResources",_resources,true];
 
 ["Factory updated."] call DT_fnc_notify;
 

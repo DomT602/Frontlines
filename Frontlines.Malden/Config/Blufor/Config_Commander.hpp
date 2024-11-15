@@ -24,8 +24,8 @@ class commander {
 		"H_HelmetCrew_B","",{},
 		{"ItemMap","ItemGPS","TFAR_anprc152","ItemCompass","ItemWatch","NVGogglesB_blk_F"}
 	};
-	
+
 	arsenalItems[] = {
-		
+
 	};
 };

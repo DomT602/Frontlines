@@ -38,7 +38,7 @@ private _marker = ["captureUAV",_position,true,"ColorOPFOR","ELLIPSE",1000,"UAV 
 
 		if (isNil "DT_secondaryActive") then {
 			["Mission cancelled.","failedNotif","Downed UAV"] remoteExecCall ["DT_fnc_notify",0];
-		} else {	
+		} else {
 			["The UAV data was downloaded.","successNotif","Downed UAV"] remoteExecCall ["DT_fnc_notify",0];
 			[30] call DT_fnc_updateIntel;
 			missionNamespace setVariable ["DT_secondaryActive",nil,true];

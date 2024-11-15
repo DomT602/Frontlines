@@ -57,7 +57,7 @@ private _marker = ["supplyDepot",_position,true,"ColorOPFOR","ELLIPSE",500,"Depo
 
 		if (isNil "DT_secondaryActive") then {
 			["Mission cancelled.","failedNotif","Depot Raid"] remoteExecCall ["DT_fnc_notify",0];
-		} else {	
+		} else {
 			["The raid is complete.","successNotif","FOB Hunting"] remoteExecCall ["DT_fnc_notify",0];
 			[-5] call DT_fnc_updateThreat;
 			missionNamespace setVariable ["DT_secondaryActive",nil,true];

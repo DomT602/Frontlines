@@ -27,6 +27,6 @@ class uavop {
 	};
 
 	arsenalItems[] = {
-		
+
 	};
 };

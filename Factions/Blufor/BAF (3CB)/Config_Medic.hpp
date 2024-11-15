@@ -27,6 +27,6 @@ class medic {
 	};
 
 	arsenalItems[] = {
-		
+
 	};
 };

@@ -59,7 +59,7 @@ private _marker = ["fobHunt",_position,true,"ColorOPFOR","ELLIPSE",1000,"FOB Hun
 
 		if (isNil "DT_secondaryActive") then {
 			["Mission cancelled.","failedNotif","FOB Hunting"] remoteExecCall ["DT_fnc_notify",0];
-		} else {	
+		} else {
 			["The FOB has been destroyed.","successNotif","FOB Hunting"] remoteExecCall ["DT_fnc_notify",0];
 			[-40] call DT_fnc_updateThreat;
 			missionNamespace setVariable ["DT_secondaryActive",nil,true];

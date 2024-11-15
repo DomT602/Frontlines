@@ -21,7 +21,7 @@ class Logi_Setup {
 		"UK3CB_BAF_LandRover_Amb_FFR_Green_A",
 		"UK3CB_BAF_Merlin_HC4_CSAR"
 	};
-	
+
 	medicalBuildings[] = { //buildings to add heal actions onto
 		"Land_Medevac_house_V1_F"
 	};
@@ -44,24 +44,24 @@ class Logi_Setup {
 			{
 				{"UK3CB_BAF_LandRover_Soft_Green_A", {60,25,0}, ""},
 				{"UK3CB_BAF_LandRover_Soft_FFR_Green_A", {60,25,0}, ""},
-				{"UK3CB_BAF_LandRover_Hard_Green_A", {70,25,0}, ""}, 
-				{"UK3CB_BAF_LandRover_Hard_FFR_Green_A", {70,25,0}, ""},                   
-				{"UK3CB_BAF_LandRover_Snatch_Green_A", {80,25,0}, ""},                     
-				{"UK3CB_BAF_LandRover_Snatch_FFR_Green_A", {80,25,0}, ""},                 
-				
+				{"UK3CB_BAF_LandRover_Hard_Green_A", {70,25,0}, ""},
+				{"UK3CB_BAF_LandRover_Hard_FFR_Green_A", {70,25,0}, ""},
+				{"UK3CB_BAF_LandRover_Snatch_Green_A", {80,25,0}, ""},
+				{"UK3CB_BAF_LandRover_Snatch_FFR_Green_A", {80,25,0}, ""},
+
 				{"UK3CB_BAF_LandRover_WMIK_GPMG_Green_A", {75,25,50}, ""},
-				{"UK3CB_BAF_LandRover_WMIK_GPMG_FFR_Green_A", {75,25,50}, ""},             
-				{"UK3CB_BAF_LandRover_WMIK_HMG_Green_A", {80,25,50}, ""},                  
-				{"UK3CB_BAF_LandRover_WMIK_HMG_FFR_Green_A", {80,25,50}, ""},              
-				{"UK3CB_BAF_LandRover_WMIK_GMG_Green_A", {80,25,75}, ""},                  
-				{"UK3CB_BAF_LandRover_WMIK_GMG_FFR_Green_A", {80,25,75}, ""},             
-				{"UK3CB_BAF_LandRover_WMIK_Milan_Green_A", {100,25,100}, ""},              
-				{"UK3CB_BAF_LandRover_WMIK_Milan_FFR_Green_A", {100,25,100}, ""},          
-				
+				{"UK3CB_BAF_LandRover_WMIK_GPMG_FFR_Green_A", {75,25,50}, ""},
+				{"UK3CB_BAF_LandRover_WMIK_HMG_Green_A", {80,25,50}, ""},
+				{"UK3CB_BAF_LandRover_WMIK_HMG_FFR_Green_A", {80,25,50}, ""},
+				{"UK3CB_BAF_LandRover_WMIK_GMG_Green_A", {80,25,75}, ""},
+				{"UK3CB_BAF_LandRover_WMIK_GMG_FFR_Green_A", {80,25,75}, ""},
+				{"UK3CB_BAF_LandRover_WMIK_Milan_Green_A", {100,25,100}, ""},
+				{"UK3CB_BAF_LandRover_WMIK_Milan_FFR_Green_A", {100,25,100}, ""},
+
 				{"UK3CB_BAF_Jackal2_L111A1_G", {100,50,75}, ""},
 				{"UK3CB_BAF_Jackal2_L134A1_G", {100,50,100}, ""},
-				
-				{"UK3CB_BAF_Coyote_Passenger_L111A1_G", {100,50,75}, ""}, 
+
+				{"UK3CB_BAF_Coyote_Passenger_L111A1_G", {100,50,75}, ""},
 				{"UK3CB_BAF_Coyote_Passenger_L134A1_G", {100,50,100}, ""},
 				{"UK3CB_BAF_Coyote_Logistics_L111A1_G", {100,50,75}, ""},
 				{"UK3CB_BAF_Coyote_Logistics_L134A1_G", {100,50,100}, ""},
@@ -76,7 +76,7 @@ class Logi_Setup {
 
 				{"UK3CB_BAF_MAN_HX60_Cargo_Green_A", {100,100,0}, ""},
 				{"UK3CB_BAF_MAN_HX60_Transport_Green", {100,100,0}, ""},
-				
+
 				{"UK3CB_BAF_MAN_HX58_Cargo_Green_A", {120,100,0}, ""},
 				{"UK3CB_BAF_MAN_HX58_Transport_Green", {120,100,0}, ""}
 			}
@@ -89,11 +89,11 @@ class Logi_Setup {
 
 				{"UK3CB_BAF_Warrior_A3_W", {250,150,250}, ""},
 				{"UK3CB_BAF_Warrior_A3_W_Camo", {250,150,250}, ""},
-				{"UK3CB_BAF_Warrior_A3_W_Cage", {250,150,250}, ""},		
+				{"UK3CB_BAF_Warrior_A3_W_Cage", {250,150,250}, ""},
 				{"UK3CB_BAF_Warrior_A3_W_Cage_Camo", {250,150,250}, ""},
 
 				{"rhsusf_m1a1aim_tuski_wd", {400,200,400}, "DT_globalReputation > 25 && {call DT_fnc_getMissionProgress > 0.5}"},
-				
+
 				{"rhsusf_m109_usarmy", {400,200,400}, ""}
 			}
 		},
@@ -104,28 +104,28 @@ class Logi_Setup {
 				{"B_UAV_06_F", {75,100,0}, ""},
 				{"UK3CB_BAF_MQ9_Reaper", {300,200,200}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {DT_globalReputation > 50 && {call DT_fnc_getMissionProgress > 0.35}}"},
 
-				{"UK3CB_BAF_Wildcat_AH1_CAS_6A", {250,150,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count DT_currentHelicopters < DT_maxHelicopterCount}"},
-				{"UK3CB_BAF_Wildcat_AH1_CAS_6B", {250,150,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count DT_currentHelicopters < DT_maxHelicopterCount}"},
-				{"UK3CB_BAF_Wildcat_AH1_CAS_6C", {250,150,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count DT_currentHelicopters < DT_maxHelicopterCount}"},
-				{"UK3CB_BAF_Wildcat_AH1_CAS_6D", {250,150,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count DT_currentHelicopters < DT_maxHelicopterCount}"},
-				{"UK3CB_BAF_Wildcat_AH1_HEL_6A", {250,150,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count DT_currentHelicopters < DT_maxHelicopterCount}"},
-				
-				{"UK3CB_BAF_Wildcat_AH1_TRN_8A", {250,150,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count DT_currentHelicopters < DT_maxHelicopterCount}"},
-				{"UK3CB_BAF_Wildcat_AH1_CAS_8A", {250,150,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count DT_currentHelicopters < DT_maxHelicopterCount}"},
-				{"UK3CB_BAF_Wildcat_AH1_CAS_8B", {250,150,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count DT_currentHelicopters < DT_maxHelicopterCount}"},
-				{"UK3CB_BAF_Wildcat_AH1_CAS_8C", {250,150,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count DT_currentHelicopters < DT_maxHelicopterCount}"},
-				{"UK3CB_BAF_Wildcat_AH1_CAS_8D", {250,150,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count DT_currentHelicopters < DT_maxHelicopterCount}"},
-				{"UK3CB_BAF_Wildcat_AH1_HEL_8A", {250,150,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count DT_currentHelicopters < DT_maxHelicopterCount}"},
-				
-				{"UK3CB_BAF_Merlin_HC3_18", {250,150,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count DT_currentHelicopters < DT_maxHelicopterCount}"},
-				{"UK3CB_BAF_Merlin_HC3_24", {250,150,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count DT_currentHelicopters < DT_maxHelicopterCount}"},
-				{"UK3CB_BAF_Merlin_HC3_32", {250,150,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count DT_currentHelicopters < DT_maxHelicopterCount}"},
-				{"UK3CB_BAF_Merlin_HC3_Cargo", {250,150,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count DT_currentHelicopters < DT_maxHelicopterCount}"},
+				{"UK3CB_BAF_Wildcat_AH1_CAS_6A", {250,150,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
+				{"UK3CB_BAF_Wildcat_AH1_CAS_6B", {250,150,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
+				{"UK3CB_BAF_Wildcat_AH1_CAS_6C", {250,150,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
+				{"UK3CB_BAF_Wildcat_AH1_CAS_6D", {250,150,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
+				{"UK3CB_BAF_Wildcat_AH1_HEL_6A", {250,150,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
 
-				{"UK3CB_BAF_Apache_AH1", {500,200,500}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count DT_currentHelicopters < DT_maxHelicopterCount}"},
+				{"UK3CB_BAF_Wildcat_AH1_TRN_8A", {250,150,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
+				{"UK3CB_BAF_Wildcat_AH1_CAS_8A", {250,150,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
+				{"UK3CB_BAF_Wildcat_AH1_CAS_8B", {250,150,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
+				{"UK3CB_BAF_Wildcat_AH1_CAS_8C", {250,150,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
+				{"UK3CB_BAF_Wildcat_AH1_CAS_8D", {250,150,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
+				{"UK3CB_BAF_Wildcat_AH1_HEL_8A", {250,150,250}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
 
-				{"RHS_C130J", {600,300,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count DT_currentPlanes < DT_maxPlaneCount}"},
-				{"RHS_C130J_Cargo", {600,300,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count DT_currentPlanes < DT_maxPlaneCount}"}
+				{"UK3CB_BAF_Merlin_HC3_18", {250,150,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
+				{"UK3CB_BAF_Merlin_HC3_24", {250,150,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
+				{"UK3CB_BAF_Merlin_HC3_32", {250,150,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
+				{"UK3CB_BAF_Merlin_HC3_Cargo", {250,150,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
+
+				{"UK3CB_BAF_Apache_AH1", {500,200,500}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count (missionNamespace getVariable ['DT_currentHelicopters',[]]) < DT_maxHelicopterCount}"},
+
+				{"RHS_C130J", {600,300,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count (missionNamespace getVariable ['DT_currentPlanes',[]]) < DT_maxPlaneCount}"},
+				{"RHS_C130J_Cargo", {600,300,0}, "missionNamespace getVariable ['DT_canPurchaseAir',false] isNotEqualTo [] && {count (missionNamespace getVariable ['DT_currentPlanes',[]]) < DT_maxPlaneCount}"}
 			}
 		},
 		{
@@ -220,7 +220,7 @@ class Logi_Setup {
 				{"Land_HelipadCircle_F", {250,0,0}, ""},
 				{"Land_HelipadRescue_F", {250,0,0}, ""},
 				{"Land_TentHangar_V1_F", {500,0,0}, ""},
-				
+
 				{"UK3CB_BAF_MAN_HX58_Repair_Green", {250,50,0}, ""},
 				{"rhsusf_M977A4_AMMO_usarmy_wd", {200,50,50}, ""},
 				{"UK3CB_BAF_MAN_HX58_Fuel_Green", {200,100,0}, ""},
@@ -338,13 +338,13 @@ class Logi_Setup {
 			{"UK3CB_BAF_762_L42A1_20Rnd_T",10},
 			{"UK3CB_BAF_338_5Rnd",10},
 			{"UK3CB_BAF_338_5Rnd_Tracer",5},
-			{"UK3CB_BAF_556_200Rnd",5},		
+			{"UK3CB_BAF_556_200Rnd",5},
 			{"UK3CB_BAF_762_200Rnd",5},
 			{"rhs_mag_m18_purple",5},
 			{"rhs_mag_m18_red",5},
 			{"rhs_mag_m18_blue",5},
 			{"rhs_mag_m18_green",5},
-			{"rhs_mag_m67",10}		
+			{"rhs_mag_m67",10}
 		}},
 		{"miscWeaponCrateCategory","Raven","small",{50,0,50},{
 			{"B_rhsusf_B_BACKPACK",1}
