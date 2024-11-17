@@ -1,7 +1,7 @@
 /*
-	Faction: British Armed Forces
-	Author: Dom
-	Requires: UK3CB, RHSUSF, RKSL, TFAR
+	Faction: United States Marine Corps (Woodland)
+	Author: Reidy
+	Requires: RHSUSF, TFAR
 */
 class Logi_Setup {
 	fobBuilding = "Land_Cargo_HQ_V1_F";
@@ -18,7 +18,7 @@ class Logi_Setup {
 	};
 
 	mobileRespawns[] = { //vehicles that act as mobile respawns
-		"rhsusf_M1230a1_usarmy_d",
+		"rhsusf_M1230a1_usarmy_wd",
 		"rhsusf_CH53E_USMC_D"
 	};
 
@@ -42,44 +42,42 @@ class Logi_Setup {
 		{
 			"Light Vehicles",
 			{
-				{"B_UGV_02_Demining_F", {20,40,0}, ""},
-
 				{"I_G_Quadbike_01_F", {50,25,0}, ""},
 
-				{"rhsusf_m998_d_s_4dr", {60,25,0}, ""},
-				{"rhsusf_m1025_d_s", {60,25,0}, ""},
-				{"rhsusf_m1045_d_s", {125,50,100}, ""},
+				{"rhsusf_m998_w_s_4dr_halftop", {60,25,0}, ""},
+				{"rhsusf_m1043_w_s", {60,25,0}, ""},
+				{"rhsusf_m1045_w_s", {125,50,100}, ""},
 
-				{"rhsusf_m1151_mk19_v3_usmc_d", {75,25,50}, ""},
-				{"rhsusf_m1151_m240_v3_usmc_d", {75,25,50}, ""},
-				{"rhsusf_m1151_m2_v3_usmc_d", {75,25,50}, ""},
+				{"rhsusf_m1151_mk19_v3_usmc_wd", {75,25,50}, ""},
+				{"rhsusf_m1151_m240_v3_usmc_wd", {75,25,50}, ""},
+				{"rhsusf_m1151_m2_v3_usmc_wd", {75,25,50}, ""},
 
-				{"rhsusf_m1240a1_usmc_d", {100,50,75}, ""},
+				{"rhsusf_m1240a1_usmc_wd", {100,50,75}, ""},
 
-				{"rhsusf_m1240a1_m2_usmc_d", {125,50,50}, ""},
-				{"rhsusf_m1240a1_m240_usmc_d", {125,50,50}, ""},
-				{"rhsusf_m1240a1_mk19_usmc_d", {125,50,50}, ""},
-				{"rhsusf_m1240a1_mk19crows_usmc_d", {250,50,100}, ""},
-				{"rhsusf_m1240a1_m2crows_usmc_d", {250,50,100}, ""},
+				{"rhsusf_m1240a1_m2_usmc_wd", {125,50,50}, ""},
+				{"rhsusf_m1240a1_m240_usmc_wd", {125,50,50}, ""},
+				{"rhsusf_m1240a1_mk19_usmc_wd", {125,50,50}, ""},
+				{"rhsusf_m1240a1_mk19crows_usmc_wd", {250,50,100}, ""},
+				{"rhsusf_m1240a1_m2crows_usmc_wd", {250,50,100}, ""},
 
-				{"rhsusf_M1084A1P2_B_D_fmtv_usarmy", {100,100,0}, ""},
-				{"rhsusf_M1083A1P2_B_M2_D_fmtv_usarmy", {100,100,0}, ""}
+				{"rhsusf_M1084A1P2_B_WD_fmtv_usarmy", {100,100,0}, ""},
+				{"rhsusf_M1083A1P2_B_M2_WD_fmtv_usarmy", {100,100,0}, ""}
 			}
 		},
 		{
 			"Heavy Vehicles",
 			{
-				{"rhsusf_M1117_D", {200,150,250}, ""},
+				{"rhsusf_M1117_W", {200,150,250}, ""},
 
-				{"rhsusf_stryker_m1126_m2_d", {250,150,250}, ""},
-				{"rhsusf_stryker_m1126_mk19_d", {250,150,250}, ""},
-				{"rhsusf_stryker_m1132_m2_np_d", {250,150,250}, ""},
-				{"rhsusf_stryker_m1132_m2_d", {250,150,250}, ""},
-				{"rhsusf_stryker_m1134_d", {250,150,250}, ""},
+				{"rhsusf_stryker_m1126_m2_wd", {250,150,250}, ""},
+				{"rhsusf_stryker_m1126_mk19_wd", {250,150,250}, ""},
+				{"rhsusf_stryker_m1132_m2_np_wd", {250,150,250}, ""},
+				{"rhsusf_stryker_m1132_m2_wd", {250,150,250}, ""},
+				{"rhsusf_stryker_m1134_wd", {250,150,250}, ""},
 
-				{"rhsusf_m1a1fep_d", {400,200,400}, "DT_globalReputation > 50 && {call DT_fnc_getMissionProgress > 0.3}"},
+				{"rhsusf_m1a1fep_wd", {400,200,400}, "DT_globalReputation > 50 && {call DT_fnc_getMissionProgress > 0.3}"},
 
-				{"rhsusf_m109d_usarmy", {400,200,400}, ""}
+				{"rhsusf_M142_usmc_WD", {400,200,400}, ""}
 			}
 		},
 		{
@@ -145,23 +143,23 @@ class Logi_Setup {
 				{"Land_TentLamp_01_suspended_F", {10,0,0}, ""},
 				{"Land_TentLamp_01_suspended_red_F", {10,0,0}, ""},
 
-				{"Land_BagFence_round_F", {10,0,0}, ""},
-				{"Land_BagFence_long_F", {10,0,0}, ""},
-				{"Land_BagFence_corner_F", {10,0,0}, ""},
-				{"Land_BagFence_end_F", {10,0,0}, ""},
-				{"Land_BagBunker_small_F", {15,0,0}, ""},
-				{"Land_BagBunker_large_F", {15,0,0}, ""},
-				{"Land_HBarrierTower_F", {75,0,0}, ""},
+				{"Land_BagFence_01_round_green_F", {10,0,0}, ""},
+				{"Land_BagFence_01_long_green_F", {10,0,0}, ""},
+				{"Land_BagFence_01_corner_green_F", {10,0,0}, ""},
+				{"Land_BagFence_01_end_green_F", {10,0,0}, ""},
+				{"Land_BagBunker_01_small_green_F", {15,0,0}, ""},
+				{"Land_BagBunker_01_large_green_F", {15,0,0}, ""},
+				{"Land_HBarrier_01_tower_green_F", {75,0,0}, ""},
 
-				{"Land_HBarrier_1_F", {5,0,0}, ""},
-				{"Land_HBarrier_3_F", {15,0,0}, ""},
-				{"Land_HBarrier_5_F", {20,0,0}, ""},
-				{"Land_HBarrier_Big_F", {50,0,0}, ""},
-				{"Land_HBarrierWall4_F", {20,0,0}, ""},
-				{"Land_HBarrierWall6_F", {25,0,0}, ""},
-				{"Land_HBarrierWall_corner_F", {50,0,0}, ""},
-				{"Land_HBarrierWall_corridor_F", {25,0,0}, ""},
-				{"Land_HBarrierTower_F", {100,0,0}, ""},
+				{"Land_HBarrier_01_line_1_green_F", {5,0,0}, ""},
+				{"Land_HBarrier_01_line_3_green_F", {15,0,0}, ""},
+				{"Land_HBarrier_01_line_5_green_F", {20,0,0}, ""},
+				{"Land_HBarrier_01_big_4_green_F", {50,0,0}, ""},
+				{"Land_HBarrier_01_wall_4_green_F", {20,0,0}, ""},
+				{"Land_HBarrier_01_wall_corner_green_F", {25,0,0}, ""},
+				{"Land_HBarrier_01_wall_6_green_F", {50,0,0}, ""},
+				{"Land_HBarrier_01_wall_corridor_green_F", {25,0,0}, ""},
+				{"Land_HBarrier_01_big_tower_green_F", {100,0,0}, ""},
 
 				{"BlockConcrete_F", {30,0,0}, ""},
 				{"Land_RampConcrete_F", {30,0,0}, ""},
@@ -202,11 +200,11 @@ class Logi_Setup {
 				{"Land_HelipadRescue_F", {250,0,0}, ""},
 				{"Land_TentHangar_V1_F", {500,0,0}, ""},
 
-				{"rhsusf_M977A4_REPAIR_BKIT_usarmy_d", {250,50,0}, ""},
+				{"rhsusf_M977A4_REPAIR_BKIT_usarmy_wd", {250,50,0}, ""},
 				{"rhsusf_M977A4_AMMO_usarmy_wd", {200,50,50}, ""},
-				{"rhsusf_M978A4_usarmy_d", {200,100,0}, ""},
+				{"rhsusf_M978A4_usarmy_wd", {200,100,0}, ""},
 
-				{{"rhsusf_M1230a1_usarmy_d","Mobile Respawn Vehicle"}, {200,100,0}, ""},
+				{{"rhsusf_M1230a1_usarmy_wd","Mobile Respawn Vehicle"}, {200,100,0}, ""},
 				{{"rhsusf_CH53E_USMC_D","Mobile Respawn Helicopter"}, {200,100,100}, ""},
 
 				{"B_Slingload_01_Repair_F", {600,0,0}, ""},
