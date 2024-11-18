@@ -4,7 +4,7 @@
 	Description: Master file containing all class eventhandlers - these can not be used on any classes that inherit from Static
 */
 
-["AllVehicles","init",{
+["AllVehicles","initpost",{
 	params ["_vehicle"];
 	[_vehicle] call DT_fnc_clearCargo;
 

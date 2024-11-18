@@ -225,8 +225,8 @@ class Logi_Setup {
 				{"rhsusf_M977A4_AMMO_usarmy_wd", {200,50,50}, ""},
 				{"UK3CB_BAF_MAN_HX58_Fuel_Green", {200,100,0}, ""},
 
-				{{"UK3CB_AAF_B_M998_2DR","Mobile Respawn Vehicle"}, {200,100,0}, ""},
-				{{"UK3CB_AAF_B_UH60M2","Mobile Respawn Helicopter"}, {200,100,100}, ""},
+				{{"UK3CB_BAF_LandRover_Amb_FFR_Green_A","Mobile Respawn Vehicle"}, {200,100,0}, ""},
+				{{"UK3CB_BAF_Merlin_HC4_CSAR","Mobile Respawn Helicopter"}, {200,100,100}, ""},
 
 				{"B_Slingload_01_Repair_F", {600,0,0}, ""},
 				{"B_Slingload_01_Fuel_F", {100,500,0}, ""},

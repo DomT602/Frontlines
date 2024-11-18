@@ -50,7 +50,7 @@ if (([_sectorObj,_radius] call DT_fnc_getCaptureRatio) > getNumber(missionConfig
 			DT_fnc_areaIsClear,
 			{
 				params ["_obj"];
-				[_obj] call DT_fnc_clearArea;
+				[_obj,true] call DT_fnc_clearArea;
 				DT_activeSectors deleteAt (DT_activeSectors find _obj);
 				publicVariable "DT_activeSectors";
 			},

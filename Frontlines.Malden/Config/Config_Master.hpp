@@ -14,7 +14,7 @@ class Settings {
 	fobGlobalResourcePool = 0; //0 - each FOB has individual resources, 1 is a shared/global pool. Do not change this mid-playthrough otherwise there will be unintended behaviour
 	maxRecycleGain[] = {100,100,100}; //max amount of each resource that can be obtained from a vehicle recycle, reduced depending on how much damage/fuel used/ammo used
 
-	sectorActivationRange = 500; //max 2D distance for sector to be activated
+	sectorActivationRange = 600; //max 2D distance for sector to be activated
 	sectorActivationHeight = 150; //max height for a sector to be activated (to avoid overflights spawning unnecessary sectors)
 	sectorCaptureRatio = 0.66; //ratio of Blufor:Opfor needed to take sector
 	sectorRadius[] = {250,200,300,200,250}; //radius for spawning/capturing different sector types in order: town, factory, city, tower, military
