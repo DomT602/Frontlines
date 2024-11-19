@@ -41,6 +41,7 @@ if (_airDrop) then {
 	[player,_crate] call ace_dragging_fnc_carryObject;
 };
 
+[_crate] call DT_fnc_clearCargo;
 [_crate,true,[0,2,0],0,true] remoteExecCall ["ace_dragging_fnc_setDraggable",0,_crate];
 
 {

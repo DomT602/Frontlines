@@ -130,7 +130,7 @@ private _recycleObject = [
 	{
 		(crew _target isEqualTo [] || {unitIsUAV _target}) &&
 		{[player] call DT_fnc_isNearFOB &&
-		{(nearestObjects [player,[getText(missionConfigFile >> "Logi_Setup" >> "recycleBuilding")],150]) isNotEqualTo []}}
+		{(nearestObjects [player,[getText(missionConfigFile >> "Logi_Setup" >> "recycleBuilding")],150,true]) isNotEqualTo []}}
 	},
 	nil,nil,nil,8
 ] call ace_interact_menu_fnc_createAction;

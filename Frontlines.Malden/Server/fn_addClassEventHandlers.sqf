@@ -13,14 +13,6 @@
 	} forEach allCurators;
 },true,[],true] call CBA_fnc_addClassEventHandler;
 
-private _crateTypes = getArray(missionConfigFile >> "Logi_Setup" >> "supplyCrateTypes") apply {_x select 1};
-{
-	[_x,"init",{
-		params ["_vehicle"];
-		[_vehicle] call DT_fnc_clearCargo;
-	}] call CBA_fnc_addClassEventHandler;
-} forEach _crateTypes;
-
 ["Helicopter","initpost",{
 	params ["_helicopter"];
 	if (getNumber (configOf _helicopter >> "slingLoadMaxCargoMass") > 0) then {

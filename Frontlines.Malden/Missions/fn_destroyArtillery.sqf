@@ -28,6 +28,7 @@ private _squads = [];
 		private _vehicle = objectParent (leader _group);
 		(driver _vehicle) disableAI "MOVE";
 		_vehicle setDir _dir;
+		_vehicle lock 3;
 		_objectives pushBack _vehicle;
 	} else {
 		private _object = createVehicle [_class,_pos,[],0,"CAN_COLLIDE"];
