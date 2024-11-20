@@ -11,7 +11,8 @@ if (([_sectorObj,_radius] call DT_fnc_getCaptureRatio) > getNumber(missionConfig
 	_sectorObj setVariable ["DT_sectorOwned",true,true];
 	_sectorObj setVariable ["DT_sectorStrength",0,true];
 
-	(_sectorObj getVariable "DT_sectorVariable") setMarkerColor "ColorBLUFOR";
+	private _sectorVar = _sector getVariable "DT_sectorVariable";
+	_sectorVar setMarkerColor "ColorBLUFOR";
 	private _sectorName = _sectorObj getVariable "DT_sectorName";
 	[format["%1 has been successfully captured.",_sectorName],"successNotif","Sector Secured"] remoteExecCall ["DT_fnc_notify",0];
 	private _sectorType = _sectorObj getVariable "DT_sectorType";
@@ -30,7 +31,7 @@ if (([_sectorObj,_radius] call DT_fnc_getCaptureRatio) > getNumber(missionConfig
 	missionNamespace setVariable ["DT_canGatherIntel",true,true];
 
 	if (_sectorType isEqualTo "tower") then {
-		missionNamespace setVariable [format["DT_%1CapTime",_sector],CBA_missionTime];
+		missionNamespace setVariable [format["DT_%1CapTime",_sectorVar],CBA_missionTime];
 	} else {
 		if (_sectorType in ["town","city","factory"]) then {
 			[] call DT_fnc_updateCivRep;

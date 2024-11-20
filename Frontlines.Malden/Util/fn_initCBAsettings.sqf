@@ -52,7 +52,7 @@ DT_alignToTerrain = true;
 			private _sector = [player,["town","city","factory","military","tower"]] call DT_fnc_getNearestSector;
 			private _radius = (getArray(missionConfigFile >> "Settings" >> "sectorRadius")) select ([_sector getVariable "DT_sectorType"] call DT_fnc_getSectorTypeIndex);
 			if (player distance2D _sector < _radius) then {
-				_markerVar = format ["%1Marker",_sector];
+				_markerVar = format ["%1Marker",_sector getVariable "DT_sectorVariable"];
 			};
 			DT_uiHandle = [DT_fnc_updateUI,DT_uiUpdateInterval,[true,_markerVar]] call CBA_fnc_addPerFrameHandler;
 		};

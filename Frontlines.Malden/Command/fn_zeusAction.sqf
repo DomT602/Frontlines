@@ -89,14 +89,15 @@ switch _action do {
 		if (_sector getVariable ["DT_sectorOwned",false]) exitWith {["Sector is already captured."] call DT_fnc_notify};
 		if (_sector in DT_activeSectors) exitWith {["Sector must be inactive."] call DT_fnc_notify};
 
+		private _sectorVar = _sector getVariable "DT_sectorVariable";
 		_sector setVariable ["DT_sectorOwned",true,true];
-		(_sector getVariable "DT_sectorVariable") setMarkerColor "colorBLUFOR";
+		_sectorVar setMarkerColor "colorBLUFOR";
 		_sector setVariable ["DT_sectorStrength",0,true];
 		_sectorListbox lbSetColor [_index,[0,0.3,0.6,1]];
 
 		private _sectorType = _sector getVariable "DT_sectorType";
 		if (_sectorType isEqualTo "tower") then {
-			missionNamespace setVariable [format["DT_%1CapTime",_sector],CBA_missionTime,2];
+			missionNamespace setVariable [format["DT_%1CapTime",_sectorVar],CBA_missionTime,2];
 		} else {
 			if (_sectorType in ["town","city","factory"]) then {
 				[] remoteExecCall ["DT_fnc_updateCivRep",2];

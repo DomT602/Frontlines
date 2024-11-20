@@ -26,7 +26,7 @@ if (_isRespawn) then {
 	[_roleName,_defaultLoadout] call ace_arsenal_fnc_addDefaultLoadout;
 
 	private _roleRank = getText(_roleConfig >> "rank");
-	player setUnitRank _roleRank;
+	player setRank _roleRank;
 
 	private _roleTraits = getArray(_roleConfig >> "traits");
 	{
