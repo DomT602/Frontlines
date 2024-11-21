@@ -11,7 +11,7 @@ if (([_sectorObj,_radius] call DT_fnc_getCaptureRatio) > getNumber(missionConfig
 	_sectorObj setVariable ["DT_sectorOwned",true,true];
 	_sectorObj setVariable ["DT_sectorStrength",0,true];
 
-	private _sectorVar = _sector getVariable "DT_sectorVariable";
+	private _sectorVar = _sectorObj getVariable "DT_sectorVariable";
 	_sectorVar setMarkerColor "ColorBLUFOR";
 	private _sectorName = _sectorObj getVariable "DT_sectorName";
 	[format["%1 has been successfully captured.",_sectorName],"successNotif","Sector Secured"] remoteExecCall ["DT_fnc_notify",0];
