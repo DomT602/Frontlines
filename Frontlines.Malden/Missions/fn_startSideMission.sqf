@@ -15,7 +15,8 @@ private _sideMissions = [
 	["convoyAmbush","DT_threatLevel > 50 && {(DT_logistics select 2) isNotEqualTo []}",DT_fnc_ambushLogisticsConvoy],
 	["counterAttack","DT_threatLevel > 33 && {[] call DT_fnc_getMissionProgress > 0.1}",DT_fnc_sectorCounterAttack],
 	["fobAssault","DT_threatLevel > 80 && {count playableUnits > 3}",DT_fnc_fobAssault],
-	["repairRequest","private _possibleSectors = [['town','city','factory'],true] call DT_fnc_getSectorsByType; (_possibleSectors findIf {_x getVariable ['DT_destroyedBuildingCount',0] isNotEqualTo 0}) isNotEqualTo -1",DT_fnc_repairRequest]
+	["repairRequest","private _possibleSectors = [['town','city','factory'],true] call DT_fnc_getSectorsByType; (_possibleSectors findIf {_x getVariable ['DT_destroyedBuildingCount',0] isNotEqualTo 0}) isNotEqualTo -1",DT_fnc_repairRequest],
+	["destroyOpforConvoy","private _opforFactories = [['factory']] call DT_fnc_getSectorsByType; (_opforFactories findIf {!(_x getVariable ['DT_sectorOwned',false])}) isNotEqualTo -1",DT_fnc_destroyConvoy]
 ];
 
 private _index = _sideMissions findIf {_x select 0 isEqualTo _lastMissionType};

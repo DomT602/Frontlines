@@ -41,7 +41,7 @@ private _objectives = [];
 	_objectives pushBack _object;
 } forEach _compositionObjectives;
 
-private _squads = [_position,50,([1] call DT_fnc_calculateEnemySquads)] call DT_fnc_createPatrols;
+private _squads = [_position,50,([] call DT_fnc_calculateEnemySquads)] call DT_fnc_createPatrols;
 _squads pushBack ([_position,50] call DT_fnc_createStatic);
 
 private _marker = ["supplyDepot",_position,true,"ColorOPFOR","ELLIPSE",500,"Depot Raid","FDiagonal"] call DT_fnc_createMarker;
@@ -61,6 +61,17 @@ private _marker = ["supplyDepot",_position,true,"ColorOPFOR","ELLIPSE",500,"Depo
 			["The raid is complete.","successNotif","Depot Raid"] remoteExecCall ["DT_fnc_notify",0];
 			[-5] call DT_fnc_updateThreat;
 			missionNamespace setVariable ["DT_secondaryActive",nil,true];
+
+			if !(missionNamespace getVariable ["DT_opforHeaviesDisabled",false]) then {
+				missionNamespace setVariable ["DT_opforHeaviesDisabled",true,true];
+				[
+					{
+						missionNamespace setVariable ["DT_opforHeaviesDisabled",false,true];
+					},
+					[],
+					5400
+				] call CBA_fnc_waitAndExecute;
+			};
 		};
 		deleteMarker _marker;
 

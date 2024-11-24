@@ -13,7 +13,7 @@ Destroying this FOB would disrupt the enemies supply lines and command and contr
 You will need to locate and destroy the FOB's assets (laptops, supply trucks and containers) to complete this mission.<br/><br/>
 <t color='#00FF00'>Reward: -40 Opfor Threat</t>"],
 	["Raid Enemy Depot",15,"","[] remoteExecCall [""DT_fnc_raidSupplyDepot"",2]","We have recieved some intel that a supply depot has been setup behind enemy lines.<br/>
-This depot could provide us plenty of resources to continue our efforts while disrupting the enemy.<br/>
+This depot could provide us plenty of resources to continue our efforts while disrupting the enemy and preventing them from fielding heavy vehicles for a time.<br/>
 Bring the trucks back to the FOB to secure the resources.<br/><br/>
 <t color='#00FF00'>Reward: +400 Resources per truck, -5 Opfor Threat</t>"],
 	["Secure Downed UAV",10,"","[] remoteExecCall [""DT_fnc_captureUAV"",2]","We have recieved some intel that an enemy UAV has crashed inside the red zone on your map.<br/>

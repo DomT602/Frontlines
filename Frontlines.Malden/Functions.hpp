@@ -84,6 +84,7 @@ class DT_Core {
 		class clearUXOs {};
 		class destroyAA {};
 		class destroyArtillery {};
+		class destroyConvoy {};
 		class destroyJammer {};
 		class fobAssault {};
 		class fobHunt {};
@@ -111,6 +112,7 @@ class DT_Core {
 		class civilianKilled {};
 		class civilianWalking {};
 		class clearArea {};
+		class createConvoy {};
 		class createDefences {};
 		class createMarker {};
 		class createMines {};

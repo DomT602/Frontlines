@@ -20,5 +20,8 @@ private _heavyVehCount = if (DT_threatLevel > 66) then {round (_baseCount / 4)} 
 
 private _return = [_infantryCount,_lightVehCount,_mediumVehCount,_heavyVehCount];
 _return vectorAdd _manualAddition;
+if (missionNamespace getVariable ["DT_opforHeaviesDisabled",false]) then {
+	_return set [3,0];
+};
 
 _return;

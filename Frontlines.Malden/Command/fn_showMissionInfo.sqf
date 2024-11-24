@@ -31,6 +31,10 @@ if (missionNamespace getVariable ["DT_canGatherIntel",false]) then {
 	_text = format ["%1<t font='PuristaBold' align='left' color='#008000'>Radio Tower Intel Available</t><br/>",_text];
 };
 
+if (missionNamespace getVariable ["DT_opforHeaviesDisabled",false]) then {
+	_text = format ["%1<t font='PuristaBold' align='left' color='#D96600'>Enemy Heavy Vehicles Disabled</t><br/>",_text];
+};
+
 if (missionNamespace getVariable ["DT_opforAAActive",false]) then {
 	_text = format ["%1<t font='PuristaBold' align='left' color='#E60000'>Enemy Anti-Air Active</t><br/>",_text];
 };
@@ -40,7 +44,6 @@ if (missionNamespace getVariable ["DT_opforArtilleryActive",false]) then {
 if (missionNamespace getVariable ["DT_opforJammerActive",false]) then {
 	_text = format ["%1<t font='PuristaBold' align='left' color='#E60000'>Enemy Jammer Active</t><br/>",_text];
 };
-
 if (DT_activeSectors isNotEqualTo []) then {
 	_text = format ["%1<br/><t font='PuristaBold' align='center' size='1.4'>Active Sectors</t><br/><br/>",_text];
 	{

@@ -156,6 +156,12 @@ switch _action do {
 		[] remoteExecCall ["DT_fnc_sectorCounterAttack",2];
 	};
 
+	case "destroyOpforConvoy": {
+		private _opforFactories = [['factory']] call DT_fnc_getSectorsByType;
+		if !((_opforFactories findIf {!(_x getVariable ['DT_sectorOwned',false])}) isNotEqualTo -1) exitWith {["No opfor factories available."] call DT_fnc_notify};
+		[] remoteExecCall ["DT_fnc_destroyConvoy",2];
+	};
+
 	case "allowDamage": {
 		if (isDamageAllowed player) then {
 			player allowDamage false;
