@@ -19,12 +19,8 @@ private _opforSectors = [];
 	};
 } forEach DT_allSectors;
 
-private _searchFromSectors = _opforSectors;
-private _searchAgainstSectors = _bluforSectors;
-if (_blufor) then {
-	_searchFromSectors = _bluforSectors;
-	_searchAgainstSectors = _opforSectors;
-};
+private _searchFromSectors = if (_blufor) then {_bluforSectors} else {_opforSectors};;
+private _searchAgainstSectors = if (_blufor) then {_opforSectors} else {_bluforSectors};
 
 {
 	private _distance = 99999;

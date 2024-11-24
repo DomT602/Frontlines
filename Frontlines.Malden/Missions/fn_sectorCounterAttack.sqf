@@ -43,7 +43,7 @@ private _groups = [_targetSector,_sendingSector] call DT_fnc_spawnAssault;
 				] call CBA_fnc_waitUntilAndExecute;
 			},
 			_this,
-			1200,
+			(getNumber(missionConfigFile >> "Settings" >> "sideMissionTimer") - 600),
 			{
 				params ["_targetSector","_groups","_marker"];
 				[format["The enemy have re-taken %1.",_targetSector getVariable "DT_sectorName"],"failedNotif","Enemy Counter-Attack"] remoteExecCall ["DT_fnc_notify",0];

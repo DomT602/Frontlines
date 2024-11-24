@@ -21,8 +21,13 @@ if (_groups isEqualType true) then {
 	[_x] call DT_fnc_deleteGroup;
 } forEach _groups;
 
+{
+	if (!(_x getVariable ["DT_isProtected",false]) && !(_x getVariable ["DT_playerUsed",false])) then {
+		deleteVehicle _x;
+	};
+} forEach _specificObjects;
+
 private _objects = nearestObjects [_centre,["LandVehicle","Air","Strategic","GroundWeaponHolder","WeaponHolderSimulated"],600,true];
-_objects insert [-1,_specificObjects,true];
 {
 	if (!(_x getVariable ["DT_isProtected",false]) && !(_x getVariable ["DT_playerUsed",false]) && !((typeOf _x) in DT_bluforClassesToSave)) then {
 		deleteVehicle _x;

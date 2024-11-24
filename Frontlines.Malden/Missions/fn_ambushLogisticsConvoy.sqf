@@ -65,7 +65,7 @@ private _marker = ["logiAmbush",_roadToSpawn,true,"ColorOPFOR","ELLIPSE",50,"Las
 		["The convoy has been secured.","successNotif","Convoy Secured"] remoteExecCall ["DT_fnc_notify",0];
 	},
 	[_roadToSpawn,_squads,_marker,_crates],
-	1800,
+	getNumber(missionConfigFile >> "Settings" >> "sideMissionTimer"),
 	{
 		params ["_position","_squads","_marker","_crates"];
 		[

@@ -39,7 +39,7 @@ private _radius = (getArray(missionConfigFile >> "Settings" >> "sectorRadius")) 
 		_sector setVariable ["DT_destroyedBuildingCount",nil,true];
 	},
 	[_chosenSector,_crateClass,_radius,_buildingsLost,_marker,_sectorName],
-	1800,
+	getNumber(missionConfigFile >> "Settings" >> "sideMissionTimer"),
 	{
 		params ["_sector","","","","_marker","_sectorName"];
 

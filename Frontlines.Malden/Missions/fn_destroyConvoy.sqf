@@ -25,12 +25,11 @@ _recievingRoadPositions = [_recievingRoadPositions,[],{_recievingSector distance
 _recievingRoadPositions params ["_destination"];
 
 ([_spawnPos,_destination] call DT_fnc_createConvoy) params ["_group","_objectives"];
-private _timer = getNumber(missionConfigFile >> "Settings" >> "sideMissionTimer");
 
 [
 	{
 		params ["_group","_objectives","_sector","_radius"];
-		(_objectives select {alive _x || ((_x distance2D _sector) > _radius)} isEqualTo []
+		(_objectives select {alive _x || ((_x distance2D _sector) > _radius)}) isEqualTo []
 	},
 	{
 		params ["_group","_objectives","_recievingSector","_radius","_marker"];
@@ -46,10 +45,11 @@ private _timer = getNumber(missionConfigFile >> "Settings" >> "sideMissionTimer"
 		} else {
 			["The convoy was stopped successfully.","successNotif","Incoming Convoy"] remoteExecCall ["DT_fnc_notify",0];
 			_recievingSector setVariable ["DT_sectorStrength",0.33,true];
+			[-5] call DT_fnc_updateThreat;
 		};
 	},
 	[_group,_objectives,_recievingSector,_radius / 2,_marker],
-	_timer,
+	getNumber(missionConfigFile >> "Settings" >> "sideMissionTimer"),
 	{
 		params ["_group","_objectives"];
 		["The convoy didn't make it in time.","generalNotif","Incoming Convoy"] remoteExecCall ["DT_fnc_notify",0];

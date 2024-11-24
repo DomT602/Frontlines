@@ -67,9 +67,8 @@ _vehicles params ["_aheadVehicle"];
 		_aheadVehicle = _x;
 	};
 
-	_x forceFollowRoad true;
 	_x limitSpeed 45;
 	_x setConvoySeparation 15;
 } forEach _vehicles;
 
-_vehicles;
+[_mainGroup,_objectives];

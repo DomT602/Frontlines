@@ -17,7 +17,7 @@ private _worldSize = worldSize;
 private _position = [];
 {
 	while {_position isEqualTo []} do {
-		private _testPos = _x getPos [random (_worldSize / 4),random 360];
+		private _testPos = _x getPos [random (_worldSize / 5),random 360];
 		_testPos params ["_xPos","_yPos"];
 
 		if (
