@@ -5,7 +5,7 @@
 */
 
 private _militarySectors = ([["military","tower"]] call DT_fnc_getSectorsByType) select {!(_x getVariable ["DT_sectorOwned",false])};
-private _spawnPos = [selectRandom _frontlineSectors,0,750,25,0,0.25,0] call BIS_fnc_findSafePos;
+private _spawnPos = [selectRandom _militarySectors,0,750,25,0,0.25,0] call BIS_fnc_findSafePos;
 
 [format["The enemy has setup an artillery site at %1.",mapGridPosition _spawnPos],"generalNotif","Destroy Artillery"] remoteExecCall ["DT_fnc_notify",0];
 

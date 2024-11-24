@@ -51,13 +51,13 @@ private _crates = [];
 
 private _squads = [_roadToSpawn,150,([0.75] call DT_fnc_calculateEnemySquads)] call DT_fnc_createPatrols;
 
-private _marker = ["logiAmbush",_roadToSpawn,true,"ColorOPFOR","ELLIPSE",100,"Last reported convoy position","Grid"] call DT_fnc_createMarker;
+private _marker = ["logiAmbush",_roadToSpawn,true,"ColorOPFOR","ELLIPSE",50,"Last reported convoy position","Grid"] call DT_fnc_createMarker;
 [format["One of your convoys have been ambushed at %1.",mapGridPosition _roadToSpawn],"generalNotif","Attacked Convoy"] remoteExecCall ["DT_fnc_notify",0];
 
 [
 	{
 		params ["_position"];
-		!([_position,10] call DT_fnc_areaIsClear)
+		!([_position,50] call DT_fnc_areaIsClear)
 	},
 	{
 		params ["","","_marker"];

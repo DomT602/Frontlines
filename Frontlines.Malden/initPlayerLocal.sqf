@@ -63,13 +63,14 @@ if (DT_isTFAREnabled) then {
 
 	private _medicalItems = [
 		"ACE_fieldDressing","ACE_elasticBandage","ACE_packingBandage","ACE_quikclot",
-		"ACE_splint",
+		"ACE_splint","ACE_surgicalKit","ACE_suture",
 		"ACE_bloodIV_250","ACE_bloodIV_500","ACE_bloodIV",
 		"ACE_plasmaIV_250","ACE_plasmaIV_500","ACE_plasmaIV",
 		"ACE_salineIV_250","ACE_salineIV_500","ACE_salineIV"
 	];
 
 	if (([typeOf _target] call DT_fnc_getConfigSide) isEqualTo civilian && {_usedItem in _medicalItems}) then {
+		private _nearestSector = [_target,["town","city","factory"]] call DT_fnc_getNearestSector;
 		[_nearestSector,getNumber (missionConfigFile >> "Settings" >> "healedCivRepGain")] remoteExecCall ["DT_fnc_updateCivRep",2];
 		[format["%1 thanks you for the treatment.",name _target]] call DT_fnc_notify;
 	};
@@ -78,6 +79,7 @@ if (DT_isTFAREnabled) then {
 [] call DT_fnc_initCBAsettings;
 [] call DT_fnc_addAceActions;
 
+deleteMarkerLocal "manualFobMarker";
 658 cutRsc ["DT_HUD","PLAIN",-1];
 DT_uiHandle = [DT_fnc_updateUI,DT_uiUpdateInterval,[true,""]] call CBA_fnc_addPerFrameHandler;
 

@@ -32,7 +32,7 @@ private _radius = (getArray(missionConfigFile >> "Settings" >> "sectorRadius")) 
 		};
 
 		private _civRepGain = (getNumber(missionConfigFile >> "Settings" >> "damagedBuildingRepLoss")) * 1.5;
-		[abs(_civRepGain * _cratesRequired)] call DT_fnc_adjustCivRep;
+		[abs(_civRepGain * _cratesRequired)] call DT_fnc_updateCivRep;
 
 		deleteMarker _marker;
 		[format["%1 thanks you for the supplies.",_sectorName],"successNotif","Repair Request"] remoteExecCall ["DT_fnc_notify",0];

@@ -56,6 +56,8 @@ if (_helmetClass isEqualTo "") then {
 	_defaultLoadoutText pushBack (getText(configFile >> "CfgWeapons" >> _helmetClass >> "displayName"));
 };
 
+_defaultLoadoutText = _defaultLoadoutText apply {(_x splitString "&") joinString "and"};
+
 private _text = format ["
 <t align='center' font='PuristaBold' size='1.6'>%1</t>
 <br/>

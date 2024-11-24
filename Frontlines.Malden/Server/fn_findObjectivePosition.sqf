@@ -7,8 +7,8 @@ params [
 	["_terrainRadius",25,[0]]
 ];
 
-private _sectorRadius = getNumber(missionConfigFile >> "Settings" >> "sectorActivationRange");
-private _doubleRadius = _sectorRadius * 2;
+private _radius = getNumber(missionConfigFile >> "Settings" >> "sectorActivationRange");
+private _doubleRadius = _radius * 2;
 private _frontlineSectors = [false] call DT_fnc_getFrontlineSectors;
 [_frontlineSectors,true] call CBA_fnc_shuffle;
 private _bluforSectors = [["town","city","factory","tower","military"],true] call DT_fnc_getSectorsByType;
