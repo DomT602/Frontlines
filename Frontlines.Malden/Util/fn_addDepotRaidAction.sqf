@@ -5,7 +5,7 @@
 */
 params [
 	["_object",objNull,[objNull]],
-	["_type","supplies",[""]]
+	["_type","opforSupplyTruck",[""]]
 ];
 
 private _action = [

@@ -15,7 +15,7 @@ private _position = [_sectorObj,_spawnRadius,(_spawnRadius * 2),5,0,1,0] call BI
 
 private _groups = [];
 _groups pushBack ([_position,150,independent] call DT_fnc_createSquad);
-if (abs DT_globalReputation > 50) then {
+if (DT_globalReputation < -50) then {
 	_groups pushBack ([_position,150,independent] call DT_fnc_createSquad);
 };
 
@@ -36,7 +36,12 @@ if (_action in ["mechAttack","sectorDefence"] || {DT_globalReputation < -33}) th
 		params ["_sectorObj"];
 		!(_sectorObj in DT_activeSectors)
 	},
-	DT_fnc_clearArea,
+	{
+		params ["","_groups"];
+		{
+			[_x] call DT_fnc_deleteGroup;
+		} forEach _groups;
+	},
 	[_sectorObj,_groups]
 ] call CBA_fnc_waitUntilAndExecute;
 

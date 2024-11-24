@@ -3,9 +3,7 @@
 	Author: Dom
 	Requires: Creates or loads a save file
 */
-params [
-	["_save",[],[[]]]
-];
+private _save = profileNamespace getVariable ["DT_serverSave",[]];
 
 if (_save isEqualTo []) then {
 	private _fobPosition = markerPos "manualFobMarker";

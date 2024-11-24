@@ -11,7 +11,7 @@ private _distance = 99999;
 private _object = objNull;
 
 {
-	private _testDistance = _pos distance _x;
+	private _testDistance = _pos distance2D _x;
 	if (_testDistance < _distance) then {
 		_distance = _testDistance;
 		_object = _x;

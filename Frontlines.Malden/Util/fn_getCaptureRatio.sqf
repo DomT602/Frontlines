@@ -15,7 +15,7 @@ private _opforCount = 0;
 {
 	private _side = side _x;
 	if (_side isEqualTo west) then {
-		_bluforCount = _bluforCount + (count (crew _x select {alive _x}));
+		_bluforCount = _bluforCount + (count (crew _x));
 	} else {
 		if (_side isEqualTo east && {!(_x getVariable ["ace_captives_ishandcuffed",false])}) then {
 			_opforCount = _opforCount + (count crew _x);

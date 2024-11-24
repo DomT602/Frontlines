@@ -10,7 +10,6 @@ params [
 ];
 
 private _squadComposition = if (_side isEqualTo east) then {selectRandom (getArray(missionConfigFile >> "Opfor_Setup" >> "opforSquads"))} else {selectRandom (getArray(missionConfigFile >> "Guerilla_Setup" >> "guerillaSquads"))};
-private _squadComposition = selectRandom (getArray(missionConfigFile >> "Opfor_Setup" >> "opforSquads"));
 private _driver = [_vehGroup,_side,selectRandom _squadComposition,_emptyVehicle] call DT_fnc_createUnit;
 _driver moveInDriver _emptyVehicle;
 if (fullCrew [_emptyVehicle,"gunner",true] isNotEqualTo []) then {

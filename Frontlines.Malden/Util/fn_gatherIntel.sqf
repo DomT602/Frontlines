@@ -22,7 +22,7 @@ private _action = [
 	},
 	{
 		private _sector = param [2];
-		private _nearestTowers = nearestObjects [getPosATL _target,["Land_Communication_F","Land_TTowerSmall_2_F","Land_TTowerBig_1_F"],30,true] select {alive _x};
+		private _nearestTowers = nearestObjects [_target,["Land_Communication_F","Land_TTowerSmall_2_F","Land_TTowerBig_1_F"],30,true] select {alive _x};
 		missionNamespace getVariable ["DT_canGatherIntel",false] && {_sector getVariable ["DT_sectorOwned",false] && {_nearestTowers isNotEqualTo []}}
 	},
 	{},

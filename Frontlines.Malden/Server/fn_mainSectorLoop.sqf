@@ -9,7 +9,7 @@ _args params ["_radius","_height"];
 private _units = playableUnits;
 {
 	if !(_x getVariable ["DT_sectorOwned",false]) then {
-		private _playersAtSector = _units inAreaArray [getPosATL _x,_radius,_radius,0,false,_height];
+		private _playersAtSector = _units inAreaArray [_x,_radius,_radius,0,false,_height];
 		if (_playersAtSector isNotEqualTo []) then {
 			if !(_x in DT_activeSectors) then {
 				[_x] call DT_fnc_activateSector;

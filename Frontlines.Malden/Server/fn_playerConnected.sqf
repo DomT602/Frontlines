@@ -1,7 +1,7 @@
 /*
-	File: fn_handleDisconnect.sqf
+	File: fn_playerConnected.sqf
 	Author: Dom
-	Description: Handles a players disconnection
+	Description: Handles a players connection
 */
 params ["_id","_uid","_name","_jip","_owner","_idstr"];
 

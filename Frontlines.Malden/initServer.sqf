@@ -81,7 +81,7 @@ publicVariable "DT_bluforClassesToSave";
 [] call DT_fnc_addClassEventHandlers;
 
 [] call DT_fnc_setupLocations;
-[profileNamespace getVariable ["DT_serverSave",[]]] call DT_fnc_createOrLoadSave;
+[] call DT_fnc_createOrLoadSave;
 
 missionNamespace setVariable ["DT_activeSectors",[],true];
 

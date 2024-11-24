@@ -8,9 +8,9 @@ _args params ["_sectorShown","_marker"];
 
 private _sector = [player,["town","city","factory","military","tower"]] call DT_fnc_getNearestSector;
 private _radius = (getArray(missionConfigFile >> "Settings" >> "sectorRadius")) select ([_sector getVariable "DT_sectorType"] call DT_fnc_getSectorTypeIndex);
-private _hud = uiNamespace getVariable ["DT_HUD",displayNull];
 
 if (player distance2D _sector < _radius) then {
+	private _hud = uiNamespace getVariable ["DT_HUD",displayNull];
 	private _closestSectorVar = format ["%1Marker",_sector getVariable "DT_sectorVariable"];
 	if (_marker isEqualTo "" || {_marker isNotEqualTo _closestSectorVar}) then {
 		if (_marker isNotEqualTo _closestSectorVar) then {deleteMarkerLocal _marker};

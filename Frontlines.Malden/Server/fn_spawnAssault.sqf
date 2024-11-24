@@ -20,18 +20,18 @@ for "_i" from 1 to _infantryCount do {
 	_groups pushBack ([_position] call DT_fnc_createSquad);
 };
 
+private _lightVehicles = getArray(missionConfigFile >> "Opfor_Setup" >> "opforLightVehicles");
 for "_i" from 1 to _lightCount do {
-	private _lightVehicles = getArray(missionConfigFile >> "Opfor_Setup" >> "opforLightVehicles");
 	_groups pushBack ([selectRandom _lightVehicles,_position,250,true] call DT_fnc_createVehicle);
 };
 
+private _mediumVehicles = getArray(missionConfigFile >> "Opfor_Setup" >> "opforMediumVehicles");
 for "_i" from 1 to _mediumCount do {
-	private _mediumVehicles = getArray(missionConfigFile >> "Opfor_Setup" >> "opforMediumVehicles");
 	_groups pushBack ([selectRandom _mediumVehicles,_position,250,true] call DT_fnc_createVehicle);
 };
 
+private _heavyVehicles = getArray(missionConfigFile >> "Opfor_Setup" >> "opforHeavyVehicles");
 for "_i" from 1 to _heavyCount do {
-	private _heavyVehicles = getArray(missionConfigFile >> "Opfor_Setup" >> "opforHeavyVehicles");
 	_groups pushBack ([selectRandom _heavyVehicles,_position,250,true] call DT_fnc_createVehicle);
 };
 
