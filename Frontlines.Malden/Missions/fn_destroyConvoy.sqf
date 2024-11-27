@@ -28,18 +28,18 @@ _recievingRoadPositions params ["_destination"];
 
 [
 	{
-		params ["_group","_objectives","_sector","_radius"];
-		(_objectives select {alive _x || ((_x distance2D _sector) > _radius)}) isEqualTo []
+		params ["_group","_objectives","_recievingSector","_radius"];
+		({!alive _x || {_x getVariable ["DT_playerUsed",false] || {(_x distance2D _recievingSector) < _radius}}} count _objectives) isEqualTo (count _objectives)
 	},
 	{
 		params ["_group","_objectives","_recievingSector","_radius","_marker"];
 
 		deleteMarker _marker;
-		private _opforVehiclesInSector = _objectives select {alive _x && {!(_x getVariable ["DT_playerUsed",false])}};
-		if (_opforVehiclesInSector isEqualTo []) then {
+		private _opforVehiclesInSector = {alive _x && {!(_x getVariable ["DT_playerUsed",false]) && {(_x distance2D _recievingSector) < _radius}}} count _objectives;
+		if (_opforVehiclesInSector > 0) then {
 			[format["Some supplies made it through to %1.",_recievingSector getVariable "DT_sectorName"],"failedNotif","Incoming Convoy"] remoteExecCall ["DT_fnc_notify",0];
 			_recievingSector setVariable ["DT_sectorStrength",1,true];
-			if ([_group] call DT_fnc_areaIsClear) then {
+			if ([leader _group] call DT_fnc_areaIsClear) then {
 				[_group] call DT_fnc_deleteGroup;
 			};
 		} else {
@@ -51,7 +51,7 @@ _recievingRoadPositions params ["_destination"];
 	[_group,_objectives,_recievingSector,_radius / 2,_marker],
 	getNumber(missionConfigFile >> "Settings" >> "sideMissionTimer"),
 	{
-		params ["_group","_objectives"];
+		params ["_group","_objectives","","","_marker"];
 		["The convoy didn't make it in time.","generalNotif","Incoming Convoy"] remoteExecCall ["DT_fnc_notify",0];
 		deleteMarker _marker;
 

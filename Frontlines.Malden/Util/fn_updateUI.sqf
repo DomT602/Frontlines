@@ -11,7 +11,6 @@ private _radius = (getArray(missionConfigFile >> "Settings" >> "sectorRadius")) 
 private _hud = uiNamespace getVariable ["DT_HUD",displayNull];
 
 if (player distance2D _sector < _radius) then {
-	private _hud = uiNamespace getVariable ["DT_HUD",displayNull];
 	private _closestSectorVar = format ["%1Marker",_sector getVariable "DT_sectorVariable"];
 	if (_marker isEqualTo "" || {_marker isNotEqualTo _closestSectorVar}) then {
 		if (_marker isNotEqualTo _closestSectorVar) then {deleteMarkerLocal _marker};

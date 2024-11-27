@@ -23,11 +23,13 @@ for "_i" from 1 to _mediumCount do {
 };
 
 private _supplyTrucks = ["opforSupplyTruck","opforFuelTruck","opforAmmoTruck"];
+private _objectives = [];
 for "_i" from 1 to ceil (random 4) do {
 	private _type = selectRandom _supplyTrucks;
 	private _group = [getText(missionConfigFile >> "Opfor_Setup" >> _type),_startPos] call DT_fnc_createVehicle;
 	_groups pushBack _group;
 	private _truck = objectParent (leader _group);
+	_objectives pushBack _truck;
 	[_truck,_type] remoteExecCall ["DT_fnc_addDepotRaidAction",0,_truck];
 };
 

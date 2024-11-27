@@ -4,7 +4,7 @@
 	Description: Checks if given area (pos or object) has any players nearby
 */
 params [
-	["_target",objNull,[objNull,[],grpNull]],
+	["_target",objNull,[objNull,[]]],
 	["_distance",750,[0]]
 ];
 
