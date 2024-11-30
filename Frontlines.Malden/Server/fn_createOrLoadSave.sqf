@@ -141,6 +141,7 @@ if (_save isEqualTo []) then {
 				[_object] call DT_fnc_setupUAV;
 			};
 
+			[_object] call DT_fnc_clearCargo;
 			{
 				_x params ["_items","_counts"];
 				private _backpacks = _forEachIndex isEqualTo 3;

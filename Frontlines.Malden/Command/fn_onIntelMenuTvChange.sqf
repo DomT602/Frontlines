@@ -23,7 +23,7 @@ private _intelRequired = _control tvValue _selectionPath;
 private _intelColour = if (DT_intelCount >= _intelRequired) then {"#00BF00"} else {"#BF0000"};
 private _text = format ["
 <t align='center' font='PuristaBold' size='1.6'>%1</t><br/>
-<t font='PuristaLight'>Intel Required: </t> <t font='PuristaLight' color='%2'>%3</t><br/>
+<t font='PuristaLight'>Intel Required: </t><t font='PuristaLight' color='%2'>%3</t><br/>
 <t font='PuristaLight'>%4</t>"
 ,_control tvText _selectionPath,_intelColour,_intelRequired,_description];
 

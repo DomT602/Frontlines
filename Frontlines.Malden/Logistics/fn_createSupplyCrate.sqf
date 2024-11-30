@@ -36,14 +36,14 @@ if (_airDrop) then {
 	private _chute = createVehicle ["B_Parachute_02_F",_target,[],0,"FLY"];
 	_chute setPosASL (getPosASL _crate);
 	_crate attachTo [_chute];
+	[_crate,true,[0,2,0],0,true,true] call ace_dragging_fnc_setDraggable;
 } else {
 	_crate = createVehicle [_crateClass,player];
-	[player,_crate] call ace_dragging_fnc_carryObject;
+	[_crate,true,[0,2,0],0,true,true] call ace_dragging_fnc_setDraggable;
+	[player,_crate] call ace_dragging_fnc_startDrag;
 };
 
 [_crate] call DT_fnc_clearCargo;
-[_crate,true,[0,2,0],0,true] remoteExecCall ["ace_dragging_fnc_setDraggable",0,_crate];
-
 {
 	_x params ["_class","_count"];
 	if (isClass(configFile >> "CfgVehicles" >> _class) && {getNumber(configFile >> "CfgVehicles" >> _class >> "isBackpack") isEqualTo 1}) then {

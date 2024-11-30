@@ -9,7 +9,6 @@ params [
 
 private _nearFOB = [_unit] call DT_fnc_getNearestFob;
 ([_nearFOB] call DT_fnc_getCurrentResources) params ["_supplies"];
-DT_logistics params ["_availableTrucks"];
 
 if (_supplies >= 100) then {
 	[_nearFOB,[100,0,0],_false] call DT_fnc_adjustResources;

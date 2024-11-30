@@ -15,8 +15,9 @@ DT_logistics params ["_availableTrucks","_trucksInUse"];
 private _text = format ["
 <t size='1.2'>Logistics Status:</t><br/>
 Trucks available: <t color='#00BF00'>%1</t><br/>
-Trucks in use: <t color='#BFBF00'>%2</t><br/>",
-_availableTrucks,_trucksInUse
+Trucks in use: <t color='#BFBF00'>%2</t><br/>
+Trucks capacity: %3 resources<br/>",
+_availableTrucks,_trucksInUse,getNumber(missionConfigFile >> "Settings" >> "logisticsTruckCapacity")
 ];
 
 if !(isNull _control) then {
