@@ -249,7 +249,7 @@ class Logi_Setup {
 			{"ACE_bloodIV_250",20},
 			{"ACE_surgicalKit",10}
 		}},
-		{"staticWeaponCrateCategory","Mk6 Mortar","large",{50,0,0},{
+		{"staticWeaponCrateCategory","Mk6 Mortar","large",{25,0,50},{
 			{"ACE_EarPlugs",2},
 			{"ACE_MapTools",2},
 			{"ACE_Vector",2},
@@ -257,21 +257,21 @@ class Logi_Setup {
 			{"B_Mortar_01_weapon_F",2},
 			{"B_Mortar_01_support_F",2}
 		}},
-		{"staticWeaponCrateCategory","Mk30 HMG","large",{50,0,0},{
+		{"staticWeaponCrateCategory","Mk30 HMG","large",{25,0,50},{
 			{"ACE_EarPlugs",2},
 			{"B_HMG_01_weapon_F",1},
 			{"B_HMG_01_high_weapon_F",1},
 			{"B_HMG_01_support_F",1},
 			{"B_HMG_01_support_high_F",1}
 		}},
-		{"staticWeaponCrateCategory","Mk32 GMG","large",{50,0,0},{
+		{"staticWeaponCrateCategory","Mk32 GMG","large",{25,0,50},{
 			{"ACE_EarPlugs",2},
 			{"B_GMG_01_high_weapon_F",1},
 			{"B_GMG_01_weapon_F",1},
 			{"B_HMG_01_support_F",1},
 			{"B_HMG_01_support_high_F",1}
 		}},
-		{"lightWeaponCrateCategory","Standard Resupply","medium",{50,0,0},{
+		{"lightWeaponCrateCategory","Standard Resupply","medium",{25,0,75},{
 			{"30Rnd_65x39_caseless_mag",25},
 			{"30Rnd_556x45_Stanag_Sand",25},
 			{"20Rnd_762x51_Mag",20},
@@ -289,7 +289,7 @@ class Logi_Setup {
 			{"1Rnd_Smoke_Grenade_shell",5},
 			{"1Rnd_SmokeRed_Grenade_shell",5}
 		}},
-		{"miscWeaponCrateCategory","Explosives","small",{75,0,0},{
+		{"miscWeaponCrateCategory","Explosives","small",{25,0,50},{
 			{"DemoCharge_Remote_Mag",6},
 			{"ACE_Clacker",2},
 			{"ACE_DefusalKit",2},

@@ -289,7 +289,7 @@ class Logi_Setup {
 			{"ACE_bloodIV_250",20},
 			{"ACE_surgicalKit",10}
 		}},
-		{"staticWeaponCrateCategory","M6 Mortar","large",{50,0,0},{
+		{"staticWeaponCrateCategory","M6 Mortar","large",{25,0,50},{
 			{"ACE_EarPlugs",2},
 			{"ACE_MapTools",2},
 			{"ACE_Vector",2},
@@ -300,7 +300,7 @@ class Logi_Setup {
 			{"UK3CB_BAF_1Rnd_60mm_Mo_Flare_White",10},
 			{"UK3CB_BAF_1Rnd_60mm_Mo_WPSmoke_White",10}
 		}},
-		{"staticWeaponCrateCategory","L16 Mortar","large",{50,0,0},{
+		{"staticWeaponCrateCategory","L16 Mortar","large",{25,0,50},{
 			{"ACE_EarPlugs",2},
 			{"ACE_MapTools",2},
 			{"ACE_Vector",2},
@@ -312,26 +312,26 @@ class Logi_Setup {
 			{"UK3CB_BAF_1Rnd_81mm_Mo_Flare_White",5},
 			{"UK3CB_BAF_1Rnd_81mm_Mo_IRFlare_White",5}
 		}},
-		{"staticWeaponCrateCategory","L111A1 HMG","large",{50,0,0},{
+		{"staticWeaponCrateCategory","L111A1 HMG","large",{25,0,50},{
 			{"ACE_EarPlugs",2},
 			{"UK3CB_BAF_L111A1",1},
 			{"UK3CB_BAF_Tripod",1},
 			{"UK3CB_BAF_127_100Rnd",5}
 		}},
-		{"staticWeaponCrateCategory","L134A1 HMG","large",{50,0,0},{
+		{"staticWeaponCrateCategory","L134A1 HMG","large",{25,0,50},{
 			{"ACE_EarPlugs",2},
 			{"UK3CB_BAF_L134A1",1},
 			{"UK3CB_BAF_Tripod",1},
 			{"UK3CB_BAF_32Rnd_40mm_G_Box",5}
 		}},
-		{"lightWeaponCrateCategory","Light AT","medium",{75,0,0},{
+		{"lightWeaponCrateCategory","Light AT","medium",{25,0,50},{
 			{"ACE_EarPlugs",2},
 			{"ACE_Vector",2},
 			{"rhs_weap_M136_hp",4},
 			{"rhs_weap_M136",4},
 			{"rhs_weap_M136_hedp",2}
 		}},
-		{"lightWeaponCrateCategory","Standard Resupply","medium",{50,0,0},{
+		{"lightWeaponCrateCategory","Standard Resupply","medium",{25,0,75},{
 			{"UK3CB_BAF_556_30Rnd",20},
 			{"UK3CB_BAF_556_30Rnd_T",10},
 			{"UK3CB_BAF_762_L42A1_20Rnd",20},
@@ -346,20 +346,20 @@ class Logi_Setup {
 			{"rhs_mag_m18_green",5},
 			{"rhs_mag_m67",10}
 		}},
-		{"miscWeaponCrateCategory","Raven","small",{50,0,50},{
+		{"miscWeaponCrateCategory","Raven","small",{25,0,25},{
 			{"B_rhsusf_B_BACKPACK",1}
 		}},
-		{"miscWeaponCrateCategory","Empty Crate (Small)","small",{5,0,0},{
+		{"miscWeaponCrateCategory","Empty Crate (Small)","small",{0,0,0},{
 
 		}},
-		{"miscWeaponCrateCategory","Empty Crate (Medium)","medium",{5,0,0},{
+		{"miscWeaponCrateCategory","Empty Crate (Medium)","medium",{0,0,0},{
 
 		}},
-		{"heavyWeaponCrateCategory","Javelin","medium",{50,0,50},{
+		{"heavyWeaponCrateCategory","Javelin","medium",{25,0,50},{
 			{"UK3CB_BAF_Javelin_CLU",1},
 			{"UK3CB_BAF_Javelin_Slung_Tube",5}
 		}},
-		{"heavyWeaponCrateCategory","Javelin Ammo","medium",{0,0,75},{
+		{"heavyWeaponCrateCategory","Javelin Ammo","medium",{25,0,75},{
 			{"UK3CB_BAF_Javelin_Slung_Tube",10}
 		}}
 	};

@@ -269,7 +269,7 @@ class Logi_Setup {
 			{"ACE_bloodIV_250",20},
 			{"ACE_surgicalKit",10}
 		}},
-		{"staticWeaponCrateCategory","M252 Mortar","large",{50,0,0},{
+		{"staticWeaponCrateCategory","M252 Mortar","large",{25,0,50},{
 			{"ACE_EarPlugs",2},
 			{"ACE_MapTools",2},
 			{"ACE_Vector",2},
@@ -277,7 +277,7 @@ class Logi_Setup {
 			{"rhs_M252_Gun_Bag",2},
 			{"rhs_M252_Bipod_Bag",2}
 		}},
-		{"staticWeaponCrateCategory","M2 HMG","large",{50,0,0},{
+		{"staticWeaponCrateCategory","M2 HMG","large",{25,0,50},{
 			{"ACE_EarPlugs",2},
 			{"ACE_MapTools",2},
 			{"ACE_Vector",2},
@@ -285,24 +285,24 @@ class Logi_Setup {
 			{"RHS_M2_Tripod_Bag",2},
 			{"RHS_M2_MiniTripod_Bag",2}
 		}},
-		{"staticWeaponCrateCategory","TOW Launcher","large",{50,0,0},{
+		{"staticWeaponCrateCategory","TOW Launcher","large",{25,0,50},{
 			{"ACE_EarPlugs",2},
 			{"rhs_TOW_Tripod_Bag",2},
 			{"rhs_Tow_Gun_Bag",2}
 		}},
-		{"staticWeaponCrateCategory","Mk19 GMG","large",{50,0,0},{
+		{"staticWeaponCrateCategory","Mk19 GMG","large",{25,0,50},{
 			{"ACE_EarPlugs",2},
 			{"RHS_Mk19_Tripod_Bag",1},
 			{"RHS_Mk19_Gun_Bag",1}
 		}},
-		{"miscWeaponCrateCategory","Raven","small",{50,0,50},{
+		{"miscWeaponCrateCategory","Raven","small",{25,0,25},{
 			{"B_rhsusf_B_BACKPACK",1}
 		}},
-		{"heavyWeaponCrateCategory","Javelin","medium",{50,0,50},{
+		{"heavyWeaponCrateCategory","Javelin","medium",{25,0,50},{
 			{"rhs_weap_fgm148",2},
 			{"rhs_fgm148_magazine_AT",6}
 		}},
-		{"heavyWeaponCrateCategory","M3 MAAWS","medium",{75,0,0},{
+		{"heavyWeaponCrateCategory","M3 MAAWS","medium",{25,0,50},{
 			{"ACE_EarPlugs",2},
 			{"ACE_Vector",2},
 			{"RHS_weap_maaws",1},
@@ -310,7 +310,7 @@ class Logi_Setup {
 			{"rhs_mag_maaws_HE",5},
 			{"rhs_mag_maaws_HEAT",10}
 		}},
-		{"lightWeaponCrateCategory","Light AT","medium",{75,0,0},{
+		{"lightWeaponCrateCategory","Light AT","medium",{25,0,50},{
 			{"ACE_EarPlugs",2},
 			{"ACE_Vector",2},
 			{"rhs_weap_m72a7",4},
@@ -318,7 +318,7 @@ class Logi_Setup {
 			{"rhs_weap_M136",4},
 			{"rhs_weap_M136_hedp",2}
 		}},
-		{"heavyWeaponCrateCategory","M240 MMG","medium",{75,0,0},{
+		{"heavyWeaponCrateCategory","M240 MMG","medium",{25,0,50},{
 			{"ACE_EarPlugs",3},
 			{"ACE_Vector",3},
 			{"rhs_weap_m240B",1},
@@ -328,7 +328,7 @@ class Logi_Setup {
 			{"rhsusf_100Rnd_762x51_m61_ap",5},
 			{"rhsusf_100Rnd_762x51_m62_tracer",5}
 		}},			
-		{"lightWeaponCrateCategory","Standard Resupply","medium",{50,0,0},{
+		{"lightWeaponCrateCategory","Standard Resupply","medium",{25,0,75},{
 			{"rhsusf_mag_15Rnd_9x19_FMJ",4},
 			{"rhsusf_mag_17Rnd_9x19_FMJ",4},
 			{"rhsusf_200Rnd_556x45_soft_pouch_coyote",8},
@@ -348,25 +348,25 @@ class Logi_Setup {
 			{"rhs_mag_m713_Red",5},
 			{"rhs_mag_m714_White",5}			
 		}},
-		{"miscWeaponCrateCategory","Explosives","small",{75,0,0},{
+		{"miscWeaponCrateCategory","Explosives","small",{25,0,50},{
 			{"DemoCharge_Remote_Mag",6},
 			{"ACE_m26_Clacker",2},
 			{"ACE_DefusalKit",2},
 			{"MineDetector",2}
 		}},
-		{"heavyWeaponCrateCategory","Anti-Material Rifle","medium",{50,50,0},{
+		{"heavyWeaponCrateCategory","Anti-Material Rifle","medium",{25,0,50},{
 			{"rhs_weap_m107",1},
 			{"rhsusf_mag_10rnd_std_50bmg_mk211",10},
 			{"ace_5rnd_127x99_api_mag",5},
 			{"rksl_optic_pmii_525",1}
 		}},
-		{"miscWeaponCrateCategory","Empty Crate (Small)","small",{5,0,0},{
+		{"miscWeaponCrateCategory","Empty Crate (Small)","small",{0,0,0},{
 
 		}},
-		{"miscWeaponCrateCategory","Empty Crate (Medium)","medium",{5,0,0},{
+		{"miscWeaponCrateCategory","Empty Crate (Medium)","medium",{0,0,0},{
 
 		}},
-		{"heavyWeaponCrateCategory","Javelin Ammo","medium",{0,0,75},{
+		{"heavyWeaponCrateCategory","Javelin Ammo","medium",{25,0,75},{
 			{"rhs_fgm148_magazine_AT",12}
 		}}
 	};

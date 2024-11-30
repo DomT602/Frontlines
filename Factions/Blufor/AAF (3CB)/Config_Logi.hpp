@@ -249,13 +249,10 @@ class Logi_Setup {
 			{"ACE_bloodIV_250",20},
 			{"ACE_surgicalKit",10}
 		}},
-		{"miscWeaponCrateCategory","Empty Crate (Small)","small",{5,0,0},{
+		{"miscWeaponCrateCategory","Empty Crate (Small)","small",{0,0,0},{
 
 		}},
-		{"miscWeaponCrateCategory","Empty Crate (Medium)","medium",{5,0,0},{
-
-		}},
-		{"miscWeaponCrateCategory","Empty Crate (Large)","large",{5,0,0},{
+		{"miscWeaponCrateCategory","Empty Crate (Medium)","medium",{0,0,0},{
 
 		}}
 	};
