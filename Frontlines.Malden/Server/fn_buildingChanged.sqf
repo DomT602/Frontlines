@@ -31,13 +31,13 @@ if (_nearestSector distance2D _previousObject < _radius) then {
 		private _civRepLoss = getNumber(missionConfigFile >> "Settings" >> "damagedBuildingRepLoss");
 		if (_isRuin) then {
 			["A civilian building was destroyed."] remoteExecCall ["DT_fnc_notify",0];
-			[(_civRepLoss * 2)] call DT_fnc_updateCivRep;
+			[_nearestSector,(_civRepLoss * 2)] call DT_fnc_updateCivRep;
 
 			private _oldDestroyedCount = _nearestSector getVariable ["DT_destroyedBuildingCount",0];
 			_nearestSector setVariable ["DT_destroyedBuildingCount",(_oldDestroyedCount + 1),true];
 		} else {
 			["A civilian building was damaged."] remoteExecCall ["DT_fnc_notify",0];
-			[_civRepLoss] call DT_fnc_updateCivRep;
+			[_nearestSector,_civRepLoss] call DT_fnc_updateCivRep;
 		};
 	};
 };
